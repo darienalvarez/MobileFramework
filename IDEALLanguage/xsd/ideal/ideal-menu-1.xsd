@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-list-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>menu element for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- menu element -->
+	<xs:attributeGroup name="ideal.menu.attlist">
+		<xs:attributeGroup ref="ideal.nl.attlist"/>
+	</xs:attributeGroup>
+	<xs:complexType name="ideal.menu.type">
+		<xs:annotation>
+			<xs:documentation>
+				The menu element represents a navigation list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.nl.content"/>
+		<xs:attributeGroup ref="ideal.menu.attlist"/>
+	</xs:complexType>
+	<xs:element name="menu" type="ideal.menu.type"/>
+	<!-- end menu element -->
+</xs:schema>

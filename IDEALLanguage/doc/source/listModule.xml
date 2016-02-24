@@ -1,0 +1,144 @@
+<div3 id="List-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>List</head>
+<p>Provides list-oriented elements.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;li&gt;</td>
+<td>The li element defines a list item within an ordered,
+				unordered, or navigation list.</td>
+<td>
+<loc href="#li-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#li-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;ol&gt;</td>
+<td>At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.</td>
+<td>
+<loc href="#ol-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#ol-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;ul&gt;</td>
+<td>At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.</td>
+<td>
+<loc href="#ul-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#ul-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dl&gt;</td>
+<td>Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).</td>
+<td>
+<loc href="#dl-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dl-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;di&gt;</td>
+<td>Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).</td>
+<td>
+<loc href="#di-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#di-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dt&gt;</td>
+<td>Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).</td>
+<td>
+<loc href="#dt-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dt-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dd&gt;</td>
+<td>Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).</td>
+<td>
+<loc href="#dd-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dd-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;nl&gt;</td>
+<td>Navigation lists are intended to be used to define
+				collections of selectable items for presentation in a
+				"navigation" menu. Note that a navigation list always
+				starts with a label element that defines the label for
+				the list</td>
+<td>
+<loc href="#nl-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#nl-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;menu&gt;</td>
+<td>The menu element represents a navigation list.</td>
+<td>
+<loc href="#menu-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#menu-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

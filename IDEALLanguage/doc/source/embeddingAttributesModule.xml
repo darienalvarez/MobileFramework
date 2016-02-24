@@ -1,0 +1,46 @@
+<div2 id="Embedding_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Embedding Attributes</head>
+<p> This collection causes the contents of a remote resource to be embedded in the document in place of the element's content. 
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>src</td>
+<td>This attribute specifies the location of an external
+				source for the contents of the element.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI" xlink:show="replace" xlink:actuate="onRequest">URI</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>srctype</td>
+<td>This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentType" xlink:show="replace" xlink:actuate="onRequest">ContentType</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>encoding</td>
+<td>This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA" xlink:show="replace" xlink:actuate="onRequest">CDATA</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

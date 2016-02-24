@@ -1,0 +1,13 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+		<externalNamespace prefix="xml" uri="http://" docuri="http://www.w3.org/TR/REC-xml/"/>
+	</externalNamespaces>
+	
+	<module name="Model Item Property Attributes" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation> This collection contains one attribute for each model item property, with an attribute name exactly matching the name of the model item property, as defined in Model Item Property Definitions.
+		</documentation>
+	</module>
+</module_desc>

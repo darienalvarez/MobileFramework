@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Altova XMLSpy 2007 Enterprise Edition (W3C) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://www.morfeo-project.org/2008/ideal"
+xmlns:xforms="http://www.w3.org/2002/xforms" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-model-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			XForms Core Module Extension
+		</xs:documentation>
+	</xs:annotation>
+	<!-- Element: data -->
+	<xs:attributeGroup name="ideal.data.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attribute ref="name"/>
+		<xs:attribute ref="expr"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.data.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.data.type">
+		<xs:annotation>
+			<xs:documentation>
+				Represents data stored in the application context.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.data.content"/>
+		<xs:attributeGroup ref="ideal.data.attlist"/>
+	</xs:complexType>
+	<xs:element name="data" type="ideal.data.type"/>
+</xs:schema>

@@ -1,0 +1,31 @@
+<div3 id="Meta_Elements-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Meta Elements</head>
+<p>Defines elements that allow the definition of relationships.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;meta&gt;</td>
+<td>The meta element can be used to identify properties of a
+				document (e.g., author, expiration date, a list of key
+				words, etc.) and assign values to those properties.</td>
+<td>
+<loc href="#meta-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#meta-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

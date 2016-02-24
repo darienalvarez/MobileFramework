@@ -1,0 +1,37 @@
+<div2 id="Single_Node_Binding_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Single Node Binding Attributes</head>
+<p> Defines a binding between an XForms element such as a form control or an action and an instance data node defined by an XPath expression.
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>xforms:bind</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xforms/#structure-attrs-single-node" xlink:show="replace" xlink:actuate="onRequest">See xforms:bind attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:model</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xforms/#structure-attrs-single-node" xlink:show="replace" xlink:actuate="onRequest">See xforms:model attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:ref</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xforms/#structure-attrs-single-node" xlink:show="replace" xlink:actuate="onRequest">See xforms:ref attribute</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

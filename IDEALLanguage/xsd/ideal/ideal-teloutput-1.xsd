@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Altova XMLSpy 2007 Enterprise Edition (W3C) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema-extra.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:include schemaLocation="ideal-model-1.xsd"/>	
+	<xs:annotation>
+		<xs:documentation>teloutput element for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- Element: teloutput -->
+	<xs:attributeGroup name="ideal.teloutput.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attribute ref="xforms:ref" use="optional"/>
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.teloutput.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.teloutput.type">
+		<xs:annotation>
+			<xs:documentation>
+				The teloutput control allows the user to make several
+				actions like phone calls, sms,..
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.teloutput.content"/>
+		<xs:attributeGroup ref="ideal.teloutput.attlist"/>
+	</xs:complexType>
+	<xs:element name="teloutput" type="ideal.teloutput.type"/>
+</xs:schema>

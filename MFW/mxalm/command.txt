@@ -1,0 +1,1 @@
+scomp -src C:\gen -out C:\gen\myxalm.jar -compiler "C:\Archivos de programa\Java\jdk1.6.0_03\bin\javac" mxalm3.xsd

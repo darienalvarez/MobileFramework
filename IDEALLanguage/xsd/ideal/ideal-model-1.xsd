@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.morfeo-project.org/2008/ideal"  targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:include schemaLocation="ideal-selgroup-1.xsd"/>
+	<xs:include schemaLocation="ideal-menu-1.xsd"/>
+	<xs:include schemaLocation="ideal-inputdate-1.xsd"/>
+	<xs:include schemaLocation="ideal-rsspanel-1.xsd"/>
+	<xs:include schemaLocation="ideal-struct-1.xsd"/>
+	<xs:include schemaLocation="ideal-inputtime-1.xsd"/>
+	<xs:include schemaLocation="ideal-teloutput-1.xsd"/>
+	<xs:include schemaLocation="ideal-list-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema module of common content models for
+			IDEAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			This module describes the groupings of elements/attributes
+			that make up common content models for IDEAL elements.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:group name="ideal.Text.class">
+		<xs:choice>
+			<xs:element ref="abbr"/>
+			<xs:element ref="cite"/>
+			<xs:element ref="code"/>
+			<xs:element ref="dfn"/>
+			<xs:element ref="em"/>
+			<xs:element ref="kbd"/>
+			<xs:element ref="l"/>
+			<xs:element ref="q"/>
+			<xs:element ref="samp"/>
+			<xs:element ref="span"/>
+			<xs:element ref="strong"/>
+			<xs:element ref="sub"/>
+			<xs:element ref="sup"/>
+			<xs:element ref="var"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="ideal.NavigationList.extra">
+		<xs:choice>
+			<xs:element ref="menu"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="ideal.NavigationList.class">
+		<xs:choice>
+			<xs:element ref="nl"/>
+			<xs:group ref="ideal.NavigationList.extra"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="ideal.List.class">
+		<xs:choice>
+			<xs:element ref="ol"/>
+			<xs:element ref="ul"/>
+			<xs:element ref="dl"/>
+		</xs:choice>
+	</xs:group>
+	<!-- LABEL Element -->
+	<xs:attributeGroup name="ideal.label.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.label.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="ideal.Text.class"/>
+				<xs:group ref="XForm.UIInline.class"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.label.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Label element is used to display information
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.label.content"/>
+		<xs:attributeGroup ref="ideal.label.attlist"/>
+	</xs:complexType>
+	<xs:element name="label" type="ideal.label.type"/>
+	<!-- end LABEL Element -->
+	<xs:group name="XForm.Controls.extra">
+		<xs:choice>
+			<xs:element ref="selgroup"/>
+			<xs:element ref="inputDate"/>
+			<xs:element ref="rssPanel"/>
+			<xs:element ref="inputTime"/>
+			<xs:element ref="teloutput"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="XForm.Controls.class">
+		<xs:choice>
+			<xs:element ref="xforms:input"/>
+			<xs:element ref="xforms:textarea"/>
+			<xs:element ref="xforms:secret"/>
+			<xs:element ref="xforms:output"/>
+			<xs:element ref="xforms:upload"/>
+			<xs:element ref="xforms:select1"/>
+			<xs:element ref="xforms:select"/>
+			<xs:element ref="xforms:range"/>
+			<xs:element ref="xforms:submit"/>
+			<xs:element ref="xforms:trigger"/>
+			<xs:group ref="XForm.Controls.extra"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="header.class">
+		<xs:choice>
+			<xs:element ref="header" minOccurs="0"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="footer.class">
+		<xs:choice>
+			<xs:element ref="footer" minOccurs="0"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="div.extra">
+		<xs:sequence>
+			<xs:element ref="xforms:repeat"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="ideal.section.extra">
+		<xs:choice>
+			<xs:element ref="include"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="ideal.div.extra">
+		<xs:choice>
+			<xs:element ref="xforms:repeat"/>
+			<xs:element ref="xforms:group"/>
+		</xs:choice>
+	</xs:group>
+	
+	<xs:group name="XForm.UIInline.class">
+		<xs:choice>
+			<xs:element ref="xforms:output" />
+		</xs:choice>
+	</xs:group>
+	
+</xs:schema>

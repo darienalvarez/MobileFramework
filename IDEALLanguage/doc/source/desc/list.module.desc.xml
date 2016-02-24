@@ -1,0 +1,22 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="List" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>Provides list-oriented elements.</documentation>
+		<elements>
+			<element name="li" docName="li-content-model"/>
+			<element name="ol" docName="ol-content-model"/>
+			<element name="ul" docName="ul-content-model"/>
+			<element name="dl" docName="dl-content-model"/>
+			<element name="di" docName="di-content-model"/>
+			<element name="dt" docName="dt-content-model"/>
+			<element name="dd" docName="dd-content-model"/>
+			<element name="nl" docName="nl-content-model"/>
+			<element name="menu" docName="menu-content-model"/>
+		</elements>		
+	</module>
+</module_desc>

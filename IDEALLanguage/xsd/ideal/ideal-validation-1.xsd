@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal"
+	elementFormDefault="qualified">
+
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="http://www.w3.org/2001/xml.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>Validation for IDEAL</xs:documentation>
+	</xs:annotation>
+
+	<!-- validator element -->
+
+	<xs:attributeGroup name="ideal.validator.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="handler" />
+		<xs:attribute ref="type" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.validator.content">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:complexType name="ideal.validator.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				The validator element defines a custom validation.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.validator.content" />
+		<xs:attributeGroup ref="ideal.validator.attlist" />
+	</xs:complexType>
+
+	<xs:element name="validator" type="ideal.validator.type" />
+
+	<!-- end validator element -->
+
+	<!-- stringValidator element -->
+
+	<xs:attributeGroup name="ideal.stringValidator.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern" />
+		<xs:attribute ref="enumeration" />
+		<xs:attribute ref="length" />
+		<xs:attribute ref="maxlength" />
+		<xs:attribute ref="minlength" />
+		<xs:attribute ref="whiteSpace" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.stringValidator.content">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:complexType name="ideal.stringValidator.type">
+		<xs:annotation>
+			<xs:documentation>
+				The stringValidator is used to test that a string
+				conforms to a set of validation constraints.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.stringValidator.content" />
+		<xs:attributeGroup ref="ideal.stringValidator.attlist" />
+	</xs:complexType>
+
+	<xs:element name="stringValidator"
+		type="ideal.stringValidator.type" />
+
+	<!-- end stringValidator element -->
+
+	<!-- numberValidator element -->
+
+	<xs:attributeGroup name="ideal.numberValidator.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="totalDigits" />
+		<xs:attribute ref="fractionDigits" />
+		<xs:attribute ref="pattern" />
+		<xs:attribute ref="whiteSpace" />
+		<xs:attribute ref="enumeration" />
+		<xs:attribute ref="maxInclusive" />
+		<xs:attribute ref="maxExclusive" />
+		<xs:attribute ref="minInclusive" />
+		<xs:attribute ref="minExclusive" />
+		<xs:attribute ref="locale" />
+		<xs:attribute ref="type" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.numberValidator.content">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:complexType name="ideal.numberValidator.type">
+		<xs:annotation>
+			<xs:documentation>
+				The numberValidator is used to test that a number value
+				conforms to a set of validation constraints.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.numberValidator.content" />
+		<xs:attributeGroup ref="ideal.numberValidator.attlist" />
+	</xs:complexType>
+
+	<xs:element name="numberValidator"
+		type="ideal.numberValidator.type" />
+
+	<!-- end numberValidator element -->
+
+	<!-- dateTimeValidator element -->
+
+	<xs:attributeGroup name="ideal.dateTimeValidator.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern" />
+		<xs:attribute ref="whiteSpace" />
+		<xs:attribute ref="enumeration" />
+		<xs:attribute ref="maxInclusive" />
+		<xs:attribute ref="maxExclusive" />
+		<xs:attribute ref="minInclusive" />
+		<xs:attribute ref="minExclusive" />
+		<xs:attribute ref="locale" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.dateTimeValidator.content">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:complexType name="ideal.dateTimeValidator.type">
+		<xs:annotation>
+			<xs:documentation>
+				The dateTimeValidator is used to test that a date or
+				time conforms to a set of validation constraints. The
+				attributes must be defined in ISO 8601 Date and Time
+				Formats. See
+				http://www.w3.org/TR/xmlschema-2/#isoformats
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.dateTimeValidator.content" />
+		<xs:attributeGroup ref="ideal.dateTimeValidator.attlist" />
+	</xs:complexType>
+
+	<xs:element name="dateTimeValidator"
+		type="ideal.dateTimeValidator.type" />
+
+	<!-- end dateTimeValidator element -->
+
+</xs:schema>

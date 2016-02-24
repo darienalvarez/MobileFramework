@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Darien (uci) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gazoomobile.com/mxalm" targetNamespace="http://www.gazoomobile.com/mxalm">
+	<xs:complexType name="T_windows">
+		<xs:all>
+			<xs:element ref="form"/>
+			<xs:element ref="combobox"/>
+			<xs:element ref="listbox"/>
+			<xs:element ref="checkbox"/>
+			<xs:element ref="button"/>
+			<xs:element ref="edit"/>
+			<xs:element ref="label"/>
+			<xs:element ref="textbox"/>
+			<xs:element ref="linkbutton"/>
+			<xs:element ref="verticallayout"/>
+			<xs:element ref="horizontallayout"/>
+			<xs:element ref="table"/>
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="background-color" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_verticallayout">
+		<xs:all>
+			<xs:element ref="combobox"/>
+			<xs:element ref="listbox"/>
+			<xs:element ref="checkbox"/>
+			<xs:element ref="button"/>
+			<xs:element ref="edit"/>
+			<xs:element ref="label"/>
+			<xs:element ref="textbox"/>
+			<xs:element ref="linkbutton"/>
+			<xs:element ref="table"/>
+			<xs:element ref="horizontallayout"/>
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="header" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_textbox">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_option">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="value" type="xs:string" use="required"/>
+				<xs:attribute name="selected" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_listbox">
+		<xs:sequence>
+			<xs:element ref="option" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_linkbutton">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="ref" type="xs:string" use="required"/>
+				<xs:attribute name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_label">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_horizontallayout">
+		<xs:all>
+			<xs:element ref="combobox"/>
+			<xs:element ref="listbox"/>
+			<xs:element ref="checkbox"/>
+			<xs:element ref="button"/>
+			<xs:element ref="edit"/>
+			<xs:element ref="label"/>
+			<xs:element ref="textbox"/>
+			<xs:element ref="linkbutton"/>
+			<xs:element ref="table"/>
+			<xs:element ref="verticallayout"/>
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="header" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_form">
+		<xs:all>
+			<xs:element ref="combobox"/>
+			<xs:element ref="listbox"/>
+			<xs:element ref="checkbox"/>
+			<xs:element ref="button"/>
+			<xs:element ref="edit"/>
+			<xs:element ref="label"/>
+			<xs:element ref="textbox"/>
+			<xs:element ref="linkbutton"/>
+			<xs:element ref="verticallayout"/>
+			<xs:element ref="horizontallayout"/>
+			<xs:element ref="table"/>
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="action" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_edit">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_combobox">
+		<xs:sequence>
+			<xs:element ref="option" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="style">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="radio"/>
+					<xs:enumeration value="combo"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="selected" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_checkbox">
+		<xs:sequence>
+			<xs:element ref="option" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="selected" type="xs:string"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_button">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="required"/>
+				<xs:attribute name="background" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="T_table">
+		<xs:sequence>
+			<xs:element name="row" type="T_row" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_row">
+		<xs:sequence>
+			<xs:element name="column" type="T_column" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="background" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="T_column">
+		<xs:all>
+			<xs:element ref="edit"/>
+			<xs:element ref="button"/>
+			<xs:element name="text" type="xs:string"/>
+		</xs:all>
+		<xs:attribute name="colspan" type="xs:integer"/>
+	</xs:complexType>
+	<xs:element name="windows" type="T_windows"/>
+	<xs:element name="verticallayout" type="T_verticallayout"/>
+	<xs:element name="textbox" type="T_textbox"/>
+	<xs:element name="option" type="T_option"/>
+	<xs:element name="listbox" type="T_listbox"/>
+	<xs:element name="linkbutton" type="T_linkbutton"/>
+	<xs:element name="label" type="T_label"/>
+	<xs:element name="horizontallayout" type="T_horizontallayout"/>
+	<xs:element name="form" type="T_form"/>
+	<xs:element name="edit" type="T_edit"/>
+	<xs:element name="combobox" type="T_combobox"/>
+	<xs:element name="checkbox" type="T_checkbox"/>
+	<xs:element name="button" type="T_button"/>
+	<xs:element name="table" type="T_table"/>
+</xs:schema>

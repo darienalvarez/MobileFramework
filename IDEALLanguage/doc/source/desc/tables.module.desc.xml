@@ -1,0 +1,25 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Tables" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>Provides elements for marking up tabular information in a document. 
+		</documentation>
+		<elements>
+			<element name="table" docName="table-content-model"/>
+			<element name="caption" docName="caption-content-model"/>
+			<element name="label" docName="label-content-model"/>
+			<element name="summary" docName="summary-content-model"/>
+			<element name="col" docName="col-content-model"/>
+			<element name="thead" docName="thead-content-model"/>
+			<element name="tbody" docName="tbody-content-model"/>
+			<element name="tfoot" docName="tfoot-content-model"/>
+			<element name="tr" docName="tr-content-model"/>
+			<element name="td" docName="td-content-model"/>
+			<element name="th" docName="th-content-model"/>
+		</elements>		
+	</module>
+</module_desc>

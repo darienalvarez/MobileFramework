@@ -1,0 +1,17 @@
+dl.attrDef {
+	background-color: #d5dee3;
+	border: none;
+	margin-right: 5%;
+}
+
+dl.contentDef {
+	background-color: #99CCFF;
+	border: none;
+	margin-right: 5%;
+	padding-top: 1px;
+	padding-bottom: 3px;
+}
+
+div.center {
+	text-align: center;
+}

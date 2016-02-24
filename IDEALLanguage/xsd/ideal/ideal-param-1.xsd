@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal">
+
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Param Element module for XHTML
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			This module declares the param element type and its
+			attributes, used to specify a set of values.
+
+			Elements defined here: * param
+		</xs:documentation>
+	</xs:annotation>
+	<xs:attributeGroup name="ideal.param.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attribute ref="name" use="required" />
+		<xs:attribute ref="value" />
+	</xs:attributeGroup>
+	<xs:group name="ideal.param.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="ideal.param.type">
+		<xs:annotation>
+			<xs:documentation>
+				Param elements specify a set of values that may be
+				required to process the object data by an object handler
+				at run-time
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.param.content" />
+		<xs:attributeGroup ref="ideal.param.attlist" />
+	</xs:complexType>
+	<xs:element name="param" type="ideal.param.type"/>
+</xs:schema>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	elementFormDefault="qualified">
+
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="../dial/XForms-Schema.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			List Module This is the XML Schema Lists module for DIAL
+
+			List Module Elements
+
+			* dl, dt, dd, di, ol, ul, li, nl
+
+			This module declares the list-oriented element types and
+			their attributes.
+		</xs:documentation>
+	</xs:annotation>
+
+	<!-- il element -->
+	<xs:attributeGroup name="dial.li.attlist">
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="encoding" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="li.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.li.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.li.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The li element defines a list item within an ordered,
+				unordered, or navigation list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.li.content" />
+		<xs:attributeGroup ref="dial.li.attlist" />
+	</xs:complexType>
+	<xs:element name="li" type="dial.li.type" />
+	<!-- end il element -->
+	<!-- ol element -->
+	<xs:attributeGroup name="dial.ol.attlist">
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="nextfocus" />
+		<xs:attribute ref="prevfocus" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="ol.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.ol.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0" />
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.ol.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.ol.content" />
+		<xs:attributeGroup ref="dial.ol.attlist" />
+	</xs:complexType>
+	<xs:element name="ol" type="dial.ol.type" />
+	<!-- end ol element -->
+	<!-- ul element -->
+	<xs:attributeGroup name="dial.ul.attlist">
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="nextfocus" />
+		<xs:attribute ref="prevfocus" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="ul.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.ul.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0" />
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.ul.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.ul.content" />
+		<xs:attributeGroup ref="dial.ul.attlist" />
+	</xs:complexType>
+	<xs:element name="ul" type="dial.ul.type" />
+	<!-- end ul element -->
+	<!-- dl element -->
+	<xs:attributeGroup name="dial.dl.attlist">
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="nextfocus" />
+		<xs:attribute ref="prevfocus" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="dl.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.dl.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0" />
+			<xs:element ref="di" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.dl.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.dl.content" />
+		<xs:attributeGroup ref="dial.dl.attlist" />
+	</xs:complexType>
+	<xs:element name="dl" type="dial.dl.type" />
+	<!-- end dl element -->
+	<!-- di element -->
+	<xs:attributeGroup name="dial.di.attlist">
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.di.content">
+		<xs:sequence>
+			<xs:element ref="dt" />
+			<xs:element ref="dd" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.di.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.di.content" />
+		<xs:attributeGroup ref="dial.di.attlist" />
+	</xs:complexType>
+	<xs:element name="di" type="dial.di.type" />
+	<!-- end di element -->
+	<!-- dt element -->
+	<xs:attributeGroup name="dial.dt.attlist">
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.dt.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.dt.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.dt.content" />
+		<xs:attributeGroup ref="dial.dt.attlist" />
+	</xs:complexType>
+	<xs:element name="dt" type="dial.dt.type" />
+	<!-- end dt element -->
+	<!-- dd element -->
+	<xs:attributeGroup name="dial.dd.attlist">
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.dd.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.dd.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.dd.content" />
+		<xs:attributeGroup ref="dial.dd.attlist" />
+	</xs:complexType>
+	<xs:element name="dd" type="dial.dd.type" />
+	<!-- end dd element -->
+	<!-- nl element -->
+	<xs:attributeGroup name="dial.nl.attlist">
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="nextfocus" />
+		<xs:attribute ref="prevfocus" />
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="nl.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.nl.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0" />
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.nl.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Navigation lists are intended to be used to define
+				collections of selectable items for presentation in a
+				"navigation" menu. Note that a navigation list always
+				starts with a label element that defines the label for
+				the list
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.nl.content" />
+		<xs:attributeGroup ref="dial.nl.attlist" />
+	</xs:complexType>
+	<xs:element name="nl" type="dial.nl.type" />
+	<!-- end nl element -->
+</xs:schema>

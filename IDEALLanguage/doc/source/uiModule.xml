@@ -1,0 +1,29 @@
+<div3 id="UI-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>UI</head>
+<p>Defines the major structural elements for the user interface.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;body&gt;</td>
+<td>Contains the document's content.</td>
+<td>
+<loc href="#body-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#body-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

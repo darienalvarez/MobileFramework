@@ -1,0 +1,50 @@
+<div2 id="Common_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Common Attributes</head>
+<p> The following attributes are common to all elements in IDEAL
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>xml:space</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/REC-xml/#sec-white-space" xlink:show="replace" xlink:actuate="onRequest">See xml:space attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xml:id</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:show="replace" xlink:actuate="onRequest">See xml:id attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xml:lang</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" xlink:show="replace" xlink:actuate="onRequest">See xml:lang attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>role</td>
+<td>The Role Attribute Module defines the role attribute and some values for that attribute in the default vocabulary space.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_QName" xlink:show="replace" xlink:actuate="onRequest">QName</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>sel:expr</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/cselection/#sec-sel-expr-attribute" xlink:show="replace" xlink:actuate="onRequest">See sel:expr attribute</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

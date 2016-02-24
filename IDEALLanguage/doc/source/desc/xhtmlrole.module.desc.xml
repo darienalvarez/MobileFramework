@@ -1,0 +1,11 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="XHTML Role Attribute Module" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>See <loc xlink:show="replace" xlink:actuate="onRequest" href="http://www.w3.org/TR/xhtml-role/">XHTML Role Attribute Module</loc></documentation>
+	</module>
+</module_desc>

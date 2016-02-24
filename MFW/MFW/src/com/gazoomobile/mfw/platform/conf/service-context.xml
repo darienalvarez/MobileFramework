@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<import resource="classpath:com/gazoomobile/mfw/platform/conf/dao-context.xml" />
+	
+	<bean id="applicationService" class="com.gazoomobile.mfw.platform.service.impl.ApplicationServiceImpl">
+		<property name="applicationDao" ref="applicationDao" />
+	</bean>
+	
+	<bean id="userService" class="com.gazoomobile.mfw.platform.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	
+	<bean id="connectorService" class="com.gazoomobile.mfw.platform.service.impl.ConnectorServiceImpl">
+		<property name="connectorDao" ref="connectorDao" />
+	</bean>
+	
+	<bean id="connectorTypeService" class="com.gazoomobile.mfw.platform.service.impl.ConnectorTypeServiceImpl">
+		<property name="connectorTypeDao" ref="connectorTypeDao" />
+	</bean>
+	
+	<bean id="controlService" class="com.gazoomobile.mfw.platform.service.impl.ControlServiceImpl">
+		<property name="controlDao" ref="controlDao" />
+	</bean>
+	
+	<bean id="controlDefinitionService" class="com.gazoomobile.mfw.platform.service.impl.ControlDefinitonServiceImpl">
+		<property name="controlDefinitionDao" ref="controlDefinitionDao" />
+	</bean>
+	
+	<bean id="controlPropertyService" class="com.gazoomobile.mfw.platform.service.impl.ControlPropertyServiceImpl">
+		<property name="controlPropertyDao" ref="controlPropertyDao" />
+	</bean>
+	
+	<bean id="permissionsetService" class="com.gazoomobile.mfw.platform.service.impl.PermissionsetServiceImpl">
+		<property name="permissionsetDao" ref="permissionsetDao" />
+	</bean>
+	
+	<bean id="screenService" class="com.gazoomobile.mfw.platform.service.impl.ScreenServiceImpl">
+		<property name="screenDao" ref="screenDao" />
+	</bean>
+	
+	<bean id="datasourceService" class="com.gazoomobile.mfw.platform.service.impl.DatasourceServiceImpl">
+		<property name="datasourceDao" ref="datasourceDao" />
+	</bean>
+	
+</beans>

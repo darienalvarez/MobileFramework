@@ -1,0 +1,89 @@
+<div3 id="Ideal-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Ideal</head>
+<p>Defines the major structural elements for the document.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;ideal&gt;</td>
+<td>The root element for IDEAL document</td>
+<td>
+<loc href="#ideal-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#ideal-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;metadata&gt;</td>
+<td>Metainformation for IDEAL document</td>
+<td>
+<loc href="#metadata-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#metadata-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;accessibility&gt;</td>
+<td>The accessibility module for IDEAL document</td>
+<td>
+<loc href="#accessibility-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#accessibility-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;behaviour&gt;</td>
+<td>The behaviour module for IDEAL document</td>
+<td>
+<loc href="#behaviour-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#behaviour-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;resources&gt;</td>
+<td>Defines links to external resources</td>
+<td>
+<loc href="#resources-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#resources-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;definitions&gt;</td>
+<td>The definitions module for IDEAL document</td>
+<td>
+<loc href="#definitions-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#definitions-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;ui&gt;</td>
+<td>The user interface (ui) module for IDEAL document</td>
+<td>
+<loc href="#ui-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#ui-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

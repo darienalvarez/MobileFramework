@@ -1,0 +1,19 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>Defines the major structural elements for the document.</documentation>
+		<elements>
+			<element name="ideal" docName="ideal-content-model"/>
+			<element name="metadata" docName="metadata-content-model"/>
+			<element name="accessibility" docName="accessibility-content-model"/>
+			<element name="behaviour" docName="behaviour-content-model"/>
+			<element name="definitions" docName="definitions-content-model"/>
+			<element name="ui" docName="ui-content-model"/>
+		</elements>
+	</module>
+</module_desc>

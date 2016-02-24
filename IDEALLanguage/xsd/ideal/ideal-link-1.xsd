@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal">
+	
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Link module for IDEAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Link element
+
+			* link
+
+			This module declares the link element type and its
+			attributes, which could (in principle) be used to define
+			document-level links to external resources.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:attributeGroup name="ideal.link.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attribute ref="rel" />
+		<xs:attribute ref="rev" />
+	</xs:attributeGroup>
+	<xs:group name="ideal.link.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="ideal.link.type">
+		<xs:annotation>
+			<xs:documentation>
+				An element that can be used to define links to external
+				resources. These resources are often used to augment the
+				Language Processor's ability to process the associated 
+				document.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.link.content" />
+		<xs:attributeGroup ref="ideal.link.attlist" />
+	</xs:complexType>
+	<xs:element name="link" type="ideal.link.type"/>
+</xs:schema>

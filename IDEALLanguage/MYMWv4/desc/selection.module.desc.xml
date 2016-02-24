@@ -1,0 +1,23 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Selection" targetNamespace="http://morfeo-project.org/2009/ideal" targetPrefix="ideal" >
+		<documentation> Processing instructions for general purpose content selection or filtering.
+		Content may be conditionally included or excluded based on the evaluation of the  <loc xlink:show="replace" xlink:actuate="onRequest" 
+				href="http://www.w3.org/TR/di-gloss/#def-delivery-context-v2">
+				delivery context
+			</loc>.
+		This may include capabilities of the requesting device, the user's profile (e.g. age, preferences),
+		the user's context (e.g. location) and any dynamic factors (e.g. battery life, the transport bandwidth).
+		A selection criterion is represented by the value of the sel:expr attribute.
+		This module is based son elements and attributes from the <loc xlink:show="replace" xlink:actuate="onRequest" href="http://www.w3.org/TR/cselection/">DISelect</loc> specification. 
+		</documentation>
+		<attributes>
+			<attribute name="sel:expr" docName="sec-sel-expr-attribute"/>
+		</attributes>
+	</module>
+</module_desc>

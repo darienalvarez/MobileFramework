@@ -1,0 +1,65 @@
+<div3 id="Tables-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Tables</head>
+<p>Provides elements for marking up tabular information in a document. 
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;table&gt;</td>
+<td>The table element contains all other elements that
+				specify the content for a table</td>
+<td>
+<loc href="#table-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#table-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;tr&gt;</td>
+<td>At least one is mandatory within a table. The tr
+				elements acts as a container for a row of table cells</td>
+<td>
+<loc href="#tr-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#tr-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;td&gt;</td>
+<td>At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row</td>
+<td>
+<loc href="#td-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#td-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;th&gt;</td>
+<td>The th element groups columns heading where authors can
+				specify selection conditions or style information for a
+				whole column in a table</td>
+<td>
+<loc href="#th-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#th-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

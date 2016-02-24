@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial">
+
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Text module for DIAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Text Elements
+
+			* abbr, cite, code, dfn, kbd, l, q, samp, span, strong, sub,
+			sup, var
+
+			This module declares the elements and their attributes used
+			to support inline-level presentational markup.
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:attributeGroup name="dial.Text.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<!-- Element: abbr  -->
+
+	<xs:attributeGroup name="dial.abbr.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+		<xs:attribute ref="full" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.abbr.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.abbr.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The abbr element indicates that a text fragment is an
+				abbreviation (e.g., W3C, XML, Inc., Ltd., Mass., etc.);
+				this includes acronyms.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.abbr.content" />
+		<xs:attributeGroup ref="dial.abbr.attlist" />
+	</xs:complexType>
+	<xs:element name="abbr" type="dial.abbr.type" />
+
+	<!-- Element: cite  -->
+
+	<xs:attributeGroup name="dial.cite.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+		<xs:attribute ref="cite" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.cite.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.cite.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The cite element contains a citation or a reference to
+				other source
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.cite.content" />
+		<xs:attributeGroup ref="dial.cite.attlist" />
+	</xs:complexType>
+	<xs:element name="cite" type="dial.cite.type" />
+
+	<!-- Element: code  -->
+
+	<xs:attributeGroup name="dial.code.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.code.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.code.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The code element contains a fragment of computer code.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.code.content" />
+		<xs:attributeGroup ref="dial.code.attlist" />
+	</xs:complexType>
+	<xs:element name="code" type="dial.code.type" />
+
+	<!-- Element: dfn  -->
+
+	<xs:attributeGroup name="dial.dfn.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.dfn.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.dfn.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The dfn element contains the defining instance of the
+				enclosed term.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.code.content" />
+		<xs:attributeGroup ref="dial.code.attlist" />
+	</xs:complexType>
+	<xs:element name="dfn" type="dial.dfn.type" />
+
+	<!-- Element: em  -->
+
+	<xs:attributeGroup name="dial.em.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.em.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.em.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The em element indicates emphasis for its contents.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.em.content" />
+		<xs:attributeGroup ref="dial.em.attlist" />
+	</xs:complexType>
+	<xs:element name="em" type="dial.kbd.type" />
+
+	<!-- Element: kbd  -->
+
+	<xs:attributeGroup name="dial.kbd.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.kbd.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.kbd.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The em element indicates emphasis for its contents.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.kbd.content" />
+		<xs:attributeGroup ref="dial.kbd.attlist" />
+	</xs:complexType>
+	<xs:element name="kbd" type="dial.kbd.type" />
+
+	<!-- Element: l  -->
+
+	<xs:attributeGroup name="dial.l.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.l.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.l.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The l element represents a semantic line of text (e.g.,
+				a line of verse or a line of computer code).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.l.content" />
+		<xs:attributeGroup ref="dial.l.attlist" />
+	</xs:complexType>
+	<xs:element name="l" type="dial.l.type" />
+
+	<!-- Element: q  -->
+
+	<xs:attributeGroup name="dial.q.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+		<xs:attribute ref="cite" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.q.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.q.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				This element designates an inline text fragment of
+				quoted text.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.q.content" />
+		<xs:attributeGroup ref="dial.q.attlist" />
+	</xs:complexType>
+	<xs:element name="q" type="dial.q.type" />
+
+	<!-- Element: samp  -->
+
+	<xs:attributeGroup name="dial.samp.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.samp.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.samp.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The samp element designates sample output from programs,
+				scripts, etc.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.samp.content" />
+		<xs:attributeGroup ref="dial.samp.attlist" />
+	</xs:complexType>
+	<xs:element name="samp" type="dial.samp.type" />
+
+	<!-- Element: span  -->
+
+	<xs:attributeGroup name="dial.span.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="encoding" />
+		<xs:attributeGroup ref="span.extra.attributes" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.span.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.span.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The span element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				structure to documents. This element imposes no
+				presentational idioms on the content. Thus, authors may
+				use this element in conjunction with style sheets, the
+				xml:lang attribute, etc.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.span.content" />
+		<xs:attributeGroup ref="dial.span.attlist" />
+	</xs:complexType>
+	<xs:element name="span" type="dial.span.type" />
+
+	<!-- Element: strong  -->
+
+	<xs:attributeGroup name="dial.strong.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.strong.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.strong.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The strong element indicates higher importance for its
+				contents than that of the surrounding content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.strong.content" />
+		<xs:attributeGroup ref="dial.strong.attlist" />
+	</xs:complexType>
+	<xs:element name="strong" type="dial.strong.type" />
+
+	<!-- Element: sub  -->
+
+	<xs:attributeGroup name="dial.sub.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.sub.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.sub.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The sub element indicates that its contents should
+				regarded as a subscript.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.sub.content" />
+		<xs:attributeGroup ref="dial.sub.attlist" />
+	</xs:complexType>
+	<xs:element name="sub" type="dial.sub.type" />
+
+	<!-- Element: sup  -->
+
+	<xs:attributeGroup name="dial.sup.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.sup.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.sup.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The sup element indicates that its contents should be
+				regarded as a super-script.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.sup.content" />
+		<xs:attributeGroup ref="dial.sup.attlist" />
+	</xs:complexType>
+	<xs:element name="sup" type="dial.sup.type" />
+
+	<!-- Element: var  -->
+
+	<xs:attributeGroup name="dial.var.attlist">
+		<xs:attributeGroup ref="dial.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.var.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.var.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The var element indicates an instance of a variable or
+				program argument.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.var.content" />
+		<xs:attributeGroup ref="dial.var.attlist" />
+	</xs:complexType>
+	<xs:element name="var" type="dial.var.type" />
+</xs:schema>

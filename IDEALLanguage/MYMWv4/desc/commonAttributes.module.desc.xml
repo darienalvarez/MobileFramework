@@ -1,0 +1,21 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+		<externalNamespace prefix="xml" uri="http://" docuri="http://www.w3.org/TR/REC-xml/"/>
+	</externalNamespaces>
+	
+	<module name="Common Attributes" targetNamespace="http://morfeo-project.org/2009/ideal" targetPrefix="ideal" >
+		<documentation> The following attributes are common to all elements in IDEAL
+		</documentation>
+		<attributes>
+			<attribute name="id" docName="id-attribute"/>
+			<attribute name="class" docName="class-attribute"/>
+			<attribute name="role" docName="role-attribute"/>
+			<attribute name="display" docName="display-attribute"/>
+			<attribute name="expr" docName="expr-attribute"/>
+			<attribute name="repeat-nodeset" docName="repeat-nodeset-attribute"/>			
+		</attributes>
+	</module>
+</module_desc>

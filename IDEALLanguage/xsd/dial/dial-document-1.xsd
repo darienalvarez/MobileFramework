@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:sel="http://www.w3.org/2004/06/diselect"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="http://www.w3.org/2001/xml.xsd" />
+	<xs:import namespace="http://www.w3.org/2001/xml-events"
+		schemaLocation="xml-events-1.xsd" />
+	<xs:import namespace="http://www.w3.org/2004/06/diselect"
+		schemaLocation="DISelect.xsd" />
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema.xsd" />
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+	<xs:include schemaLocation="dial-model-1.xsd" />
+	<xs:include schemaLocation="dial-object-1.xsd" />
+	<xs:include schemaLocation="dial-text-1.xsd" />
+	<xs:include schemaLocation="dial-table-1.xsd" />
+	<xs:include schemaLocation="dial-script-1.xsd" />
+	<xs:include schemaLocation="dial-link-1.xsd" />
+	<xs:include schemaLocation="dial-meta-1.xsd" />
+	<xs:include schemaLocation="dial-struct-1.xsd" />
+	<xs:include schemaLocation="xhtml-access-1.xsd" />
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Document framework module for DIAL
+
+			Document Framework
+
+			* html, head, title, body
+
+			The Document Framwork Module defines the major elements and
+			their attributes.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- HTML Element -->
+	<xs:attributeGroup name="dial.html.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="xml:base" />
+		<xs:attribute ref="sel:functions" />
+	</xs:attributeGroup>
+	<xs:group name="dial.html.content">
+		<xs:sequence>
+			<xs:element ref="head" />
+			<xs:element ref="body" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.html.type">
+		<xs:annotation>
+			<xs:documentation>
+				The root element for DIAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.html.content" />
+		<xs:attributeGroup ref="dial.html.attlist" />
+	</xs:complexType>
+	<xs:element name="html" type="dial.html.type" />
+	<!-- End HTML Element -->
+	<!-- head Element -->
+	<xs:attributeGroup name="dial.head.attlist">
+		<xs:attribute ref="xml:id" />
+	</xs:attributeGroup>
+	<xs:group name="dial.head.content">
+		<xs:sequence>
+			<xs:element ref="title" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="access" />
+				<xs:element ref="script" />
+				<xs:element ref="link" />
+				<xs:element ref="ev:listener" />
+				<xs:element ref="xforms:model" />
+				<xs:element ref="meta" />
+				<xs:element ref="sel:variable" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.head.type">
+		<xs:annotation>
+			<xs:documentation>
+				Contains information about the current document that is
+				not considered document content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.head.content" />
+		<xs:attributeGroup ref="dial.head.attlist" />
+	</xs:complexType>
+	<xs:element name="head" type="dial.head.type" />
+	<!-- End head Element -->
+	<!-- title Element -->
+	<xs:attributeGroup name="dial.title.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="title.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.title.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.title.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Used to provide a short description of the page contents
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.title.content" />
+		<xs:attributeGroup ref="dial.title.attlist" />
+	</xs:complexType>
+	<xs:element name="title" type="dial.title.type" />
+	<!-- End title Element -->
+	<!-- body Element -->
+	<xs:attributeGroup name="dial.body.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.body.content">
+		<xs:sequence>
+			<xs:group ref="header.class" />
+			<xs:element ref="h" minOccurs="0" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="section" />
+				<xs:element ref="separator" />
+			</xs:choice>
+			<xs:group ref="footer.class" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.body.type">
+		<xs:annotation>
+			<xs:documentation>
+				Contains the document's content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.body.content" />
+		<xs:attributeGroup ref="dial.body.attlist" />
+	</xs:complexType>
+	<xs:element name="body" type="dial.body.type" />
+	<!-- End body Element -->
+</xs:schema>

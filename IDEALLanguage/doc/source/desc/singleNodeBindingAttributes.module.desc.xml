@@ -1,0 +1,18 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+		<externalNamespace prefix="xml" uri="http://" docuri="http://www.w3.org/TR/REC-xml/"/>
+	</externalNamespaces>
+	
+	<module name="Single Node Binding Attributes" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation> Defines a binding between an XForms element such as a form control or an action and an instance data node defined by an XPath expression.
+		</documentation>
+		<attributes>
+			<attribute name="xforms:bind"   docName="http://www.w3.org/TR/xforms/#structure-attrs-single-node"/>
+			<attribute name="xforms:model" docName="http://www.w3.org/TR/xforms/#structure-attrs-single-node"/>
+			<attribute name="xforms:ref"    docName="http://www.w3.org/TR/xforms/#structure-attrs-single-node"/>
+		</attributes>
+	</module>
+</module_desc>

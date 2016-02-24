@@ -1,0 +1,81 @@
+<div4 id="Forms_Controls_Module-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Forms Controls Module</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;input&gt;</td>
+<td>This form control enables free-form data entry</td>
+<td>
+<loc href="#input-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#input-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;textarea&gt;</td>
+<td>This form control enables free-form data entry and is
+				intended for use in entering multiline content</td>
+<td>
+<loc href="#textarea-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#textarea-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;select&gt;</td>
+<td>This form control allows the user to make selections
+				from a set of items</td>
+<td>
+<loc href="#select-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#select-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;select1&gt;</td>
+<td>This form control allows the user to make selections
+				from a set of items</td>
+<td>
+<loc href="#select1-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#select1-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;inputDate&gt;</td>
+<td>Date input control</td>
+<td>
+<loc href="#inputDate-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#inputDate-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;inputTime&gt;</td>
+<td>Time input control</td>
+<td>
+<loc href="#inputTime-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#inputTime-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>

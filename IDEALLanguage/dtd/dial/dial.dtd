@@ -1,0 +1,377 @@
+<!-- ....................................................................... -->
+<!-- DIAL 1.0 DTD  ........................................................ -->
+<!-- file: dial.dtd
+-->
+
+<!-- DIAL DTD
+
+     
+-->
+<!-- This is the driver file for version 1.0 of the DIAL DTD.
+
+     Please use this public identifier to identify it:
+
+         "-//MORFEO-PROJECT//DTD DIAL 1.0//EN"
+-->
+<!ENTITY % DIAL.version  "-//MORFEO-PROJECT//DTD DIAL 1.0//EN" >
+
+<!-- Use this URI to identify the default namespace:
+
+         "http://www.morfeo-project.org/2008/dial"
+
+     See the Qualified Names module for information
+     on the use of namespace prefixes in the DTD.
+
+	 Note that IDEAL namespace elements are not prefixed by default,
+	 but the IDEAL namespace prefix is defined as "ideal" so that
+	 other markup languages can extend this one and use the IDEAL
+	 prefixed global attributes if required.
+
+-->
+
+<!ENTITY % NS.prefixed "IGNORE" >
+
+<!ENTITY % DIAL.prefixed "%NS.prefixed;" >
+
+<!ENTITY % DIAL.xmlns  "http://www.morfeo-project.org/2008/dial" >
+
+<!ENTITY % DIAL.prefix  "dial" >
+
+<![%DIAL.prefixed;[
+<!ENTITY % DIAL.pfx  "%DIAL.prefix;:" >
+]]>
+<!ENTITY % DIAL.pfx  "" >
+
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!ENTITY % xhtml-events.module "INCLUDE" >
+<!ENTITY % DISelect.prefixed "INCLUDE" >
+<!ENTITY % diselect-qname.module "INCLUDE" >
+
+<!-- Bring in the datatypes -->
+<!ENTITY % xhtml-datatypes.mod
+         PUBLIC "-//W3C//ENTITIES XHTML Datatypes 1.0//EN"
+         "http://www.w3.org/MarkUp/DTD/xhtml-datatypes-1.mod" >
+%xhtml-datatypes.mod;
+
+
+<!ENTITY % XForms.prefixed "INCLUDE" >
+<!ENTITY % DISelect.prefixed "INCLUDE" >
+
+<!ENTITY % Extra_elements.class "" >
+
+
+<!-- Text Module (Required)  ..................................... -->
+
+<!-- Hypertext Module (required) ................................. -->
+
+<!-- Lists Module (required)  .................................... -->
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!-- Bring in the qualified names -->
+
+<!-- Bring in the qualified names -->
+<!-- dial-document-qname-1.mod -->
+<!ENTITY % dial-document-qname.module "INCLUDE" >
+<![%dial-document-qname.module;[
+<!ENTITY % dial-document-qname.mod
+     SYSTEM "dial-document-qname-1.mod" >
+%dial-document-qname.mod;]]>
+
+<!-- diselect-qname-1.mod -->
+<!ENTITY % diselect-qname.module "INCLUDE" >
+<![%diselect-qname.module;[
+<!ENTITY % diselect-qname.mod
+     SYSTEM "diselect-qname-1.mod" >
+%diselect-qname.mod;]]>
+
+<!-- xforms-core-qname-1.mod -->
+<!ENTITY % xforms-core-qname.module "INCLUDE" >
+<![%xforms-core-qname.module;[
+<!ENTITY % xforms-core-qname.mod
+     SYSTEM "xforms-core-qname-1.mod" >
+%xforms-core-qname.mod;]]>
+
+<!-- xforms-control-qname-1.mod -->
+<!ENTITY % xforms-control-qname.module "INCLUDE" >
+<![%xforms-control-qname.module;[
+<!ENTITY % xforms-control-qname.mod
+     SYSTEM "xforms-control-qname-1.mod" >
+%xforms-control-qname.mod;]]>
+
+<!-- xforms-ui-qname-1.mod -->
+<!ENTITY % xforms-ui-qname.module "INCLUDE" >
+<![%xforms-ui-qname.module;[
+<!ENTITY % xforms-ui-qname.mod
+     SYSTEM "xforms-ui-qname-1.mod" >
+%xforms-ui-qname.mod;]]>
+
+<!-- xforms-action-qname-1.mod -->
+<!ENTITY % xforms-action-qname.module "INCLUDE" >
+<![%xforms-action-qname.module;[
+<!ENTITY % xforms-action-qname.mod
+     SYSTEM "xforms-action-qname-1.mod" >
+%xforms-action-qname.mod;]]>
+
+<!-- Bring in the qualified names -->
+<!-- dial-table-qname-1.mod -->
+<!ENTITY % dial-table-qname.module "INCLUDE" >
+<![%dial-table-qname.module;[
+<!ENTITY % dial-table-qname.mod
+     SYSTEM "dial-table-qname-1.mod" >
+%dial-table-qname.mod;]]>
+
+<!-- Bring in the qualified names -->
+
+<!-- dial-struct-qname-1.mod -->
+<!ENTITY % dial-struct-qname.module "INCLUDE" >
+<![%dial-struct-qname.module;[
+<!ENTITY % dial-struct-qname.mod
+     SYSTEM "dial-struct-qname-1.mod" >
+%dial-struct-qname.mod;]]>
+
+
+<!-- dial-text-qname-1.mod -->
+<!ENTITY % dial-text-qname.module "INCLUDE" >
+<![%dial-text-qname.module;[
+<!ENTITY % dial-text-qname.mod
+     SYSTEM "dial-text-qname-1.mod" >
+%dial-text-qname.mod;]]>
+
+<!-- -qname-1.mod -->
+<!ENTITY % dial-list-qname.module "INCLUDE" >
+<![%dial-list-qname.module;[
+<!ENTITY % dial-list-qname.mod
+     SYSTEM "dial-list-qname-1.mod" >
+%dial-list-qname.mod;]]>
+
+<!-- dial-handler-qname-1.mod -->
+<!ENTITY % dial-handler-qname.module "INCLUDE" >
+<![%dial-handler-qname.module;[
+<!ENTITY % dial-handler-qname.mod
+     SYSTEM "dial-handler-qname-1.mod" >
+%dial-handler-qname.mod;]]>
+
+<!-- dial-hypertext-qname-1.mod -->
+<!ENTITY % dial-hypertext-qname.module "INCLUDE" >
+<![%dial-hypertext-qname.module;[
+<!ENTITY % dial-hypertext-qname.mod
+     SYSTEM "dial-hypertext-qname-1.mod" >
+%dial-hypertext-qname.mod;]]>
+
+<!-- dial-object-qname-1.mod -->
+<!ENTITY % dial-object-qname.module "INCLUDE" >
+<![%dial-object-qname.module;[
+<!ENTITY % dial-object-qname.mod
+     SYSTEM "dial-object-qname-1.mod" >
+%dial-object-qname.mod;]]>
+
+<!-- xml-events-qname.mod -->
+<!ENTITY % XML-EVENTS.prefixed "INCLUDE">
+<!ENTITY % XML-EVENTS.prefix "ev" >
+<!ENTITY % xml-events-qname.module "INCLUDE" >
+<![%xml-events-qname.module;[
+<!ENTITY % xml-events-qname.mod
+     SYSTEM "xml-events-qname-1.mod" >
+%xml-events-qname.mod;]]>
+
+<!-- xhtml-access-qname-1.mod -->
+<!ENTITY % XHTML-ACCESS.prefixed "IGNORE" >
+<!--!ENTITY % XHTML-ACCESS.prefix "xh" -->
+<!ENTITY % xhtml-access-qname.module "INCLUDE" >
+<![%xhtml-access-qname.module;[
+<!ENTITY % xhtml-access-qname.mod
+     SYSTEM "xhtml-access-qname-1.mod" >
+%xhtml-access-qname.mod;]]>
+
+<!-- xhtml-role-qname-1.mod -->
+<!ENTITY % XHTML-ROLE.prefixed "IGNORE" >
+<!ENTITY % xhtml-role-qname.module "INCLUDE" >
+<![%xhtml-role-qname.module;[
+<!ENTITY % xhtml-role-qname.mod
+     SYSTEM "xhtml-role-qname-1.mod" >
+%xhtml-role-qname.mod;]]>
+
+<!-- diselect-qname-1.mod -->
+<!ENTITY % diselect-qname.module "INCLUDE" >
+<![%diselect-qname.module;[
+<!ENTITY % diselect-qname.mod
+     SYSTEM "diselect-qname-1.mod" >
+%diselect-qname.mod;]]>
+
+<!ENTITY % DIAL.common.attrs.prefixed "INCLUDE" >
+
+<!ENTITY % DISelect.global.attrs.prefixed "INCLUDE" >
+
+<!ENTITY % XForms.global.attrs.prefixed "INCLUDE" >
+
+<!--!ENTITY % Inline.mix "%DIAL.span.qname;" -->
+
+<!ENTITY % DIAL.xmlns.attrib 
+     "xmlns:%DIAL.prefix;  %URI.datatype;     #FIXED '%DIAL.xmlns;'"
+>
+
+<!ENTITY % DISelect.xmlns.attrib 
+     "xmlns:%DISelect.prefix;  %URI.datatype;     #FIXED '%DISelect.xmlns;'"
+>
+
+
+<!ENTITY % diselect-attribs.module "INCLUDE" >
+<![%diselect-attribs.module;[
+<!ENTITY % diselect-attribs.mod
+     SYSTEM "diselect-attribs-1.mod" >
+%diselect-attribs.mod;]]>
+
+<!ENTITY % xforms-core-attribs.module "INCLUDE" >
+<![%xforms-core-attribs.module;[
+<!ENTITY % xforms-core-attribs.mod
+     SYSTEM "xforms-core-attribs-1.mod" >
+%xforms-core-attribs.mod;]]>
+
+<!ENTITY % xforms-control-attribs.module "INCLUDE" >
+<![%xforms-control-attribs.module;[
+<!ENTITY % xforms-control-attribs.mod
+     SYSTEM "xforms-control-attribs-1.mod" >
+%xforms-control-attribs.mod;]]>
+
+<!ENTITY % xforms-ui-attribs.module "INCLUDE" >
+<![%xforms-ui-attribs.module;[
+<!ENTITY % xforms-ui-attribs.mod
+     SYSTEM "xforms-ui-attribs-1.mod" >
+%xforms-ui-attribs.mod;]]>
+
+<!ENTITY % xforms-action-attribs.module "INCLUDE" >
+<![%xforms-action-attribs.module;[
+<!ENTITY % xforms-action-attribs.mod
+     SYSTEM "xforms-action-attribs-1.mod" >
+%xforms-action-attribs.mod;]]>
+
+<!ENTITY % dial-attribs.module "INCLUDE" >
+<![%dial-attribs.module;[
+<!ENTITY % dial-attribs.mod
+     SYSTEM "dial-attribs-1.mod" >
+%dial-attribs.mod;]]>
+
+<!ENTITY % dial-model.module "INCLUDE" >
+<![%dial-model.module;[
+<!ENTITY % dial-model.mod
+     SYSTEM "dial-model-1.mod" >
+%dial-model.mod;]]>
+
+
+<!ENTITY % dial-hypertext.module "INCLUDE" >
+<![%dial-hypertext.module;[
+<!ENTITY % dial-hypertext.mod
+     SYSTEM "dial-hypertext-1.mod" >
+%dial-hypertext.mod;]]>
+
+<!-- Meta Module -->
+<!ENTITY % dial-meta.module "INCLUDE" >
+<![%dial-meta.module;[
+<!ENTITY % dial-meta.mod
+     SYSTEM "dial-meta-1.mod" >
+%dial-meta.mod;]]>
+
+<!-- Link Module -->
+<!ENTITY % dial-link.module "INCLUDE" >
+<![%dial-link.module;[
+<!ENTITY % dial-link.mod
+     SYSTEM "dial-link-1.mod" >
+%dial-link.mod;]]>
+
+<!ENTITY % xs-schema PUBLIC "-//W3C//DTD XMLSCHEMA 200102//EN" "XMLSchema.dtd">
+%xs-schema;
+
+<!-- Table Module (model)  .................................... -->
+<!ENTITY % dial-table.module "INCLUDE" >
+<![%dial-table.module;[
+<!ENTITY % dial-table.mod SYSTEM "dial-table-1.mod" >
+%dial-table.mod;]]>
+
+<!-- List Module (model)  .................................... -->
+<!ENTITY % dial-list.module "INCLUDE" >
+<![%dial-list.module;[
+<!ENTITY % dial-list.mod SYSTEM "dial-list-1.mod" >
+%dial-list.mod;]]>
+
+
+<!-- Object Module (model)  .................................... -->
+<!ENTITY % dial-object.module "INCLUDE" >
+<![%dial-object.module;[
+<!ENTITY % dial-object.mod SYSTEM "dial-object-1.mod" >
+%dial-object.mod;]]>
+
+<!ENTITY % NS.decl.attrib "%DIAL.xmlns.extra.attrib;">
+
+<!ENTITY % anyURI.datatype "CDATA">
+<!ENTITY % xhtml-events.module "INCLUDE" >
+<![%xhtml-events.module;[
+<!ENTITY % xhtml-events.mod SYSTEM "xml-events-1.mod" >
+%xhtml-events.mod;]]>
+
+<!ENTITY % xhtml-access.module "INCLUDE" >
+<![%xhtml-access.module;[
+<!ENTITY % xhtml-access.mod SYSTEM "xhtml-access-1.mod" >
+%xhtml-access.mod;]]>
+
+<!-- Handler  .................................... -->
+<!ENTITY % dial-handler.module "INCLUDE" >
+<![%dial-handler.module;[
+<!ENTITY % dial-handler.mod SYSTEM "dial-handler-1.mod" >
+%dial-handler.mod;]]>
+
+
+<!-- DISelect Module  .................................... -->
+<!ENTITY % diselect.module "INCLUDE" >
+<![%diselect.module;[
+<!ENTITY % diselect.mod SYSTEM "diselect-1.mod" >
+%diselect.mod;]]>
+
+<!-- XFORM Module (core)  .................................... -->
+<!ENTITY % xforms.core.module "INCLUDE" >
+<![%xforms.core.module;[
+<!ENTITY % xforms.core.mod SYSTEM "xforms-core-1.mod" >
+%xforms.core.mod;]]>
+
+<!-- XFORM Module (control)  .................................... -->
+<!ENTITY % xforms.control.module "INCLUDE" >
+<![%xforms.control.module;[
+<!ENTITY % xforms.control.mod SYSTEM "xforms-control-1.mod" >
+%xforms.control.mod;]]>
+
+<!-- XFORM Module (UI)  .................................... -->
+<!ENTITY % xforms.ui.module "INCLUDE" >
+<![%xforms.ui.module;[
+<!ENTITY % xforms.ui.mod SYSTEM "xforms-ui-1.mod" >
+%xforms.ui.mod;]]>
+
+<!-- XFORM Module (Action)  .................................... -->
+<!ENTITY % xforms.action.module "INCLUDE" >
+<![%xforms.action.module;[
+<!ENTITY % xforms.action.mod SYSTEM "xforms-action-1.mod" >
+%xforms.action.mod;]]>
+
+<!-- Structure Module  .................................... -->
+<!ENTITY % dial-struct.module "INCLUDE" >
+<![%dial-struct.module;[
+<!ENTITY % dial-struct.mod SYSTEM "dial-struct-1.mod" >
+%dial-struct.mod;]]>
+
+
+<!-- Text Module  .................................... -->
+<!ENTITY % dial-text.module "INCLUDE" >
+<![%dial-text.module;[
+<!ENTITY % dial-text.mod SYSTEM "dial-text-1.mod" >
+%dial-text.mod;]]>
+
+<!-- Document Structure Module   ....................... -->
+<!ENTITY % DIAL.header.class "" >
+<!ENTITY % DIAL.footer.class "" >
+<!ENTITY % dial-document.module "INCLUDE" >
+<![%dial-document.module;[
+<!ENTITY % dial-document.mod SYSTEM "dial-document-1.mod" >
+%dial-document.mod;]]>
+<!-- end of DIAL 1.1 DTD  ................................................. -->
+<!-- ....................................................................... -->

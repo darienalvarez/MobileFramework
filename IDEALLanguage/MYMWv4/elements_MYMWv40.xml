@@ -1,0 +1,2684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div1 id="elements" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head> Elements </head>
+<div2 id="a-element">
+<head>The <code>&lt;a&gt;</code> element</head>
+<p id="a-content-model">
+
+				Defines an anchor and may be used to establish a link to
+				other document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="a-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>href = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies a URI that is actuated when the
+				element is activated
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>longtitle = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Long description of a title
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>src = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the location of an external
+				source for the contents of the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="access-element">
+<head>The <code>&lt;access&gt;</code> element</head>
+<p id="access-content-model">
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+ EMPTY </code></label><def></def></gitem></glist>
+<p id="access-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>activate = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( yes | no )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>key = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character" xlink:show="replace" xlink:actuate="onRequest">Character</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>targetid = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREFS" xlink:show="replace" xlink:actuate="onRequest">IDREFS</loc>
+</label>
+<def><p>
+Attribute specifies the id of the target elements of the
+				event.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>targetrole = <loc href="http://www.w3.org/TR/curie/#s_schema" xlink:show="replace" xlink:actuate="onRequest">CURIEs</loc>
+</label>
+<def><p>
+Attribute specifies the role of the target elements of
+				the event.
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="accessibility-element">
+<head>The <code>&lt;accessibility&gt;</code> element</head>
+<p id="accessibility-content-model">
+
+				The accessibility module for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#access-element" xlink:show="replace" xlink:actuate="onRequest">access</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="accessibility-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="anchor-element">
+<head>The <code>&lt;anchor&gt;</code> element</head>
+<p id="anchor-content-model">
+
+				This element represents a anchor to a part of the
+				document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="anchor-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>href = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies a URI that is actuated when the
+				element is activated
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="behaviour-element">
+<head>The <code>&lt;behaviour&gt;</code> element</head>
+<p id="behaviour-content-model">
+
+				The behaviour module for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#ev_listener-element" xlink:show="replace" xlink:actuate="onRequest">ev:listener</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="behaviour-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="body-element">
+<head>The <code>&lt;body&gt;</code> element</head>
+<p id="body-content-model">
+
+				Contains the document's content
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>? )* , ( <loc href="#header-element" xlink:show="replace" xlink:actuate="onRequest">header</loc>? , <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc> , ( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc>? | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>? )* , <loc href="#footer-element" xlink:show="replace" xlink:actuate="onRequest">footer</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="body-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>class = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>newcontext = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute specifies if the form should be deleted
+				before navigate to it (only for WAP)
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="carousel-element">
+<head>The <code>&lt;carousel&gt;</code> element</head>
+<p id="carousel-content-model">
+
+				This element intends to display sequentially a catalogue
+				of objects to be selected by the user. Moreover the
+				content can be scrolled back and it can reference static
+				images or the list items can be created dynamically
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="carousel-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>validationtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of validation associated with a UI
+				component
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="chainedmenu-element">
+<head>The <code>&lt;chainedmenu&gt;</code> element</head>
+<p id="chainedmenu-content-model">
+
+				This element is used to specify a control that
+				represents a set of chained menus
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#menu-element" xlink:show="replace" xlink:actuate="onRequest">menu</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="chainedmenu-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="definitions-element">
+<head>The <code>&lt;definitions&gt;</code> element</head>
+<p id="definitions-content-model">
+
+				The definitions module for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#xforms_model-element" xlink:show="replace" xlink:actuate="onRequest">xforms:model</loc>* | <loc href="#eventsource-element" xlink:show="replace" xlink:actuate="onRequest">eventsource</loc>* )+
+</code></label><def></def></gitem></glist>
+<p id="definitions-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="div-element">
+<head>The <code>&lt;div&gt;</code> element</head>
+<p id="div-content-model">
+
+				The div element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				extra structure to documents. This element defines no
+				presentational idioms on the content. Thus, authors may
+				use this element in conjunction with style sheets, etc
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#p-element" xlink:show="replace" xlink:actuate="onRequest">p</loc>* | <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#anchor-element" xlink:show="replace" xlink:actuate="onRequest">anchor</loc>* | <loc href="#secret-element" xlink:show="replace" xlink:actuate="onRequest">secret</loc>* | <loc href="#input-element" xlink:show="replace" xlink:actuate="onRequest">input</loc>* | <loc href="#upload-element" xlink:show="replace" xlink:actuate="onRequest">upload</loc>* | <loc href="#inputDate-element" xlink:show="replace" xlink:actuate="onRequest">inputDate</loc>* | <loc href="#inputTime-element" xlink:show="replace" xlink:actuate="onRequest">inputTime</loc>* | <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* | <loc href="#figure-element" xlink:show="replace" xlink:actuate="onRequest">figure</loc>* | <loc href="#reset-element" xlink:show="replace" xlink:actuate="onRequest">reset</loc>* | <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>* | <loc href="#submit-element" xlink:show="replace" xlink:actuate="onRequest">submit</loc>* | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#trigger-element" xlink:show="replace" xlink:actuate="onRequest">trigger</loc>* | <loc href="#select-element" xlink:show="replace" xlink:actuate="onRequest">select</loc>* | <loc href="#select1-element" xlink:show="replace" xlink:actuate="onRequest">select1</loc>* | <loc href="#table-element" xlink:show="replace" xlink:actuate="onRequest">table</loc>* | <loc href="#textarea-element" xlink:show="replace" xlink:actuate="onRequest">textarea</loc>* | <loc href="#menu-element" xlink:show="replace" xlink:actuate="onRequest">menu</loc>* | <loc href="#chainedmenu-element" xlink:show="replace" xlink:actuate="onRequest">chainedmenu</loc>* | <loc href="#list-element" xlink:show="replace" xlink:actuate="onRequest">list</loc>* | <loc href="#object-element" xlink:show="replace" xlink:actuate="onRequest">object</loc>* | <loc href="#telephonecaller-element" xlink:show="replace" xlink:actuate="onRequest">telephonecaller</loc>* | <loc href="#phonebookadder-element" xlink:show="replace" xlink:actuate="onRequest">phonebookadder</loc>* | <loc href="#smssend-element" xlink:show="replace" xlink:actuate="onRequest">smssend</loc>* | <loc href="#placard-element" xlink:show="replace" xlink:actuate="onRequest">placard</loc>* | <loc href="#range-element" xlink:show="replace" xlink:actuate="onRequest">range</loc>* | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>* | <loc href="#carousel-element" xlink:show="replace" xlink:actuate="onRequest">carousel</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="div-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>anchor = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute specifies that the element has an anchor
+				in the document
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="ev_listener-element">
+<head>The <code>&lt;ev:listener&gt;</code> element</head>
+<p id="ev_listener-content-model">
+
+				Element listener supports a subset of the DOM's
+				EventListener interface. It is used to declare event
+				listeners and register them with specific nodes in the
+				DOM.
+			
+</p>
+<p id="ev_listener-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>ev:defaultAction = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( cancel | perform )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:event = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:function = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:handler = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:observer = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:phase = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( capture | default )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:propagate = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( stop | continue )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:target = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<p id="ev_listener-external-content-model">
+View definition of this element is on <loc href='http://www.w3.org/TR/xml-events/Overview.html#section-listener-element'  xlink:show='replace' xlink:actuate='onRequest'>ev:listener</loc></p></div2>
+<div2 id="eventsource-element">
+<head>The <code>&lt;eventsource&gt;</code> element</head>
+<p id="eventsource-content-model">
+
+				The eventSource element, in conjunction with the id and
+				src attributes, offers a generic mechanism to receive
+				server-side events.
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#param-element" xlink:show="replace" xlink:actuate="onRequest">param</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="eventsource-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>id = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</label>
+<def><p>
+See <loc href="
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+"
+ xlink:show="replace"
+ xlink:actuate="onRequest"
+>
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+</loc>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>mode = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>refresh = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#nonNegativeInteger" xlink:show="replace" xlink:actuate="onRequest">nonNegativeInteger</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>src = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the location of an external
+				source for the contents of the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="figure-element">
+<head>The <code>&lt;figure&gt;</code> element</head>
+<p id="figure-content-model">
+
+				This element represents a special image with legend
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc> , <loc href="#legend-element" xlink:show="replace" xlink:actuate="onRequest">legend</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="figure-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="footer-element">
+<head>The <code>&lt;footer&gt;</code> element</head>
+<p id="footer-content-model">
+
+				The section element defines document's or application's
+				section. Particularly, in conjunction with the h
+				element, offers a mechanism for structuring documents
+				into sections. This element defines content to be
+				block-level but imposes no other presentational idioms
+				on the content, which may otherwise be controlled from a
+				style sheet
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc> , ( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+ ) | ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc> | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc> | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc> ) , ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc>+ | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+
+</code></label><def></def></gitem></glist>
+<p id="footer-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>newcontext = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute specifies if the form should be deleted
+				before navigate to it (only for WAP)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="header-element">
+<head>The <code>&lt;header&gt;</code> element</head>
+<p id="header-content-model">
+
+				The section element defines document's or application's
+				section. Particularly, in conjunction with the h
+				element, offers a mechanism for structuring documents
+				into sections. This element defines content to be
+				block-level but imposes no other presentational idioms
+				on the content, which may otherwise be controlled from a
+				style sheet
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc> , ( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+ ) | ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc> | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc> | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc> ) , ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc>+ | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+
+</code></label><def></def></gitem></glist>
+<p id="header-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>newcontext = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute specifies if the form should be deleted
+				before navigate to it (only for WAP)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="ideal-element">
+<head>The <code>&lt;ideal&gt;</code> element</head>
+<p id="ideal-content-model">
+
+				The root element for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#metadata-element" xlink:show="replace" xlink:actuate="onRequest">metadata</loc>? <loc href="#behaviour-element" xlink:show="replace" xlink:actuate="onRequest">behaviour</loc>? <loc href="#resources-element" xlink:show="replace" xlink:actuate="onRequest">resources</loc>? <loc href="#definitions-element" xlink:show="replace" xlink:actuate="onRequest">definitions</loc>? <loc href="#accessibility-element" xlink:show="replace" xlink:actuate="onRequest">accessibility</loc>? <loc href="#ui-element" xlink:show="replace" xlink:actuate="onRequest">ui</loc> )
+</code></label><def></def></gitem></glist>
+<p id="ideal-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>id = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</label>
+<def><p>
+See <loc href="
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+"
+ xlink:show="replace"
+ xlink:actuate="onRequest"
+>
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+</loc>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="image-element">
+<head>The <code>&lt;image&gt;</code> element</head>
+<p id="image-content-model">
+
+				The image element embeds an image in an IDEAL document
+			
+</p>
+<p id="image-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>alt = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#stringNotEmpty" xlink:show="replace" xlink:actuate="onRequest">stringNotEmpty</loc>
+</label>
+<def><p>
+This attribute specifies an alternate text for an image
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>src = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the location of an external
+				source for the contents of the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="include-element">
+<head>The <code>&lt;include&gt;</code> element</head>
+<p id="include-content-model">
+
+				The include element specifies the inlusion of divs into
+				markup
+			
+</p>
+<p id="include-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>content = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+The content to be included
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>expr = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the expr attribute, and all its
+				child and attribute nodes, are selected for inclusion in
+				the output document. If the expression evaluates to
+				false, then the element containing the expr attribute,
+				and all its children, are omitted from the output
+				document.
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="input-element">
+<head>The <code>&lt;input&gt;</code> element</head>
+<p id="input-content-model">
+
+				This form control enables free-form data entry
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="input-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>about-class = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the relationship between the control and a
+				class defined in an ontology for annotatating
+				semantically
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>about-prop = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the relationship between the control and a
+				property defined in an ontology for annotating
+				semantically
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>recommendations = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+Indicates that the recommendation module is required
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>recommendationsURI = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+Indicates the URI of the service provides
+				recommendations
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>validationtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of validation associated with a UI
+				component
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="inputDate-element">
+<head>The <code>&lt;inputDate&gt;</code> element</head>
+<p id="inputDate-content-model">
+Date input control
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="inputDate-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="inputTime-element">
+<head>The <code>&lt;inputTime&gt;</code> element</head>
+<p id="inputTime-content-model">
+Time input control
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="inputTime-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="item-element">
+<head>The <code>&lt;item&gt;</code> element</head>
+<p id="item-content-model">
+
+				This element specifies the storage value and label to
+				represent an item in a list
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc> , <loc href="#value-element" xlink:show="replace" xlink:actuate="onRequest">value</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="item-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>href = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies a URI that is actuated when the
+				element is activated
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>longtitle = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Long description of a title
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>selected = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute indicates that an item should appear
+				selected
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="l-element">
+<head>The <code>&lt;l&gt;</code> element</head>
+<p id="l-content-model">
+
+				The l element represents a semantic line of text (e.g.,
+				a line of verse or a line of computer code)
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#anchor-element" xlink:show="replace" xlink:actuate="onRequest">anchor</loc>* | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#telephonecaller-element" xlink:show="replace" xlink:actuate="onRequest">telephonecaller</loc>* | <loc href="#phonebookadder-element" xlink:show="replace" xlink:actuate="onRequest">phonebookadder</loc>* | <loc href="#smssend-element" xlink:show="replace" xlink:actuate="onRequest">smssend</loc>* | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>* | <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="l-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+</div2>
+<div2 id="label-element">
+<head>The <code>&lt;label&gt;</code> element</head>
+<p id="label-content-model">
+
+				Label element is used to display information
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="label-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="legend-element">
+<head>The <code>&lt;legend&gt;</code> element</head>
+<p id="legend-content-model">
+
+				This element represents the text associated to figure
+				control
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="legend-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="link-element">
+<head>The <code>&lt;link&gt;</code> element</head>
+<p id="link-content-model">
+
+				An element that can be used to define links to external
+				resources. These resources are often used to augment the
+				Language Processor's ability to process the associated
+				document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="link-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>display = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the display attribute, and all
+				its child and attribute nodes, are displayed. If the
+				expression evaluates to false, then the element
+				containing the display attribute, and all its children,
+				are not displayed.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>expr = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the expr attribute, and all its
+				child and attribute nodes, are selected for inclusion in
+				the output document. If the expression evaluates to
+				false, then the element containing the expr attribute,
+				and all its children, are omitted from the output
+				document.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>href = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies a URI that is actuated when the
+				element is activated
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>id = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</label>
+<def><p>
+See <loc href="
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+"
+ xlink:show="replace"
+ xlink:actuate="onRequest"
+>
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+</loc>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>rel = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute describes the relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="list-element">
+<head>The <code>&lt;list&gt;</code> element</head>
+<p id="list-content-model">
+
+				This element groups a set of items in a list
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( ( <loc href="#item-element" xlink:show="replace" xlink:actuate="onRequest">item</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )* | <loc href="#repeat-element" xlink:show="replace" xlink:actuate="onRequest">repeat</loc> )
+</code></label><def></def></gitem></glist>
+<p id="list-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="menu-element">
+<head>The <code>&lt;menu&gt;</code> element</head>
+<p id="menu-content-model">
+
+				The menu element represents a navigation list
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? , ( ( <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#item-element" xlink:show="replace" xlink:actuate="onRequest">item</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )* | <loc href="#repeat-element" xlink:show="replace" xlink:actuate="onRequest">repeat</loc> )? )
+</code></label><def></def></gitem></glist>
+<p id="menu-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>buttonlabel = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute indicates the button's label when the
+				control is rendered as a combo box plus button
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>buttonresid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute indicates the button's decorator when the
+				control is rendered as a combo box plus button
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>cacheContent = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute indicates that the content should be
+				cached
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="meta-element">
+<head>The <code>&lt;meta&gt;</code> element</head>
+<p id="meta-content-model">
+
+				The meta element can be used to identify properties of a
+				document (e.g., author, expiration date, a list of key
+				words, etc.) and assign values to those properties.
+			
+</p>
+<p id="meta-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>about = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+This attribute specifies which resource has a specified
+				property
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>content = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the metadata associated with an
+				element. If not specified, then the metadata for an
+				element is its content
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>datatype = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_QName" xlink:show="replace" xlink:actuate="onRequest">QName</loc>
+</label>
+<def><p>
+This attribute defines the datatype of the content
+				metadata of the element. If the attribute is not
+				specified, then the default value is string as defined
+				by [XMLSCHEMA]
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>property = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_QName" xlink:show="replace" xlink:actuate="onRequest">QName</loc>
+</label>
+<def><p>
+This attribute indicates which property is being defined
+				by the element. If it is not specified, the property is
+				reference
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="metadata-element">
+<head>The <code>&lt;metadata&gt;</code> element</head>
+<p id="metadata-content-model">
+
+				Metainformation for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#meta-element" xlink:show="replace" xlink:actuate="onRequest">meta</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="metadata-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="object-element">
+<head>The <code>&lt;object&gt;</code> element</head>
+<p id="object-content-model">
+
+				Object indicates a non-text item for inclusion in the
+				document; this includes images and other media, as well
+				as executable content which require plugins or external
+				applications to process
+			
+</p>
+<p id="object-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>src = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the location of an external
+				source for the contents of the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>standby = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines a text to display while the
+				object is loading
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="output-element">
+<head>The <code>&lt;output&gt;</code> element</head>
+<p id="output-content-model">
+
+				This form control renders a value from the instance
+				data, but provides no means for entering or changing
+				data
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="output-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="p-element">
+<head>The <code>&lt;p&gt;</code> element</head>
+<p id="p-content-model">
+
+				The p element represents a paragraph elements
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#anchor-element" xlink:show="replace" xlink:actuate="onRequest">anchor</loc>* | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#telephonecaller-element" xlink:show="replace" xlink:actuate="onRequest">telephonecaller</loc>* | <loc href="#phonebookadder-element" xlink:show="replace" xlink:actuate="onRequest">phonebookadder</loc>* | <loc href="#smssend-element" xlink:show="replace" xlink:actuate="onRequest">smssend</loc>* | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>* | <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* | <loc href="#l-element" xlink:show="replace" xlink:actuate="onRequest">l</loc>* | <loc href="#range-element" xlink:show="replace" xlink:actuate="onRequest">range</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="p-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="param-element">
+<head>The <code>&lt;param&gt;</code> element</head>
+<p id="param-content-model">
+
+				The param element defines a generic parameter in an
+				IDEAL document
+			
+</p>
+<p id="param-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>name = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+The name attribute indicates the name that will be used
+				for this contact in the phone book
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="phonebookadder-element">
+<head>The <code>&lt;phonebookadder&gt;</code> element</head>
+<p id="phonebookadder-content-model">
+
+				This element allows the user to add phone numbers
+				directly to device's phone book from the browser
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="phonebookadder-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>name = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+The name attribute indicates the name that will be used
+				for this contact in the phone book
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>number = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute represents the telephone number. It must
+				not have any spaces or other characters between the
+				digits and it is recommended to precede it always with
+				the country number
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="placard-element">
+<head>The <code>&lt;placard&gt;</code> element</head>
+<p id="placard-content-model">
+
+				This container presents elements like text, images, etc
+				in a predefined layout
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#trigger-element" xlink:show="replace" xlink:actuate="onRequest">trigger</loc>* | <loc href="#p-element" xlink:show="replace" xlink:actuate="onRequest">p</loc>* | <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>* | <loc href="#figure-element" xlink:show="replace" xlink:actuate="onRequest">figure</loc>* | <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc>* | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>* | <loc href="#range-element" xlink:show="replace" xlink:actuate="onRequest">range</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="placard-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="range-element">
+<head>The <code>&lt;range&gt;</code> element</head>
+<p id="range-content-model">
+
+				This form control allows selection from a sequential
+				range of values
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="range-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>end = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Optional hint for the ending bound for the range
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>incremental = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+When true, this form control will generate additional
+				xforms-value-changed events
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>start = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Optional hint for the lexical starting bound for the
+				range
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>step = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Optional value to use for incrementing or decrementing
+				the value
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>validationtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of validation associated with a UI
+				component
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="repeat-element">
+<head>The <code>&lt;repeat&gt;</code> element</head>
+<p id="repeat-content-model">
+
+				This element defines a UI mapping over a homogeneous
+				collection selected by the nodeset attribute
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#item-element" xlink:show="replace" xlink:actuate="onRequest">item</loc> | <loc href="#a-element" xlink:show="replace" xlink:actuate="onRequest">a</loc> | <loc href="#tr-element" xlink:show="replace" xlink:actuate="onRequest">tr</loc> )
+</code></label><def></def></gitem></glist>
+<p id="repeat-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>nodeset = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a set of nodes on
+				context.
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="reset-element">
+<head>The <code>&lt;reset&gt;</code> element</head>
+<p id="reset-content-model">
+
+				This action initiates reset processing
+			
+</p>
+<p id="reset-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="resources-element">
+<head>The <code>&lt;resources&gt;</code> element</head>
+<p id="resources-content-model">
+
+				Defines links to external resources
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#script-element" xlink:show="replace" xlink:actuate="onRequest">script</loc> | <loc href="#link-element" xlink:show="replace" xlink:actuate="onRequest">link</loc> )
+</code></label><def></def></gitem></glist>
+<p id="resources-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="script-element">
+<head>The <code>&lt;script&gt;</code> element</head>
+<p id="script-content-model">
+
+				An element that it is used to contain information
+				pertaining to event handler implementations, usually
+				defined in a scripting language
+			
+</p>
+<p id="script-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>charset = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the character encoding of the
+				resource designated by the control
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>defer = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( defer )
+</label>
+<def><p>
+User agent may defer execution of script
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>expr = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the expr attribute, and all its
+				child and attribute nodes, are selected for inclusion in
+				the output document. If the expression evaluates to
+				false, then the element containing the expr attribute,
+				and all its children, are omitted from the output
+				document.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>id = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</label>
+<def><p>
+See <loc href="
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+"
+ xlink:show="replace"
+ xlink:actuate="onRequest"
+>
+http://www.w3.org/TR/2005/REC-xml-id-20050909/
+</loc>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>module = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+( http://morfeo-project.org/mymobileweb/modules#DCCI | http://morfeo-project.org/mymobileweb/modules#Orientation | http://morfeo-project.org/mymobileweb/modules#Location | http://morfeo-project.org/mymobileweb/modules#Autocompletion | http://morfeo-project.org/mymobileweb/modules#Recommendation | http://morfeo-project.org/mymobileweb/modules#Debug )
+</label>
+<def><p>
+This attribute indicates that a module should be loaded
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>src = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the location of an external
+				source for the contents of the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="secret-element">
+<head>The <code>&lt;secret&gt;</code> element</head>
+<p id="secret-content-model">
+
+				This form control enables free-form data entry
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="secret-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>about-class = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the relationship between the control and a
+				class defined in an ontology for annotatating
+				semantically
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>about-prop = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the relationship between the control and a
+				property defined in an ontology for annotating
+				semantically
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>recommendations = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+Indicates that the recommendation module is required
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>recommendationsURI = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+Indicates the URI of the service provides
+				recommendations
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>validationtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of validation associated with a UI
+				component
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="section-element">
+<head>The <code>&lt;section&gt;</code> element</head>
+<p id="section-content-model">
+
+				The section element defines document's or application's
+				section. Particularly, in conjunction with the h
+				element, offers a mechanism for structuring documents
+				into sections. This element defines content to be
+				block-level but imposes no other presentational idioms
+				on the content, which may otherwise be controlled from a
+				style sheet
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc> , ( <loc href="#section-element" xlink:show="replace" xlink:actuate="onRequest">section</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+ ) | ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc> | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc> | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc> ) , ( <loc href="#div-element" xlink:show="replace" xlink:actuate="onRequest">div</loc>+ | <loc href="#include-element" xlink:show="replace" xlink:actuate="onRequest">include</loc>* | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc>* )+
+</code></label><def></def></gitem></glist>
+<p id="section-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>newcontext = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute specifies if the form should be deleted
+				before navigate to it (only for WAP)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="select-element">
+<head>The <code>&lt;select&gt;</code> element</head>
+<p id="select-content-model">
+
+				This form control allows the user to make selections
+				from a set of items
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? , ( ( <loc href="#item-element" xlink:show="replace" xlink:actuate="onRequest">item</loc> | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc> )* | <loc href="#repeat-element" xlink:show="replace" xlink:actuate="onRequest">repeat</loc> )? )
+</code></label><def></def></gitem></glist>
+<p id="select-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="select1-element">
+<head>The <code>&lt;select1&gt;</code> element</head>
+<p id="select1-content-model">
+
+				This form control allows the user to make selections
+				from a set of items
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? , ( ( <loc href="#item-element" xlink:show="replace" xlink:actuate="onRequest">item</loc> | <loc href="#separator-element" xlink:show="replace" xlink:actuate="onRequest">separator</loc> )* | <loc href="#repeat-element" xlink:show="replace" xlink:actuate="onRequest">repeat</loc> )? )
+</code></label><def></def></gitem></glist>
+<p id="select1-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="separator-element">
+<head>The <code>&lt;separator&gt;</code> element</head>
+<p id="separator-content-model">
+
+				The separator element separates parts of the document
+				from each other
+			
+</p>
+<p id="separator-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="smssend-element">
+<head>The <code>&lt;smssend&gt;</code> element</head>
+<p id="smssend-content-model">
+
+				This element allows the user to send sms by mobile
+				operators directly from the browser
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="smssend-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>number = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute represents the telephone number. It must
+				not have any spaces or other characters between the
+				digits and it is recommended to precede it always with
+				the country number
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="span-element">
+<head>The <code>&lt;span&gt;</code> element</head>
+<p id="span-content-model">
+
+				The span element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				structure to documents or text.
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="span-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="submit-element">
+<head>The <code>&lt;submit&gt;</code> element</head>
+<p id="submit-content-model">
+
+				This element represents a submission
+			
+</p>
+<p id="submit-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>principal = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#boolean" xlink:show="replace" xlink:actuate="onRequest">boolean</loc>
+</label>
+<def><p>
+This attribute indicates whether submit is the principal
+				of the body in which it is located (the devices that
+				support this attribute will have quick access to this
+				action)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="table-element">
+<head>The <code>&lt;table&gt;</code> element</head>
+<p id="table-content-model">
+
+				The table element contains all other elements that
+				specify the content for a table
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#th-element" xlink:show="replace" xlink:actuate="onRequest">th</loc>? , <loc href="#repeat-element" xlink:show="replace" xlink:actuate="onRequest">repeat</loc>? , <loc href="#tr-element" xlink:show="replace" xlink:actuate="onRequest">tr</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="table-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>decstyles = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Declaration of classes (separated by commas) that can
+				appear in the class of the data located in the context.
+				Any class that is dynamically loaded should be declared
+				in this attribute
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="td-element">
+<head>The <code>&lt;td&gt;</code> element</head>
+<p id="td-content-model">
+
+				At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA | <loc href="#output-element" xlink:show="replace" xlink:actuate="onRequest">output</loc>? | <loc href="#span-element" xlink:show="replace" xlink:actuate="onRequest">span</loc>* | <loc href="#image-element" xlink:show="replace" xlink:actuate="onRequest">image</loc>* | <loc href="#p-element" xlink:show="replace" xlink:actuate="onRequest">p</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="td-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>class = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>display = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the display attribute, and all
+				its child and attribute nodes, are displayed. If the
+				expression evaluates to false, then the element
+				containing the display attribute, and all its children,
+				are not displayed.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>expr = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the expr attribute, and all its
+				child and attribute nodes, are selected for inclusion in
+				the output document. If the expression evaluates to
+				false, then the element containing the expr attribute,
+				and all its children, are omitted from the output
+				document.
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>repeat-nodeset = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Contains the expression that indicates the source data
+				to the repeatig structure
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>role = <loc href="http://www.w3.org/TR/curie/#s_schema" xlink:show="replace" xlink:actuate="onRequest">CURIEs</loc>
+</label>
+<def><p>
+See <loc href="
+http://www.w3.org/TR/xhtml-role
+"
+ xlink:show="replace"
+ xlink:actuate="onRequest"
+>
+http://www.w3.org/TR/xhtml-role
+</loc>
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="telephonecaller-element">
+<head>The <code>&lt;telephonecaller&gt;</code> element</head>
+<p id="telephonecaller-content-model">
+
+				This element allows the user to make phone calls
+				directly from device's browser
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="telephonecaller-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>cti = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute (Computer Telephony Integration) allows
+				interactions between the phone and a computer, including
+				pauses and user actions. This is usually useful for
+				voice services, or to make a phone call through a phone
+				switchboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>number = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute represents the telephone number. It must
+				not have any spaces or other characters between the
+				digits and it is recommended to precede it always with
+				the country number
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="textarea-element">
+<head>The <code>&lt;textarea&gt;</code> element</head>
+<p id="textarea-content-model">
+
+				This form control enables free-form data entry and is
+				intended for use in entering multiline content
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA | <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="textarea-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>bindingtype = <loc href="http://files.morfeo-project.org/mymobileweb/public/specs/ideal2/#ListTypes" xlink:show="replace" xlink:actuate="onRequest">listTypes</loc>
+</label>
+<def><p>
+Indicates the type of the datum on which user's input
+				will be stored
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="th-element">
+<head>The <code>&lt;th&gt;</code> element</head>
+<p id="th-content-model">
+
+				The th element groups columns heading where authors can
+				specify selection conditions or style information for a
+				whole column in a table
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#td-element" xlink:show="replace" xlink:actuate="onRequest">td</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="th-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="tr-element">
+<head>The <code>&lt;tr&gt;</code> element</head>
+<p id="tr-content-model">
+
+				At least one is mandatory within a table. The tr
+				elements acts as a container for a row of table cells
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#td-element" xlink:show="replace" xlink:actuate="onRequest">td</loc>* )
+</code></label><def></def></gitem></glist>
+<p id="tr-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="trigger-element">
+<head>The <code>&lt;trigger&gt;</code> element</head>
+<p id="trigger-content-model">
+
+				This element allows for user-triggered actions
+			
+</p>
+<p id="trigger-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>resourceid = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Decorator should be shown nearer the element
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>value = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the value that is sent as
+				parameter on the request when the control is activated
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="ui-element">
+<head>The <code>&lt;ui&gt;</code> element</head>
+<p id="ui-content-model">
+
+				The user interface (ui) module for IDEAL document
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#body-element" xlink:show="replace" xlink:actuate="onRequest">body</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="ui-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="upload-element">
+<head>The <code>&lt;upload&gt;</code> element</head>
+<p id="upload-content-model">
+
+				This form control enables the common feature found on
+				Web sites to upload a file from the local file system
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#label-element" xlink:show="replace" xlink:actuate="onRequest">label</loc>? )
+</code></label><def></def></gitem></glist>
+<p id="upload-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>The <loc href="#Common_attributes-def" xlink:show='replace' xlink:actuate='onRequest'>
+Common Attributes
+</loc></label><def><p>
+</p></def></gitem></glist>
+<glist role="attrDef"><gitem>
+<label>accesskey = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Allows an user to immediately jump to a specific part of
+				the document via the keyboard
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>beantype = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Indicates the type of object which will be the container
+				of user's input (Map by default)
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>buttonlabel = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute indicates the button's label when the
+				control is rendered as a combo box plus button
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ref = <loc href="http://www.w3.org/TR/xmlschema-2/#dt-anySimpleType" xlink:show="replace" xlink:actuate="onRequest">anySimpleType</loc>
+</label>
+<def><p>
+Binding expression interpreted as a node on context
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>size = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+Max size in 'bytes' allowed for the uploaded file
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>title = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute defines meta-information about the
+				element on which it is set
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>type = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</label>
+<def><p>
+This attribute specifies the allowable content types of
+				the relevant href URI
+</p></def>
+</gitem></glist>
+</div2>
+<div2 id="value-element">
+<head>The <code>&lt;value&gt;</code> element</head>
+<p id="value-content-model">
+
+				This element provides a storage value to be used when an
+				item is selected
+			
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( PCDATA )*
+</code></label><def></def></gitem></glist>
+<p id="value-attributes"><emph>Attributes</emph></p>
+</div2>
+<div2 id="xforms_model-element">
+<head>The <code>&lt;xforms:model&gt;</code> element</head>
+<p id="xforms_model-content-model">
+</p>
+<p><emph>Content Model</emph></p>
+<glist role="contentDef">
+<gitem><label><code>
+( <loc href="#XForms-Action-Module-Extension" xlink:show="replace" xlink:actuate="onRequest">Action</loc> )
+</code></label><def></def></gitem></glist>
+<p id="xforms_model-attributes"><emph>Attributes</emph></p>
+<glist role="attrDef"><gitem>
+<label>ev:defaultAction = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( cancel | perform )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:phase = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( capture | default )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:propagate = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+( stop | continue )
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>functions = <loc href="http://www.w3.org/TR/2007/CR-cselection-20070725/#sec-sel-functions-attribute" xlink:show="replace" xlink:actuate="onRequest">QNameList</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>id = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:event = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKEN" xlink:show="replace" xlink:actuate="onRequest">NMTOKEN</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:handler = <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:observer = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>ev:target = <loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>schema =  List of <loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI" xlink:show="replace" xlink:actuate="onRequest">anyURI</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<glist role="attrDef"><gitem>
+<label>version = <loc href="http://www.w3.org/TR/xforms/#def-versionList" xlink:show="replace" xlink:actuate="onRequest">versionList</loc>
+</label>
+<def><p>
+</p></def>
+</gitem></glist>
+<p id="xforms_model-external-content-model">
+View definition of this element is on <loc href='http://www.w3.org/TR/2007/REC-xforms-20071029/#structure-model'  xlink:show='replace' xlink:actuate='onRequest'>xforms:model</loc></p></div2>
+</div1>

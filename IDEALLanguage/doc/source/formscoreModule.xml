@@ -1,0 +1,31 @@
+<div4 id="Forms_Core_Module-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Forms Core Module</head>
+<p>All content sets and elements/attributes of 
+<loc href="" xlink:show="replace" xlink:actuate="onRequest">XForms Core Module</loc>
+ are mandatory and extended with the	following elements:	</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;data&gt;</td>
+<td>Represents data stored in the application context.</td>
+<td>
+<loc href="#data-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#data-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>

@@ -1,0 +1,16 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Forms Core Module" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>
+		</documentation>
+		<elements>
+			<element name="data" docName="data-content-model"/>
+		</elements>
+		<extends name="XForms Core Module" docName="http://www.w3.org/TR/xforms/#structure-abstract"/>
+	</module>
+</module_desc>

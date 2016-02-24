@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec [
+    <!ENTITY Elements SYSTEM "Elements.xml">	
+	<!ENTITY Modules	SYSTEM "Modules.xml">	
+	<!ENTITY Copyright SYSTEM "Copyright.xml">	
+    <!ENTITY % entities SYSTEM "doc-entities.dtd">
+    
+	<!ENTITY idealModule		SYSTEM "idealModule.xml">	
+	<!ENTITY uiModule		SYSTEM "uiModule.xml">	
+	<!ENTITY metaModule		SYSTEM "metaModule.xml">	
+	<!ENTITY xhtmlroleModule	SYSTEM "xhtmlroleModule.xml">	
+	<!ENTITY xhtmlaccessModule	SYSTEM "xhtmlaccessModule.xml">	
+	
+	<!ENTITY linkModule		SYSTEM "linkModule.xml">	
+	<!ENTITY scriptModule		SYSTEM "scriptModule.xml">	
+	<!ENTITY formattingModule	SYSTEM "formattingModule.xml">	
+	<!ENTITY validationModule	SYSTEM "validationModule.xml">	
+	
+	<!ENTITY uistructureModule		SYSTEM "uistructureModule.xml">
+	
+	<!ENTITY listModule		SYSTEM "listModule.xml">	
+	<!ENTITY textModule		SYSTEM "textModule.xml">	
+	<!ENTITY objectModule		SYSTEM "objectModule.xml">	
+	<!ENTITY tablesModule		SYSTEM "tablesModule.xml">
+	<!ENTITY formscoreModule	SYSTEM "formscoreModule.xml">	
+	<!ENTITY formscontrolsModule	SYSTEM "formscontrolsModule.xml">	
+	
+	<!ENTITY eventsModule			SYSTEM "eventsModule.xml">		
+	<!ENTITY formsActionModule		SYSTEM "formsActionModule.xml">		
+	<!ENTITY selectionModule		SYSTEM "selectionModule.xml">		
+	<!ENTITY commonAttributesModule		SYSTEM "commonAttributesModule.xml">
+	<!ENTITY uiCommonAttributesModule	SYSTEM "uiCommonAttributesModule.xml">
+	<!ENTITY embeddingAttributesModule	SYSTEM "embeddingAttributesModule.xml">
+	<!ENTITY hypertextAttributesModule	SYSTEM "hypertextAttributesModule.xml">
+	<!ENTITY repeatAttributesModule		SYSTEM "repeatAttributesModule.xml">
+	
+	<!ENTITY singleNodeBindingAttributesModule		SYSTEM "singleNodeBindingAttributesModule.xml">
+	<!ENTITY nodeSetBindingAttributesModule			SYSTEM "nodeSetBindingAttributesModule.xml">
+	<!ENTITY modelItemPropertyAttributesModule		SYSTEM "modelItemPropertyAttributesModule.xml">
+	
+    <!ENTITY % entities SYSTEM "doc-entities.dtd">
+    
+    %entities;
+]>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\MyMobileWebUtil\XMLSpec\xmlspec.xsd"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<header>
+		<title>IDEAL</title>
+		<subtitle>Core Language</subtitle>
+		<w3c-designation />
+		<w3c-doctype>Working Draft</w3c-doctype>
+		<pubdate>
+			<day>&doc.day;
+			</day>
+			<month>&doc.month;
+			</month>
+			<year>&doc.year;
+			</year>
+		</pubdate>
+		<publoc>
+			<loc href="&url.thisversion;" xlink:show="replace" xlink:actuate="onRequest">&url.thisversion;
+			</loc>
+		</publoc>
+		<latestloc>
+			<loc href="&url.latestversion;" xlink:show="replace" xlink:actuate="onRequest">&url.latestversion;
+			</loc>
+		</latestloc>
+		<prevlocs>
+			<loc href="&url.prevversion;" xlink:show="replace" xlink:actuate="onRequest">&url.prevversion;
+			</loc>
+		</prevlocs>
+		<authlist>
+			<author>
+				<name>José Manuel Cantera Fonseca</name>
+				<affiliation>Telefónica I+D</affiliation>
+				<email role="editor" href="mailto:jmcf@tid.es" xlink:show="new" xlink:actuate="onRequest">
+					jmcf@tid.es
+				</email>
+			</author>
+			<author>
+				<name>José Luis Díaz Díaz</name>
+				<affiliation>Telefónica I+D</affiliation>
+				<email role="editor" href="mailto:joseld@tid.es" xlink:show="new" xlink:actuate="onRequest">
+					joseld@tid.es
+				</email>
+			</author>
+			<author>
+				<name>Cristian Rodríguez de la Cruz</name>
+				<affiliation>Telefónica I+D</affiliation>
+				<email role="editor" href="mailto:crdlc@tid.es" xlink:show="new" xlink:actuate="onRequest">
+					crdlc@tid.es
+				</email>
+			</author>
+		</authlist>
+					&Copyright;
+		<abstract>
+		<p>
+				This specification defines the IDEAL Core Language which it is a markup language for authoring web applications and contents targeted to multiple Delivery Contexts.			
+			</p>
+		</abstract>
+		<status>
+			<p>
+				<emph role="strong">This is a work in progress!</emph>
+				This document is changing on a daily if not hourly basis
+				in response to comments and as a general part of its
+				development process. Comments are very welcome, please
+				send them to
+				<loc
+					href="mailto:mymobileweb-develop@lists.morfeo-project.org" xlink:show="replace" xlink:actuate="onRequest">
+					mymobileweb-develop@lists.morfeo-project.org
+				</loc>
+				. Thank you.
+			</p>
+		</status>
+		<langusage>
+			<language id="EN">[LANGUAGE]</language>
+		</langusage>
+		<revisiondesc>
+			<p>[REVERSION INFORMATION]</p>
+		</revisiondesc>
+	</header>
+	<body>
+		<div1 id="introduction">
+			<head>Introduction</head>
+			<div2>
+				<head>Reading the Specification</head>
+				<p />
+				<div3>
+					<head>Recommended reading</head>
+					<p>This section is informative.</p>
+					<p>
+						It is recommended to read at least the XForms and XMLEvents specifications before reading this specification.
+					</p>
+				</div3>
+				<div3>
+					<head>Definition of terms used</head>
+					<p>
+						Terms used in this document, and others related
+						to device independence, are collected in the
+						Glossary of Terms for Device Independence[DI
+						Glossary]. A link is provided to the Glossary
+						definition when a term is first used in this
+						document.
+					</p>
+				</div3>
+			</div2>
+			<div2>
+				<head>How the Specification is Organized</head>
+				<p>					
+				</p>
+			</div2>
+			<div2>
+				<head>Documentation Conventions</head>
+				<p />
+				<div3>
+					<head>XML namespace bindings</head>
+					<p>
+						The following namespace prefixes and
+						corresponding namespace identifiers are used in
+						this document:
+					</p>
+					<table border='1' cellpadding='3' width='100%'>
+						<thead>
+							<tr>
+								<th>Prefix</th>
+								<th>Namespace URI</th>
+								<th>Usage</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr valign='middle'>
+								<td>None</td>
+								<td>
+									http://www.morfeo-project.org/2009/ideal
+								</td>
+								<td>
+									Elements without any prefix are
+									bound to the default namespace.
+								</td>
+							</tr>
+							<tr valign='middle'>
+								<td>xforms:</td>
+								<td>http://www.w3.org/2002/xforms</td>
+								<td>
+									Refers to items from the XForms
+									vocabulary
+									<bibref ref="XForms" />
+								</td>
+							</tr>
+							<tr valign='middle'>
+								<td>sel:</td>
+								<td>
+									http://www.w3.org/2004/06/diselect
+								</td>
+								<td>
+									Refers to items from the DISelect
+									vocabulary
+									<bibref ref="DISelect" />
+								</td>
+							</tr>
+							<tr valign='middle'>
+								<td>ev:</td>
+								<td>
+									http://www.w3.org/2001/xml-events
+								</td>
+								<td>
+									Refers to items from the XML Events
+									vocabulary
+									<bibref ref="XML-Events" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div3>
+			</div2>
+		</div1>
+		<div1 id="conformance">
+			<head>Conformance</head>
+		</div1>
+					&Modules;
+					&Elements;
+		
+	</body>
+	<back>
+		<inform-div1>
+			<head>References</head>
+			<div2>
+				<head>Normative References</head>
+				<blist>
+					<bibl key="IETF RFC 2119" id="ref-rfc2119"
+						href="http://www.ietf.org/rfc/rfc2119.txt" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.ietf.org/rfc/rfc2119.txt" xlink:show="new" xlink:actuate="onRequest">
+							RFC 2119: Key words for use in RFCs to
+							Indicate Requirement Levels
+						</titleref>
+						Internet Engineering Task Force, 1997.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XMLID" id="XMLID"
+						href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:show="new" xlink:actuate="onRequest">
+							xml:id Version 1.0
+						</titleref>
+						J. Marsh et al., W3C Recommendation, 9 September
+						2005
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XHTML Access Module"
+						id="XHTML-Access-Module"
+						href="http://www.w3.org/TR/2008/WD-xhtml-access-20080526" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2008/WD-xhtml-access-20080526" xlink:show="new" xlink:actuate="onRequest">
+							XHTML Access Module
+						</titleref>
+						Mark Birbeck et al., W3C Working Draft, 26 May
+						2008.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XHTML Role Attribute Module"
+						id="XHTML-Role-Attribute-Module"
+						href="http://www.w3.org/TR/2008/WD-xhtml-role-20080407" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2008/WD-xhtml-role-20080407" xlink:show="new" xlink:actuate="onRequest">
+							XHTML Role Attribute Module
+						</titleref>
+						Mark Birbeck et al., W3C Working Draft, 7 April
+						2008.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="DISelect" id="DISelect"
+						href="http://www.w3.org/TR/2005/WD-cselection-20050502/" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2005/WD-cselection-20050502/" xlink:show="new" xlink:actuate="onRequest">
+							Content Selection for Device Independence
+							(DISelect) 1.0
+						</titleref>
+						R. Lewis et al., W3C Candidate Recommendation,
+						25 July 2007.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XHTML Modularization"
+						id="XHTML-Modularization"
+						href="http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213/" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213/" xlink:show="new" xlink:actuate="onRequest">
+							Modularization of XHTML
+						</titleref>
+						M. Altheim et al., W3C Recommendation, 13
+						February 2006.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XML Events" id="XML-Events"
+						href="http://www.w3.org/TR/2003/REC-xml-events-20031014/" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2003/REC-xml-events-20031014/" xlink:show="new" xlink:actuate="onRequest">
+							XML Events
+						</titleref>
+						Shane McCarron et al., W3C Recommendation, 14
+						October 2003.
+					</bibl>
+				</blist>
+				<blist>
+					<bibl key="XForms" id="XForms"
+						href="http://www.w3.org/TR/2007/REC-xforms-20071029/" xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2007/REC-xforms-20071029/" xlink:show="new" xlink:actuate="onRequest">
+							XForms 1.0 (Third edition)
+						</titleref>
+						John M. Boyer et al., W3C Recommendation, 29
+						October 2007.
+					</bibl>
+				</blist>
+			</div2>
+			<div2>
+				<head>Informative References</head>
+				<blist>
+					<bibl id="ref-dial" key="DIAL"
+						href="http://www.w3.org/TR/dial/"  xlink:show="replace" xlink:actuate="onRequest">
+						<titleref href="http://www.w3.org/TR/dial/" xlink:show="new" xlink:actuate="onRequest">
+							Device Independent Authoring Language (DIAL)
+						</titleref>
+						Kevin Smith, Vodafone Group, 2007. W3C Working
+						Draft
+					</bibl>
+					<bibl id="ref-xhtml1" key="XHTML11"
+						href="http://www.w3.org/TR/xhtml11/"  xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/xhtml11/"  xlink:show="new" xlink:actuate="onRequest">
+							XHTML™ 1.1 - Module-based XHTML
+						</titleref>
+						Shane McCarron, Applied Testing and Technology,
+						Inc. and Masayasu Ishikawa, W3C, 2007. W3C
+						Working Draft
+					</bibl>
+					<bibl id="RDFaPrimer" key="RDFaPrimer"
+						href="http://www.w3.org/TR/2008/WD-xhtml-rdfa-primer-20080620/"  xlink:show="replace" xlink:actuate="onRequest">
+						<titleref
+							href="http://www.w3.org/TR/2008/WD-xhtml-rdfa-primer-20080620/" xlink:show="new" xlink:actuate="onRequest">
+							RDF Primer
+						</titleref>
+						W3C Working Draft, Ben Adida et al., 20 June
+						2008
+					</bibl>
+				</blist>
+			</div2>
+		</inform-div1>
+		<inform-div1 id="changes-this-version">
+			<head>Changes in this version</head>
+			<ulist>
+				<item>
+					<p>changelog</p>
+				</item>
+			</ulist>
+		</inform-div1>
+		<inform-div1 id="acknowledgements">
+			<head>Acknowledgements</head>
+			<p>
+				This document was produced with the participation of the
+				MyMobileWeb project Consortium:
+			</p>
+			<p>
+				The editors wish to acknowledge the specific written
+				contributions of:
+			</p>
+			<orglist>
+				<member>
+					<name>xxx, Telefónica I+D</name>
+				</member>
+			</orglist>
+		</inform-div1>
+	</back>
+</spec>

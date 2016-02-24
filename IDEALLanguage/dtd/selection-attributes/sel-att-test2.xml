@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html SYSTEM "xhtml-selection-attribs-1.dtd"
+[
+<!ENTITY % SELATTRIBUTES..prefixed "INCLUDE" >
+<!ENTITY % SELATTRIBUTES.prefix "sel" >
+]
+>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sel="http://www.w3.org/2005/sel" >
+
+	<head sel:expr="a">
+		<title/>
+	</head>
+	<body/>
+</html>

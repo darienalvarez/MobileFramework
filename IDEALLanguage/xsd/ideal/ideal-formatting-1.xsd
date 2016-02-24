@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Formatting for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- formatter element -->
+	<xs:attributeGroup name="ideal.formatter.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="handler"/>
+		<xs:attribute ref="locale"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.formatter.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.formatter.type">
+		<xs:annotation>
+			<xs:documentation>
+				The formatter element allows developers to create custom
+				formatters for formatting the data.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.formatter.content"/>
+		<xs:attributeGroup ref="ideal.formatter.attlist"/>
+	</xs:complexType>
+	<xs:element name="formatter" type="ideal.formatter.type"/>
+	<!-- end formatter element -->
+	<!-- stringFormatter element -->
+	<xs:attributeGroup name="ideal.stringFormatter.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.stringFormatter.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.stringFormatter.type">
+		<xs:annotation>
+			<xs:documentation>
+				The formatter can be used to format a string into other
+				according to specified format.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.stringFormatter.content"/>
+		<xs:attributeGroup ref="ideal.stringFormatter.attlist"/>
+	</xs:complexType>
+	<xs:element name="stringFormatter" type="ideal.stringFormatter.type"/>
+	<!-- end stringFormatter element -->
+	<!-- numberFormatter element -->
+	<xs:attributeGroup name="ideal.numberFormatter.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern"/>
+		<xs:attribute ref="locale"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.numberFormatter.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.numberFormatter.type">
+		<xs:annotation>
+			<xs:documentation>
+				This formatter can be used to format a number into other
+				number according to the specified format.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.numberFormatter.content"/>
+		<xs:attributeGroup ref="ideal.numberFormatter.attlist"/>
+	</xs:complexType>
+	<xs:element name="numberFormatter" type="ideal.numberFormatter.type"/>
+	<!-- end numberFormatter element -->
+	<!-- currencyFormatter element -->
+	<xs:attributeGroup name="ideal.currencyFormatter.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern"/>
+		<xs:attribute ref="locale"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.currencyFormatter.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.currencyFormatter.type">
+		<xs:annotation>
+			<xs:documentation>
+				This formatter can be used to format a number into a
+				currency string.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.currencyFormatter.content"/>
+		<xs:attributeGroup ref="ideal.currencyFormatter.attlist"/>
+	</xs:complexType>
+	<xs:element name="currencyFormatter" type="ideal.currencyFormatter.type"/>
+	<!-- end currencyFormatter element -->
+	<!-- dateTimeFormatter element -->
+	<xs:attributeGroup name="ideal.dateTimeFormatter.attlist">
+		<xs:attribute ref="xml:id"/>
+		<xs:attribute ref="pattern"/>
+		<xs:attribute ref="locale"/>
+		<xs:attribute ref="timeZone"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.dateTimeFormatter.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:complexType name="ideal.dateTimeFormatter.type">
+		<xs:annotation>
+			<xs:documentation>
+				This formatter can be used to format a date or time into
+				other according to specified format. The
+				dateTimeFormatter also accepts dates in ISO 8601 Date
+				and Time Formats. See
+				http://www.w3.org/TR/xmlschema-2/#isoformats
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.dateTimeFormatter.content"/>
+		<xs:attributeGroup ref="ideal.dateTimeFormatter.attlist"/>
+	</xs:complexType>
+	<xs:element name="dateTimeFormatter" type="ideal.dateTimeFormatter.type"/>
+	<!-- end dateTimeFormatter element -->
+</xs:schema>

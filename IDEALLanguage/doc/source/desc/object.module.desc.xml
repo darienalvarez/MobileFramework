@@ -1,0 +1,16 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Object" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>Provides elements for general-purpose object inclusion; this includes images and other media, as well as executable content. 
+		</documentation>
+		<elements>
+			<element name="object" docName="object-content-model"/>
+			<element name="param" docName="param-content-model"/>
+		</elements>		
+	</module>
+</module_desc>

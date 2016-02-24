@@ -1,0 +1,82 @@
+<div2 id="Common_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Common Attributes</head>
+<p> The following attributes are common to all elements in IDEAL
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>id</td>
+<td>See http://www.w3.org/TR/2005/REC-xml-id-20050909</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ID" xlink:show="replace" xlink:actuate="onRequest">ID</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>class</td>
+<td>This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.</td>
+<td>
+<loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>role</td>
+<td>The attribute describes the role(s) the current element plays in the context of the document. This can be used, for example, by applications and assistive technologies to determine the purpose of an element. This could allow a user to make informed decisions on which actions may be taken on an element and activate the selected action in a device independent way. It could also be used as a mechanism for annotating portions of a document in a domain specific way (e.g., a legal term taxonomy).</td>
+<td>
+<loc href="http://www.w3.org/TR/curie/#s_schema" xlink:show="replace" xlink:actuate="onRequest">CURIEs</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>display</td>
+<td>This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the display attribute, and all
+				its child and attribute nodes, are displayed. If the
+				expression evaluates to false, then the element
+				containing the display attribute, and all its children,
+				are not displayed.</td>
+<td>
+<loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>expr</td>
+<td>This attribute may be included in any element in the
+				document. Its value is a boolean expression. This
+				expression may be evaluated by the server, client, or
+				other adaptation layer: if it evaluates to 'true' then
+				the element containing the expr attribute, and all its
+				child and attribute nodes, are selected for inclusion in
+				the output document. If the expression evaluates to
+				false, then the element containing the expr attribute,
+				and all its children, are omitted from the output
+				document.</td>
+<td>
+<loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>repeat-nodeset</td>
+<td>Contains the expression that indicates the source data
+				to the repeatig structure</td>
+<td>
+<loc href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#string" xlink:show="replace" xlink:actuate="onRequest">string</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

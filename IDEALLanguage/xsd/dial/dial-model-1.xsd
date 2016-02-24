@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema.xsd" />
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema-extra.xsd" />		
+	<xs:include schemaLocation="dial-text-1.xsd" />
+	<xs:include schemaLocation="dial-list-1.xsd" />
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema module of common content models for
+			DIAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			This module describes the groupings of elements/attributes
+			that make up common content models for DIAL elements.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:group name="dial.Text.class">
+		<xs:choice>
+			<xs:element ref="abbr" />
+			<xs:element ref="cite" />
+			<xs:element ref="code" />
+			<xs:element ref="dfn" />
+			<xs:element ref="em" />
+			<xs:element ref="kbd" />
+			<xs:element ref="l" />
+			<xs:element ref="q" />
+			<xs:element ref="samp" />
+			<xs:element ref="span" />
+			<xs:element ref="strong" />
+			<xs:element ref="sub" />
+			<xs:element ref="sup" />
+			<xs:element ref="var" />
+		</xs:choice>
+	</xs:group>
+	<xs:group name="dial.NavigationList.extra">
+		<xs:sequence />
+	</xs:group>
+	<xs:group name="dial.NavigationList.class">
+		<xs:choice>
+			<xs:element ref="nl" />
+			<xs:group ref="dial.NavigationList.extra" />
+		</xs:choice>
+	</xs:group>
+	<xs:group name="dial.List.class">
+		<xs:choice>
+			<xs:element ref="ol" />
+			<xs:element ref="ul" />
+			<xs:element ref="dl" />
+		</xs:choice>
+	</xs:group>
+	<!-- LABEL Element -->
+	<xs:attributeGroup name="dial.label.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.label.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.label.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Label element is used to display information
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.label.content" />
+		<xs:attributeGroup ref="dial.label.attlist" />
+	</xs:complexType>
+	<xs:element name="label" type="dial.label.type" />
+	<!-- end LABEL Element -->
+	<xs:group name="XForm.Controls.class">
+		<xs:choice>
+			<xs:element ref="xforms:input" />
+			<xs:element ref="xforms:textarea" />
+			<xs:element ref="xforms:secret" />
+			<xs:element ref="xforms:output" />
+			<xs:element ref="xforms:upload" />
+			<xs:element ref="xforms:select1" />
+			<xs:element ref="xforms:select" />
+			<xs:element ref="xforms:range" />
+			<xs:element ref="xforms:submit" />
+			<xs:element ref="xforms:trigger" />
+		</xs:choice>
+	</xs:group>
+	<xs:group name="XForm.UIInline.class">
+		<xs:choice>
+			<xs:element ref="xforms:output" />
+		</xs:choice>
+	</xs:group>
+	<xs:group name="header.class">
+		<xs:sequence />
+	</xs:group>
+	<xs:group name="footer.class">
+		<xs:sequence />
+	</xs:group>
+	<xs:group name="dial.section.extra">
+		<xs:sequence />
+	</xs:group>
+	<xs:group name="dial.div.extra">
+		<xs:sequence />
+	</xs:group>	
+</xs:schema>

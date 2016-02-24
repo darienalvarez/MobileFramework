@@ -1,0 +1,49 @@
+<div2 id="Repeat_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Repeat Attributes</head>
+<p> This collection enables the creation of user interfaces for populating repeating structures. 
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>xforms:repeat-model</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2007/REC-xforms-20071029/#ui.repeat.via.attrs" xlink:show="replace" xlink:actuate="onRequest">See xforms:repeat-model attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:repeat-bind</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2007/REC-xforms-20071029/#ui.repeat.via.attrs" xlink:show="replace" xlink:actuate="onRequest">See xforms:repeat-bind attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:repeat-nodeset</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2007/REC-xforms-20071029/#ui.repeat.via.attrs" xlink:show="replace" xlink:actuate="onRequest">See xforms:repeat-nodeset attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:repeat-startindex</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2007/REC-xforms-20071029/#ui.repeat.via.attrs" xlink:show="replace" xlink:actuate="onRequest">See xforms:repeat-startindex attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>xforms:repeat-number</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/2007/REC-xforms-20071029/#ui.repeat.via.attrs" xlink:show="replace" xlink:actuate="onRequest">See xforms:repeat-number attribute</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

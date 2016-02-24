@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<windows id="123" title="windows1" backgroundColor="red" >
+<edit id="edit1" >mi texto</edit>
+<edit id="edit2" >mi texto2</edit>
+<button id="b1" background="azul" >Boton1</button>
+<checkbox id="check1" selected="true" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</checkbox>
+<combobox id="combo1" label="Combo_Label" selected="true" style="combo" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</combobox>
+<label id="l1" >labelText</label>
+<linkbutton id="link1" ref="boton:pagina1" >linkButton</linkbutton>
+<listbox id="list1" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</listbox>
+<textbox id="text1" >este es un textbox</textbox>
+<table id="mitabla" >
+<row background="red" >
+<column >columna1</column>
+<column >columna2</column>
+</row>
+<row background="red" >
+<column >columna1</column>
+<column >columna2</column>
+</row>
+<row background="red" >
+<column >columna1</column>
+<column >columna2</column>
+</row>
+</table>
+<horizontallayout id="mi layout" >
+<edit id="edit2" >mi texto2</edit>
+<button id="b1" background="azul" >Boton1</button>
+<checkbox id="check1" selected="true" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</checkbox>
+<combobox id="combo1" label="Combo_Label" selected="true" style="combo" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</combobox>
+<label id="l1" >labelText</label>
+<linkbutton id="link1" ref="boton:pagina1" >linkButton</linkbutton>
+<listbox id="list1" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</listbox>
+<textbox id="text1" >este es un textbox</textbox>
+<error id="error1">tremendo palo</error>
+</horizontallayout>
+<verticallayout id="mi layout" >
+<edit id="edit2" >mi texto2</edit>
+<button id="b1" background="azul" >Boton1</button>
+<checkbox id="check1" selected="true" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</checkbox>
+<combobox id="combo1" label="Combo_Label" selected="true" style="combo" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</combobox>
+<label id="l1" >labelText</label>
+<linkbutton id="link1" ref="boton:pagina1" >linkButton</linkbutton>
+<listbox id="list1" >
+<option selected="true" value="value1" >opcion1</option>
+<option value="value2" >opcion2</option>
+<option value="value3" >opcion3</option>
+<option value="value4" >opcion4</option>
+</listbox>
+<textbox id="text1" >este es un textbox</textbox>
+</verticallayout>
+</windows>

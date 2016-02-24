@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Altova XMLSpy 2007 Enterprise Edition (W3C) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal"
+	elementFormDefault="qualified">
+
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd" />
+		
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>XForms Actions Extension</xs:documentation>
+	</xs:annotation>
+
+	<!-- Element: invoke -->
+	<xs:attributeGroup name="ideal.invoke.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+		<xs:attribute ref="xforms:functions" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.invoke.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.invoke.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows the user to invoke code.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.invoke.content" />
+		<xs:attributeGroup ref="ideal.invoke.attlist" />
+	</xs:complexType>
+
+	<xs:element name="invoke" type="ideal.invoke.type" />
+
+	<!-- Element: telephonecall -->
+	<xs:attributeGroup name="ideal.telephonecall.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attribute ref="cti" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.telephonecall.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.telephonecall.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows the user to make phone calls directly from
+				device's browser.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.telephonecall.content" />
+		<xs:attributeGroup ref="ideal.telephonecall.attlist" />
+	</xs:complexType>
+
+	<xs:element name="telephoneCall" type="ideal.telephonecall.type" />
+
+	<!-- Element: phonebookadd -->
+	<xs:attributeGroup name="ideal.phonebookadd.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attribute ref="contact" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.phonebookadd.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.phonebookadd.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows the user to add phone numbers directly to
+				device's phone book from the browser.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.phonebookadd.content" />
+		<xs:attributeGroup ref="ideal.phonebookadd.attlist" />
+	</xs:complexType>
+
+	<xs:element name="phoneBookAdd" type="ideal.phonebookadd.type" />
+
+	<!-- Element: smssend -->
+	<xs:attributeGroup name="ideal.smssend.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.smssend.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.smssend.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows the user to send sms by mobile operators
+				directly from the browser.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.smssend.content" />
+		<xs:attributeGroup ref="ideal.smssend.attlist" />
+	</xs:complexType>
+
+	<xs:element name="smsSend" type="ideal.smssend.type" />
+
+	<!-- Element: format -->
+	<xs:attributeGroup name="ideal.format.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+		<xs:attribute ref="formatter" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.format.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.format.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows to format data.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.format.content" />
+		<xs:attributeGroup ref="ideal.format.attlist" />
+	</xs:complexType>
+
+	<xs:element name="format" type="ideal.format.type" />
+
+	<!-- Element: validate -->
+	<xs:attributeGroup name="ideal.validate.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attributeGroup ref="xforms:XML.Events" />
+		<xs:attribute ref="validator" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.validate.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="xforms:Action" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.validate.type">
+		<xs:annotation>
+			<xs:documentation>
+				Action allows to validate data.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.validate.content" />
+		<xs:attributeGroup ref="ideal.validate.attlist" />
+	</xs:complexType>
+
+	<xs:element name="validate" type="ideal.validate.type" />
+</xs:schema>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div1 id="ideal-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<head>IDEAL Modules</head>
+	<p>
+		The markup which together forms a Web page intended for
+		consumption across multiple delivery contexts may be grouped
+		thusly:
+	</p>
+
+	<p>
+		The following sections list the relevant Web page markup in each
+		group.
+	</p>
+
+	<div2 id="document">
+		<head>Document</head>
+		
+		&idealModule;
+		&uiModule;
+
+	</div2>
+	<div2 id="metainformation">
+		<head>Metainformation</head>
+		
+		&metaModule;
+		
+		&xhtmlroleModule;
+
+
+	</div2>
+
+	&xhtmlaccessModule;
+	
+	<div2 id ="descriptions">
+	<head>Descriptions</head>
+
+		&linkModule;
+		
+		&scriptModule;
+
+		&formattingModule;
+		
+		&validationModule;
+
+	</div2>		
+
+	&uistructureModule;
+	
+	<div2 id ="uicomponents">
+	<head>UI Components</head>
+
+		&listModule;
+		
+		&textModule;
+		
+		&objectModule;
+		
+		&tablesModule;		
+
+
+		<div3 id="forms-def">
+			<head>Forms</head>
+
+			&formscoreModule;		
+			
+			&formscontrolsModule;
+		</div3>						
+	</div2>		
+
+
+	<div2 id="uibehaivour">
+		<head>UI Behaviour</head>
+		
+		&eventsModule;
+
+		&formsActionModule;
+
+	</div2>
+	
+	<div2 id="sel-def">
+		<head>Selection</head>
+
+		&selectionModule;
+		
+		<div3 id="attribute-value-templates">
+			<head>Attribute Value Templates</head>
+			<p>
+				DISelect extends the host language by allowing any
+				attribute value to be specified as an Attribute Value
+				Template (AVT). An AVT is an XPath expression which is
+				evaluated to yield the value to be used for the
+				attribute. To distinguish the use of an AVT as the value
+				of an attribute, the expression is enclosed within curly
+				braces {}.
+			</p>
+			<p>
+				An AVT used within the source infoset can contain any
+				XPath expression supported by the DISelect processor.
+				During processing, the expression is evaluated and the
+				result is used as the value of the attribute.
+			</p>
+		</div3>
+	</div2>
+
+	<div2 id="inc-def">
+		<head>Inclusion</head>
+		<p>
+			Authors can include content fragments using the
+			<code>src</code>
+			attribute.
+		</p>
+	</div2>
+
+	
+	&commonAttributesModule;
+
+	&embeddingAttributesModule;
+	
+	&hypertextAttributesModule;
+	
+	&repeatAttributesModule;
+	
+	&singleNodeBindingAttributesModule;
+	
+	&nodeSetBindingAttributesModule;
+	
+	&modelItemPropertyAttributesModule;
+
+	<div2 id="semantic-enrichment">
+		<head>Semantic Enrichment</head>
+		<p>
+			<emph>This section is informative</emph>
+		</p>
+		<p>
+			Content semantics (in the form of metadata) may be used to
+			provide information in order to:
+			<ulist>
+				<item>
+					<p>
+						inform the content adaptation process, so that
+						the decision about which content to show to the
+						user is a combination of delivery context and
+						content rules (for example, legal constraints).
+					</p>
+				</item>
+				<item>
+					<p>
+						be used to provide semantics to the content,
+						which assists search applications, and may
+						enable the inference of affinity between
+						documents.
+					</p>
+				</item>
+				<item>
+					<p>
+						reuse document data as document metadata to
+						reduce duplication.
+					</p>
+				</item>
+			</ulist>
+		</p>
+		<p>
+			Authors can make use of the role attribute or RDFa
+			<bibref ref="RDFaPrimer" />
+			to add semantics to the IDEAL documents.
+		</p>
+	</div2>	
+</div1>

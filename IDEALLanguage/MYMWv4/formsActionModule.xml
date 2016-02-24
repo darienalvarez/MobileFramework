@@ -1,0 +1,51 @@
+<div3 id="Forms_Action_Module-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Forms Action Module</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;phonebookadder&gt;</td>
+<td>This element allows the user to add phone numbers
+				directly to device's phone book from the browser</td>
+<td>
+<loc href="#phonebookadder-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#phonebookadder-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;smssend&gt;</td>
+<td>This element allows the user to send sms by mobile
+				operators directly from the browser</td>
+<td>
+<loc href="#smsSend-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#smssend-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;telephonecaller&gt;</td>
+<td>This element allows the user to make phone calls
+				directly from device's browser</td>
+<td>
+<loc href="#telephonecaller-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#telephonecaller-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

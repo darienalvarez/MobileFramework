@@ -1,0 +1,5 @@
+chequear que cuando se manda a guardar dos veces la misma app no se pongan 2 entradas en el user_profile
+
+chequear donde es que se estan borrando los properties del control
+
+chequear por que cuando se reinicia la bd hay que reiniciar el tomcat

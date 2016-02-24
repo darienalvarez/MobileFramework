@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:sel="http://www.w3.org/2004/06/diselect" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema-extra.xsd"/>
+	<xs:import namespace="http://www.w3.org/2004/06/diselect" schemaLocation="DISelect.xsd"/>
+	<xs:import namespace="http://www.w3.org/2001/xml-events" schemaLocation="xml-events-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:include schemaLocation="ideal-validation-1.xsd"/>
+	<xs:include schemaLocation="ideal-formatting-1.xsd"/>
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-ui-1.xsd"/>
+	<xs:include schemaLocation="xhtml-access-1.xsd"/>
+	<xs:include schemaLocation="ideal-meta-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Document framework module for IDEAL
+
+			Document Framework
+
+			* ideal
+
+			The Document Framwork Module defines the major elements and
+			their attributes.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- IDEAL Element -->
+	<xs:attributeGroup name="ideal.ideal.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.ideal.content">
+		<xs:sequence>
+			<xs:element ref="metadata" minOccurs="0"/>
+			<xs:element ref="accessibility" minOccurs="0"/>
+			<xs:element ref="behaviour" minOccurs="0"/>
+			<xs:element ref="definitions" minOccurs="0"/>
+			<xs:element ref="ui"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.ideal.type">
+		<xs:annotation>
+			<xs:documentation>
+				The root element for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.ideal.content"/>
+		<xs:attributeGroup ref="ideal.ideal.attlist"/>
+	</xs:complexType>
+	<xs:element name="ideal" type="ideal.ideal.type"/>
+	<!-- End IDEAL Element -->
+	<!-- metadata Element -->
+	<xs:attributeGroup name="ideal.metadata.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.metadata.content">
+		<xs:sequence>
+			<xs:sequence>
+				<xs:element ref="meta" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.metadata.type">
+		<xs:annotation>
+			<xs:documentation>
+				Metainformation for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.metadata.content"/>
+		<xs:attributeGroup ref="ideal.metadata.attlist"/>
+	</xs:complexType>
+	<xs:element name="metadata" type="ideal.metadata.type"/>
+	<!-- End metadata Element -->
+	<!-- accessibility Element -->
+	<xs:attributeGroup name="ideal.accessibility.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.accessibility.content">
+		<xs:sequence>
+			<xs:element ref="access" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.accessibility.type">
+		<xs:annotation>
+			<xs:documentation>
+				The accessibility module for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.accessibility.content"/>
+		<xs:attributeGroup ref="ideal.accessibility.attlist"/>
+	</xs:complexType>
+	<xs:element name="accessibility" type="ideal.accessibility.type"/>
+	<!-- End accessibility Element -->
+	<!-- behaviour Element -->
+	<xs:attributeGroup name="ideal.behaviour.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.behaviour.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ev:listener"/>
+				<xs:group ref="xforms:Action"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.behaviour.type">
+		<xs:annotation>
+			<xs:documentation>
+				The behaviour module for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.behaviour.content"/>
+		<xs:attributeGroup ref="ideal.behaviour.attlist"/>
+	</xs:complexType>
+	<xs:element name="behaviour" type="ideal.behaviour.type"/>
+	<!-- End behaviour Element -->
+	<!-- definitions Element -->
+	<xs:attributeGroup name="ideal.definitions.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.definitions.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="validator"/>
+				<xs:element ref="stringValidator"/>
+				<xs:element ref="dateTimeValidator"/>
+				<xs:element ref="numberValidator"/>
+				<xs:element ref="formatter"/>
+				<xs:element ref="stringFormatter"/>
+				<xs:element ref="numberFormatter"/>
+				<xs:element ref="currencyFormatter"/>
+				<xs:element ref="dateTimeFormatter"/>
+				<xs:element ref="sel:variable"/>
+				<xs:element ref="xforms:model"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.definitions.type">
+		<xs:annotation>
+			<xs:documentation>
+				The definitions module for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.definitions.content"/>
+		<xs:attributeGroup ref="ideal.definitions.attlist"/>
+	</xs:complexType>
+	<xs:element name="definitions" type="ideal.definitions.type"/>
+	<!-- End definitions Element -->
+	<!-- ui Element -->
+	<xs:attributeGroup name="ideal.ui.attlist">
+		<xs:attributeGroup ref="ideal.Basic_Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.ui.content">
+		<xs:sequence>
+			<xs:element ref="body"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.ui.type">
+		<xs:annotation>
+			<xs:documentation>
+				The user interface (ui) module for IDEAL document
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.ui.content"/>
+		<xs:attributeGroup ref="ideal.ui.attlist"/>
+	</xs:complexType>
+	<xs:element name="ui" type="ideal.ui.type"/>
+	<!-- End ui Element -->
+</xs:schema>

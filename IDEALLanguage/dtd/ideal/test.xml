@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ideal SYSTEM "ideal.dtd"
+[
+<!ENTITY % DISelect.prefixed "INCLUDE" >
+<!ENTITY % XHTML-ROLE.prefixed "IGNORE" >
+<!ENTITY % IDEAL.attrs.prefixed "IGNORE" >
+<!ENTITY % XHTML-ACCESS.prefixed "IGNORE" >
+<!ENTITY % XML-EVENTS.prefixed "INCLUDE" >
+<!ENTITY % XForms.prefixed "INCLUDE" >
+<!ENTITY % DIAL.prefixed "INCLUDE" >
+<!ENTITY % IDEAL.prefixed "IGNORE" >
+]>
+<ideal xmlns="http://www.morfeo-project.org/2008/ideal"  xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:sel="http://www.w3.org/2005/sel"
+xmlns:ev="http://www.w3.org/2001/xml-events"
+>
+<ui>
+	<html sel:expr="" >
+		<head>
+			<title></title>
+			<script></script>
+			<link></link>
+		</head>
+		<body>
+		<dial:section>
+		<dial:div>
+		<xforms:select>
+			<xforms:label></xforms:label>
+			<xforms:choices>
+				<xforms:label></xforms:label>
+				<xforms:item>
+					<xforms:label></xforms:label>
+					<xforms:value></xforms:value>
+					<xforms:itemset>
+						<xforms:value></xforms:value>
+					</xforms:itemset>
+				</xforms:item>
+			</xforms:choices>
+		</xforms:select>
+		</dial:div>
+		</dial:section>
+		</body>
+	</html>
+</ui>
+</ideal>

@@ -1,0 +1,20 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Forms Controls Module" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>
+		</documentation>
+		<elements>
+			<element name="inputDate" docName="inputDate-content-model"/>
+			<element name="inputTime" docName="inputTime-content-model"/>
+			<element name="rssPanel" docName="rssPanel-content-model"/>
+			<element name="selgroup" docName="selgroup-content-model"/>
+			<element name="teloutput" docName="teloutput-content-model"/>			
+		</elements>
+		<extends name="XForms Form Controls Module" docName="http://www.w3.org/TR/xforms/#N11BD5"/>
+	</module>
+</module_desc>

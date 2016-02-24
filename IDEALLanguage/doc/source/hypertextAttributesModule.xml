@@ -1,0 +1,72 @@
+<div2 id="Hypertext_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Hypertext Attributes</head>
+<p> This collection allows an element to be the start point of a hypertext link to a remote resource.  
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>href</td>
+<td>This attribute specifies a URI that is actuated when the
+				element is activated.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI" xlink:show="replace" xlink:actuate="onRequest">URI</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>hreftype</td>
+<td>This attribute specifies the allowable content types of
+				the relevant href URI.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentType" xlink:show="replace" xlink:actuate="onRequest">ContentType</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>hrefmedia</td>
+<td>This attribute indicates the type(s) of media to which
+				to make available the content referenced by the
+				associated href URI</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_MediaDesc" xlink:show="replace" xlink:actuate="onRequest">MediaDesc</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>hreflang</td>
+<td>This attribute specifies the primary language of the
+				resource designated by href</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_LanguageCodes" xlink:show="replace" xlink:actuate="onRequest">LanguageCodes</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>nextfocus</td>
+<td>This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>prevfocus</td>
+<td>This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF" xlink:show="replace" xlink:actuate="onRequest">IDREF</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

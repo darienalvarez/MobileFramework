@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" 
+	xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema-extra.xsd"/>
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-model-1.xsd" />
+	<xs:annotation>
+		<xs:documentation>inputtime element for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- inputtime element -->
+	<xs:attributeGroup name="ideal.inputtime.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attribute ref="xforms:ref" use="optional"/>
+		<xs:attribute ref="xforms:bind" use="optional"/>
+		<xs:attribute ref="xforms:model" use="optional"/>
+		<xs:attribute ref="validator" use="optional"/>
+		<xs:attribute ref="formatter" use="optional"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.inputtime.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:group ref="xforms:Action" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.inputtime.type">
+		<xs:annotation>
+			<xs:documentation>Date input control.</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.inputtime.content"/>
+		<xs:attributeGroup ref="ideal.inputtime.attlist"/>
+	</xs:complexType>
+	<xs:element name="inputTime" type="ideal.inputtime.type"/>
+	<!-- end inputtime element -->
+</xs:schema>

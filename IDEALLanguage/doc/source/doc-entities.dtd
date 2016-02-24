@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Date for this version of the document -->
+<!ENTITY doc.year "2009">
+<!ENTITY doc.month "April">
+<!ENTITY doc.day "13">
+<!ENTITY doc.mm "04">
+<!-- The base name of the file -->
+<!ENTITY doc.baseloc "http://mymobileweb.morfeo-project.org/specs/ideal">
+<!ENTITY doc.basename "">
+<!-- The URLs for the various versions of the base document -->
+<!ENTITY url.latestversion "http://files.morfeo-project.org/mymobileweb/public/specs/ideal">
+<!ENTITY url.thisversion "http://files.morfeo-project.org/mymobileweb/public/specs/ideal/ideal-20090413">
+<!ENTITY url.prevversion "http://files.morfeo-project.org/mymobileweb/public/specs/ideal/ideal-20081017 ">
+<!-- Status -->
+<!ENTITY status "Working Draft">
+<!-- Short name for the specification -->
+<!-- Base links to other DIWG documents -->
+<!ENTITY glossary "http://www.w3.org/TR/di-gloss/">
+<!ENTITY auth_scen "http://www.w3.org/TR/acdi/">
+<!ENTITY auth_tech "http://www.w3.org/TR/di-atdi/">
+<!ENTITY principles "http://www.w3.org/TR/di-princ/">

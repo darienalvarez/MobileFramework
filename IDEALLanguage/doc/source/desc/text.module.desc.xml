@@ -1,0 +1,27 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Text" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>Defines all of the basic text container elements, attributes, and their content models that are "inline level". </documentation>
+		<elements>
+			<element name="abbr" docName="abbr-content-model"/>
+			<element name="cite" docName="cite-content-model"/>
+			<element name="code" docName="code-content-model"/>
+			<element name="dfn" docName="dfn-content-model"/>
+			<element name="em" docName="em-content-model"/>
+			<element name="kbd" docName="kbd-content-model"/>
+			<element name="l" docName="l-content-model"/>
+			<element name="q" docName="q-content-model"/>
+			<element name="samp" docName="samp-content-model"/>
+			<element name="span" docName="span-content-model"/>
+			<element name="strong" docName="strong-content-model"/>
+			<element name="sub" docName="sub-content-model"/>
+			<element name="sup" docName="sup-content-model"/>
+			<element name="var" docName="var-content-model"/>
+		</elements>		
+	</module>
+</module_desc>

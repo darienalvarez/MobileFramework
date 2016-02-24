@@ -1,0 +1,1 @@
+java -cp java/classes;java/lib/jaxmexs-0.5.2.jar org.morfeo.mymw.doc.ElementGenerator xsd/ideal/ideal.xsd doc/source/desc/ideal.module.desc.xml doc/source/elements.xml

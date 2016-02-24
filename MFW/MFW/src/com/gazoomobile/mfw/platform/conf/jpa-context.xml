@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" id="propertyConfigurer">
+		<property name="location">
+			<value>classpath:com/gazoomobile/mfw/platform/conf/hibernate.properties</value>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
+		<property name="url">
+			<value>${hibernate.connection.url}</value>
+		</property>
+		
+		<property name="driverClassName">
+			<value>${hibernate.connection.driver.class}</value>
+		</property>
+		
+		<property name="username">
+			<value>${hibernate.connection.username}</value>
+		</property>
+		
+		<property name="password">
+			<value>${hibernate.connection.password}</value>
+		</property>
+	</bean>
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceXmlLocation">
+			<value>classpath:com/gazoomobile/mfw/platform/conf/persistence.xml</value>
+		</property>
+		<property name="loadTimeWeaver">
+			<bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver" />
+		</property>
+	</bean>
+	
+</beans>

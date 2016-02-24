@@ -1,0 +1,20 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Forms Action Module" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation>
+		</documentation>
+		<elements>
+			<element name="invoke" 	     docName="invoke-content-model"/>
+			<element name="format" 	     docName="format-content-model"/>
+			<element name="phoneBookAdd" docName="phoneBookAdd-content-model"/>
+			<element name="smsSend" docName="smsSend-content-model"/>
+			<element name="telephoneCall" docName="telephoneCall-content-model"/>
+			<element name="validate" docName="validate-content-model"/>
+		</elements>
+	</module>
+</module_desc>

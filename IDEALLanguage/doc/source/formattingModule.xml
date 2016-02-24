@@ -1,0 +1,77 @@
+<div3 id="formatting-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>formatting</head>
+<p>Defines the formatting module.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;formatter&gt;</td>
+<td>The formatter element allows developers to create custom
+				formatters for formatting the data.</td>
+<td>
+<loc href="#formatter-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#formatter-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;stringFormatter&gt;</td>
+<td>The formatter can be used to format a string into other
+				according to specified format.</td>
+<td>
+<loc href="#stringFormatter-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#stringFormatter-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;numberFormatter&gt;</td>
+<td>This formatter can be used to format a number into other
+				number according to the specified format.</td>
+<td>
+<loc href="#numberFormatter-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#numberFormatter-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;currencyFormatter&gt;</td>
+<td>This formatter can be used to format a number into a
+				currency string.</td>
+<td>
+<loc href="#currencyFormatter-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#currencyFormatter-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dateTimeFormatter&gt;</td>
+<td>This formatter can be used to format a date or time into
+				other according to specified format. The
+				dateTimeFormatter also accepts dates in ISO 8601 Date
+				and Time Formats. See
+				http://www.w3.org/TR/xmlschema-2/#isoformats</td>
+<td>
+<loc href="#dateTimeFormatter-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dateTimeFormatter-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

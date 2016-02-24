@@ -1,0 +1,81 @@
+<div3 id="Forms_Action_Module-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Forms Action Module</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;invoke&gt;</td>
+<td>Action allows the user to invoke code.</td>
+<td>
+<loc href="#invoke-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#invoke-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;format&gt;</td>
+<td>Action allows to format data.</td>
+<td>
+<loc href="#format-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#format-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;phoneBookAdd&gt;</td>
+<td>Action allows the user to add phone numbers directly to
+				device's phone book from the browser.</td>
+<td>
+<loc href="#phoneBookAdd-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#phoneBookAdd-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;smsSend&gt;</td>
+<td>Action allows the user to send sms by mobile operators
+				directly from the browser.</td>
+<td>
+<loc href="#smsSend-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#smsSend-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;telephoneCall&gt;</td>
+<td>Action allows the user to make phone calls directly from
+				device's browser.</td>
+<td>
+<loc href="#telephoneCall-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#telephoneCall-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;validate&gt;</td>
+<td>Action allows to validate data.</td>
+<td>
+<loc href="#validate-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#validate-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

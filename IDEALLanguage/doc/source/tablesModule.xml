@@ -1,0 +1,156 @@
+<div3 id="Tables-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Tables</head>
+<p>Provides elements for marking up tabular information in a document. 
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;table&gt;</td>
+<td>The table element contains all other elements that
+				specify the caption, column groups, columns, rows, and
+				content for a table</td>
+<td>
+<loc href="#table-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#table-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;caption&gt;</td>
+<td>When present, the caption element's text should describe
+				the nature of the table for the benefit of the reader.</td>
+<td>
+<loc href="#caption-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#caption-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;label&gt;</td>
+<td>Label element is used to display information</td>
+<td>
+<loc href="#label-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#label-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;summary&gt;</td>
+<td>This element provides a summary of the table's purpose
+				and structure.</td>
+<td>
+<loc href="#summary-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#summary-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;col&gt;</td>
+<td>The col element allows authors to specify selection
+				conditions or style information for a whole column in a
+				table.</td>
+<td>
+<loc href="#col-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#col-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;thead&gt;</td>
+<td>Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.</td>
+<td>
+<loc href="#thead-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#thead-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;tbody&gt;</td>
+<td>Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.</td>
+<td>
+<loc href="#tbody-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#tbody-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;tfoot&gt;</td>
+<td>Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.</td>
+<td>
+<loc href="#tfoot-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#tfoot-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;tr&gt;</td>
+<td>At least one is mandatory within a table. The tr
+				elements acts as a container for a row of table cells
+				(either th or td, see below).</td>
+<td>
+<loc href="#tr-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#tr-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;td&gt;</td>
+<td>At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row. &lt;th&gt;
+				represents a column heading, &lt;td&gt; represents the
+				value of that column data for a given row.</td>
+<td>
+<loc href="#td-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#td-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;th&gt;</td>
+<td>At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row. &lt;th&gt;
+				represents a column heading, &lt;td&gt; represents the
+				value of that column data for a given row.</td>
+<td>
+<loc href="#th-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#th-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

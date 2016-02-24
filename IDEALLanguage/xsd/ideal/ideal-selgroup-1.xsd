@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" 
+	xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-menu-1.xsd"/>
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+		<xs:include schemaLocation="ideal-list-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>selgroup element for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- selgroup element -->
+	<xs:attributeGroup name="ideal.selgroup.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attribute ref="xforms:model" use="optional"/>
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.selgroup.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="xforms:select1"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.selgroup.type">
+		<xs:annotation>
+			<xs:documentation>
+				This form control allows the user to make chained
+				selections from a set of selects with several choices.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.selgroup.content"/>
+		<xs:attributeGroup ref="ideal.selgroup.attlist"/>
+	</xs:complexType>
+	<xs:element name="selgroup" type="ideal.selgroup.type"/>
+	<!-- end selgroup element -->
+</xs:schema>

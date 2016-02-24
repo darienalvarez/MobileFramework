@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SIIPOL-MOVIL" default="dist">
+	
+	<!-- Falta correr los test-->
+	
+	
+	<property file="build.properties" />
+	
+
+	<description>
+		MWF build script
+	</description>
+
+
+	<!-- ================================= 
+		        setting the classpath              
+		 ================================= -->
+	<path id="libs">
+		<fileset dir="${app.libs.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		
+		<fileset dir="${other.libs.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	
+	<!-- ================================= 
+			    start build process              
+		 ================================= -->
+    <target name="start">
+    	<echo message="MWF build script" />
+        <echo message="Starting to build..." />
+    </target>
+	
+	
+	<!-- ================================= 
+          		cleans all output directories              
+         ================================= -->
+    <target name="clean" depends="start">
+    	<echo message="Cleaning output directories" />
+    	
+        <delete dir="${out.dir}" includeemptydirs="true" 
+        	quiet="true" />
+    </target>
+
+
+	<!-- ================================= 
+          		create the output directories        
+         ================================= -->
+    <target name="dirs" depends="clean">
+    	<echo message="Creating all output directories" />
+    	
+        <mkdir dir="${out.dir}" />
+    	<mkdir dir="${out.classes.dir}"/>
+    	<mkdir dir="${out.doc.dir}"/>
+    	<mkdir dir="${out.packages.dir}"/>
+    </target>
+	
+	<!-- ================================= 
+          		compiles the source code
+         ================================= -->
+    <target name="compile" depends="dirs">
+        <javac destdir="${out.classes.dir}">
+        	<src path="${src.dir}" />
+        	<classpath refid="libs" />
+        </javac>
+    </target>
+
+	
+	<!-- ================================= 
+          		creates the javadoc documents
+         ================================= -->
+    <target name="javadoc" depends="dirs">
+        <javadoc sourcepath="${src.dir}" destdir="${out.doc.dir}" 
+        	windowtitle="SIIPOL MOVIL" version="true">
+        	
+        	<doctitle>
+        		<![CDATA[<h1>MWF</h1>]]>
+        	</doctitle>
+        	
+        	<bottom>
+        		<![CDATA[<i>Copyright &copy; 2009,  
+        		<a href="http://www.uci.cu/" target="_blank">University of Information Sciences</a>.</i>]]>
+        	</bottom>
+        	
+        	<excludepackage name="**/*test"/>
+        	
+        	<classpath refid="libs" />
+        </javadoc>
+    </target>
+	
+	
+	<!-- ================================= 
+          		creates a jar containing all classes              
+         ================================= -->
+    <target name="jar" depends="compile">
+        <echo message="Creating the platform jar file" />
+    	
+    	<jar destfile="${out.packages.dir}/${pack.jar}">
+    		<fileset dir="${out.classes.dir}" includes="**/*.class" />
+<!--   		<fileset dir="${out.ws.dir}" includes="**/jaxws/*.class" />		-->
+    	</jar>
+    </target>
+
+	
+	<!-- ================================= 
+          		creates the war package for siipol mobile
+         ================================= -->
+    <target name="war" depends="jar">
+    	<echo message="Creating the platform war file" />
+    	
+        <war destfile="${out.packages.dir}/${pack.war}">
+        	<fileset dir="${app.web.dir}" includes="**/*.*" />
+        	<lib file="${out.packages.dir}/${pack.jar}" />
+        	<classes dir="${src.dir}" includes="**/*.properties,**/*.xml" />
+        </war>
+    </target>
+
+	
+	<!-- ================================= 
+          		creates a zip file containing the doc
+         ================================= -->
+    <target name="doc-zip" depends="javadoc">
+    	<echo message="Creating a documentaion zip file" />
+    	
+        <zip destfile="${out.packages.dir}/${pack.doc}">
+        	<fileset dir="${out.doc.dir}" includes="**/*.*" />
+        </zip>
+    </target>
+	
+	
+	<!-- ================================= 
+          		creates a zip file containing a platform war and 
+          		documentation zip files
+         ================================= -->
+    <target name="zip" depends="doc-zip, war">
+    	<echo message="Creating a platform distribution zip file" />
+    	
+        <zip destfile="${out.packages.dir}/${pack.zip}">
+        	<fileset dir="${out.packages.dir}" includes="**/*.*" />
+        </zip>
+    </target>
+
+
+	<!-- ================================= 
+	      		creates the platform packages
+	     ================================= -->
+	<target name="dist" depends="zip">
+		<echo message="MWF build process finished" />
+	</target>
+	
+	<!-- ================================= 
+		      		undeploy application from apache
+		     ================================= -->	
+	<target name="undeploy.apache">
+		<echo message="Undeploying ${apache.deploy.file}" />
+		<delete verbose="true" failonerror="no">
+			<fileset dir="${apache.home}/webapps/" includes="${apache.deploy.file}*" />
+		</delete>
+		<delete verbose="true" failonerror="no" includeemptydirs="yes">
+			<fileset dir="${apache.home}/webapps/${apache.deploy.file}" />
+		</delete>
+	</target>
+	
+	<!-- ================================= 
+		      		deploy war file to apache webapps
+		     ================================= -->
+	<target name="deploy.apache" depends="war, undeploy.apache">
+		<echo message="Deploying war file to apache webapps" />
+		<echo message="Copying ${out.packages.dir}/${pack.war} to ${apache.home}/webapps/${apache.deploy.file}.war" />
+		<copy file="${out.packages.dir}/${pack.war}" tofile="${apache.home}/webapps/${apache.deploy.file}.war" failonerror="yes" overwrite="yes" preservelastmodified="no" verbose="true" />
+	</target>
+
+	<!-- ================================= 
+		      		run apache
+		     ================================= -->
+	<target name="run.apache" depends="deploy.apache">
+		<exec executable="sh" output="log.log">
+		    <arg value="${apache.home}/bin/catalina.sh"/>
+			<arg value="run"/>
+		</exec>
+	</target>
+	
+</project>
+
+<!-- ================================= 
+          		generates the web services
+         ================================= 
+    <target name="apt" depends="dirs">
+    	<echo message="Generating web services" />
+    	
+    	<apt classpathref="libs" destdir="${out.ws.dir}" srcdir="${src.dir}" 
+    		failonerror="true" preprocessdir="${out.ws.dir}">
+    				
+    		<include name="**/*WebService*.*"/>
+    	</apt>
+    </target>
+-->

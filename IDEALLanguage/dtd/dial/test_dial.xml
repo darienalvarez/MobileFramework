@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "D:\codigo_mymw\IDEALLanguage\dtd\dial\dial.dtd"
+[
+<!ENTITY % DISelect.prefixed "INCLUDE" >
+<!ENTITY % XHTML-ROLE.prefixed "IGNORE" >
+<!ENTITY % IDEAL.attrs.prefixed "IGNORE" >
+<!ENTITY % XHTML-ACCESS.prefixed "IGNORE" >
+<!ENTITY % XML-EVENTS.prefixed "IGNORE" >
+<!ENTITY % XForms.prefixed "IGNORE" >
+<!ENTITY % DIAL.prefixed "INCLUDE" >
+]
+>
+<html>
+	<head>
+		<title/>
+	</head>
+	<body/>
+</html>

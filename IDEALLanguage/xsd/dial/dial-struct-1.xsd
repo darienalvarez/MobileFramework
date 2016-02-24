@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	elementFormDefault="qualified">
+
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+
+	<xs:include schemaLocation="dial-object-1.xsd" />
+
+	<xs:include schemaLocation="dial-text-1.xsd" />
+
+	<xs:include schemaLocation="dial-table-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="../dial/XForms-Schema.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Document Structure module for DIAL
+
+			Document Structure
+
+			* div, section, h, p, separator
+
+			The Structure Module defines the major structural elements
+			and their attributes.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- SECTION Element -->
+	<xs:attributeGroup name="dial.section.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.section.content">
+		<xs:sequence>
+			<xs:element ref="h" minOccurs="0" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="section" />
+				<xs:element ref="div" />
+				<xs:element ref="p" />
+				<xs:element ref="separator" />
+				<xs:group ref="dial.section.extra" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.section.type">
+		<xs:annotation>
+			<xs:documentation>
+				The section element defines document's or application's
+				section. Particularly, in conjunction with the h
+				element, offers a mechanism for structuring documents
+				into sections. This element defines content to be
+				block-level but imposes no other presentational idioms
+				on the content, which may otherwise be controlled from a
+				style sheet.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.section.content" />
+		<xs:attributeGroup ref="dial.section.attlist" />
+	</xs:complexType>
+	<xs:element name="section" type="dial.section.type" />
+	<!-- DIV Element -->
+	<xs:attributeGroup name="dial.div.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="div.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.div.content">
+		<xs:sequence>
+			<xs:element ref="h" minOccurs="0" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="object" />
+				<xs:element ref="span" />
+				<xs:element ref="p" />
+				<xs:element ref="table" />
+				<xs:group ref="dial.NavigationList.class" />
+				<xs:group ref="dial.List.class" />
+				<xs:group ref="XForm.Controls.class" />
+				<xs:group ref="dial.div.extra" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.div.type">
+		<xs:annotation>
+			<xs:documentation>
+				The div element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				extra structure to documents. This element defines no
+				presentational idioms on the content. Thus, authors may
+				use this element in conjunction with style sheets, the
+				xml:lang attribute, etc.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.div.content" />
+		<xs:attributeGroup ref="dial.div.attlist" />
+	</xs:complexType>
+	<xs:element name="div" type="dial.div.type" />
+	<!-- H Element -->
+	<xs:attributeGroup name="dial.h.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+	</xs:attributeGroup>
+	<xs:group name="dial.h.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.h.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				A heading element briefly describes the topic of the
+				section it introduces. Heading information may be used
+				by user agents, for example, to construct a table of
+				contents for a document automatically. Structured
+				headings use the single h element, in combination with
+				the section element to indicate the structure of the
+				document, and the nesting of the sections indicates the
+				importance of the heading. The heading for the section
+				is the one that is a child of the section element.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.h.content" />
+		<xs:attributeGroup ref="dial.h.attlist" />
+	</xs:complexType>
+	<xs:element name="h" type="dial.h.type" />
+	<!-- SEPARATOR Element -->
+	<xs:attributeGroup name="dial.separator.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+	</xs:attributeGroup>
+	<xs:group name="dial.separator.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="dial.separator.type">
+		<xs:annotation>
+			<xs:documentation>
+				The separator element separates parts of the document
+				from each other.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.separator.content" />
+		<xs:attributeGroup ref="dial.separator.attlist" />
+	</xs:complexType>
+	<xs:element name="separator" type="dial.separator.type" />
+	<!-- P Element -->
+	<xs:attributeGroup name="dial.p.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attributeGroup ref="p.extra.attributes" />
+	</xs:attributeGroup>
+	<xs:group name="dial.p.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="dial.List.class" />
+				<xs:group ref="XForm.UIInline.class" />				
+				<xs:element ref="table" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="dial.p.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The p element represents a paragraph. In comparison with
+				earlier versions of HTML, where a paragraph could only
+				contain inline text, paragraphs represent the
+				conceptual idea of a paragraph, and so may contain
+				lists, blockquotes, pre's and tables as well as inline
+				text. Note however that they may not contain directly
+				nested p elements.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.p.content" />
+		<xs:attributeGroup ref="dial.p.attlist" />
+	</xs:complexType>
+	<xs:element name="p" type="dial.p.type" />
+</xs:schema>

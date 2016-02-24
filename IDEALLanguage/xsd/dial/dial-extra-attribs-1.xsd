@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://www.morfeo-project.org/2008/dial" targetNamespace="http://www.morfeo-project.org/2008/dial" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema common extra attributes module for DIAL
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:attributeGroup name="p.extra.attributes"/>
+	<xs:attributeGroup name="div.extra.attributes"/>
+	<xs:attributeGroup name="title.extra.attributes"/>	
+	<xs:attributeGroup name="span.extra.attributes"/>
+	<xs:attributeGroup name="li.extra.attributes"/>
+	<xs:attributeGroup name="table.extra.attributes"/>
+	<xs:attributeGroup name="th.extra.attributes"/>
+	<xs:attributeGroup name="tr.extra.attributes"/>
+	<xs:attributeGroup name="td.extra.attributes"/>	
+	<xs:attributeGroup name="dl.extra.attributes"/>
+	<xs:attributeGroup name="ol.extra.attributes"/>
+	<xs:attributeGroup name="ul.extra.attributes"/>
+	<xs:attributeGroup name="nl.extra.attributes"/>
+	<xs:attributeGroup name="object.extra.attributes" />
+</xs:schema>

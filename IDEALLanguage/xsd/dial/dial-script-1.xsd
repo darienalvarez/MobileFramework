@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial">
+	
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Script module for DIAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Script
+
+			* script
+
+			This module declares element types and attributes used to
+			contain information pertaining to event handler
+			implementations, usually defined in a scripting language.
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:attributeGroup name="dial.script.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding"/>
+		<xs:attribute ref="src" use="required" />
+		<xs:attribute ref="srctype" use="required" />
+	</xs:attributeGroup>
+	<xs:group name="dial.script.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="dial.script.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				An element that it is used to contain information
+				pertaining to event handler implementations, usually
+				defined in a scripting language.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.script.content" />
+		<xs:attributeGroup ref="dial.script.attlist" />
+	</xs:complexType>
+	<xs:element name="script" type="dial.script.type"/>
+</xs:schema>

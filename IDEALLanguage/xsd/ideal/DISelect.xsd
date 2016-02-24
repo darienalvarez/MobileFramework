@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by Rhys (W3C) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Roland A. Merrick (W3C) -->
+<xs:schema xmlns="http://www.w3.org/2004/06/diselect"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:sel="http://www.w3.org/2004/06/diselect"
+	targetNamespace="http://www.w3.org/2004/06/diselect"
+	elementFormDefault="qualified">
+	<!--
+		Changes:
+		2004-05-10 RAM created
+		2004-05-27 RL	removed import for xml schema schema
+		moved the xs:anyAttribute elements after the specific attributes
+		changed the schema prefix to xs:
+		2005-03-06 RAM added selidName attribute
+		if ##any changed to ##other
+		when ##any changed to ##other
+		otherwise ##any changed to ##other
+		add: variable; value; options; idreplace; process; required.
+		2005-04-04 RAM change namespace to /2004/06/
+		2006-02-27 RAM remove, options, reprocess and change idreplace an replace to attributes
+		2006-03-02 RL Rename required attribute to functions.
+		2006-03-02 RL Add selidname and functions attributes to elements for completeness
+	-->
+	<!-- elements -->
+	<xs:element name="variable">
+		<xs:annotation>
+			<xs:documentation>
+				definition of a variable.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:NCName" use="optional" />
+			<xs:attribute name="ref" type="xs:NCName" use="optional" />
+			<xs:attribute name="value" type="xs:string" use="required" />
+			<xs:anyAttribute namespace="##other" />
+		</xs:complexType>
+	</xs:element>
+	<!-- element options removed RAM -->
+	<!-- element process removed RAM -->
+	<!-- element required removed RAM -->
+	<!-- element idreplace removed RAM -->
+	<!-- attributes -->
+	<xs:attribute name="expr" type="selExpr">
+		<xs:annotation>
+			<xs:documentation>
+				XPath expression which resolves to a boolean to control
+				inclusion of optional content.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<!-- attributes required, idreplace added RAM -->
+	<xs:attribute name="functions" type="QNameList">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/2005/WD-cselection-20050502/#sec-sel-functions-attribute">
+				Specify required XPath functions.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<!-- type definitions -->
+	<xs:simpleType name="precept">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="matchfirst" />
+			<xs:enumeration value="matchevery" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="selExpr">
+		<xs:restriction base="XPathExpression" />
+	</xs:simpleType>
+	<xs:simpleType name="XPathExpression">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="processType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="every" />
+			<xs:enumeration value="once" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="QNameList">
+		<xs:list itemType="xs:QName" />
+	</xs:simpleType>
+</xs:schema>

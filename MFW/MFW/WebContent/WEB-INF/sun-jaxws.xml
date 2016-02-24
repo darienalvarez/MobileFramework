@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+	version="2.0">
+
+	<endpoint name="UserService"
+		implementation="com.gazoomobile.mfw.platform.web.impl.UserWebServiceImpl"
+		url-pattern="/services/UserService" />
+
+	<endpoint name="ApplicationService"
+		implementation="com.gazoomobile.mfw.platform.web.impl.ApplicationWebServiceImpl"
+		url-pattern="/services/ApplicationService" />
+		
+	<endpoint name="ControlService"
+		implementation="com.gazoomobile.mfw.platform.web.impl.ControlWebServiceImpl"
+		url-pattern="/services/ControlService" />
+		
+	<endpoint name="DatasourceService"
+		implementation="com.gazoomobile.mfw.platform.web.impl.DatasourceWebServiceImpl"
+		url-pattern="/services/DatasourceService" />
+		
+	<endpoint name="ConnectorService"
+		implementation="com.gazoomobile.mfw.platform.web.impl.ConnectorWebServiceImpl"
+		url-pattern="/services/ConnectorService" />
+		
+</endpoints>

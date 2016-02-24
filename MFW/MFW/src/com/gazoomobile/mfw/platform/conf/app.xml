@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://jax-ws.dev.java.net/spring/core
+    http://jax-ws.dev.java.net/spring/core.xsd
+    http://jax-ws.dev.java.net/spring/servlet
+    http://jax-ws.dev.java.net/spring/servlet.xsd">
+
+	<import resource="classpath:com/gazoomobile/mfw/platform/conf/service-context.xml" />
+
+	<bean id="userWebService" class="com.gazoomobile.mfw.platform.web.impl.UserWebServiceImpl">
+		<property name="userService" ref="userService" />
+	</bean>
+	
+	<bean id="applicationWebService" class="com.gazoomobile.mfw.platform.web.impl.ApplicationWebServiceImpl">
+		<property name="applicationService" ref="applicationService" />
+		<property name="userService" ref="userService" />
+		<property name="controlService" ref="controlService" />
+	</bean>
+	
+	<bean id="controlWebService" class="com.gazoomobile.mfw.platform.web.impl.ControlWebServiceImpl">
+		<property name="controlService" ref="controlService" />
+	</bean>
+	
+	<bean id="datasourceWebService" class="com.gazoomobile.mfw.platform.web.impl.DatasourceWebServiceImpl">
+		<property name="datasourceService" ref="datasourceService" />
+	</bean>
+	
+	<bean id="connectorWebService" class="com.gazoomobile.mfw.platform.web.impl.ConnectorWebServiceImpl">
+		<property name="connectorTypeService" ref="connectorTypeService" />
+	</bean>
+	
+	<wss:binding url="/services/UserService">
+		<wss:service>
+			<ws:service bean="#userWebService" />
+		</wss:service>
+	</wss:binding>
+	
+	<wss:binding url="/services/ApplicationService">
+		<wss:service>
+			<ws:service bean="#applicationWebService" />
+		</wss:service>
+	</wss:binding>
+	
+	<wss:binding url="/services/ControlService">
+		<wss:service>
+			<ws:service bean="#controlWebService" />
+		</wss:service>
+	</wss:binding>
+	
+	<wss:binding url="/services/DatasourceService">
+		<wss:service>
+			<ws:service bean="#datasourceWebService" />
+		</wss:service>
+	</wss:binding>
+	
+	<wss:binding url="/services/ConnectorService">
+		<wss:service>
+			<ws:service bean="#connectorWebService" />
+		</wss:service>
+	</wss:binding>
+
+	<bean id="testServlet" class="com.gazoomobile.mfw.platform.testing.TestServlet">
+		<property name="applicationService" ref="applicationService" />
+		<property name="connectorService" ref="connectorService" />
+		<property name="controlDefinitionService" ref="controlDefinitionService" />
+		<property name="controlPropertyService" ref="controlPropertyService" />
+		<property name="controlService" ref="controlService" />
+		<property name="datasourceService" ref="datasourceService" />
+		<property name="permissionsetService" ref="permissionsetService" />
+		<property name="screenService" ref="screenService" />
+		<property name="userService" ref="userService" />
+	</bean>
+	
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xh11d="http://www.w3.org/1999/xhtml/datatypes/" targetNamespace="http://www.w3.org/2001/xml-events" elementFormDefault="qualified" attributeFormDefault="qualified" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema 
+                        http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:import namespace="http://www.w3.org/1999/xhtml/datatypes/" schemaLocation="../dial/xhtml-datatypes-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+      This is the XML Schema for extending XML Events global attributes
+    </xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+      XML Extra Event Attributes
+		
+        These "extra" event attributes are based on XML Events 2 ideas.
+    </xs:documentation>
+	</xs:annotation>
+	
+	<xs:attributeGroup name="XML.Events.extra">
+	</xs:attributeGroup>
+</xs:schema>

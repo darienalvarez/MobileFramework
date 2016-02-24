@@ -1,0 +1,21 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+		<externalNamespace prefix="xml" uri="http://" docuri="http://www.w3.org/TR/REC-xml/"/>
+	</externalNamespaces>
+	
+	<module name="Hypertext Attributes" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation> This collection allows an element to be the start point of a hypertext link to a remote resource.  
+		</documentation>
+		<attributes>
+			<attribute name="href" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_src"/>
+			<attribute name="hreftype" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_srctype"/>
+			<attribute name="hrefmedia" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_encoding"/>
+			<attribute name="hreflang" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_encoding"/>
+			<attribute name="nextfocus" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_encoding"/>
+			<attribute name="prevfocus" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_encoding"/>
+		</attributes>
+	</module>
+</module_desc>

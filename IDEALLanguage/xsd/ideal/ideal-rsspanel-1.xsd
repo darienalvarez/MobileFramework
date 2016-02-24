@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal"
+	elementFormDefault="qualified">
+
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+	<xs:annotation>
+		<xs:documentation>rsspanel element for IDEAL</xs:documentation>
+	</xs:annotation>
+	<!-- rsspanel element -->
+	<xs:attributeGroup name="ideal.rsspanel.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attribute ref="cachecontent" />
+		<xs:attribute ref="src" />
+	</xs:attributeGroup>
+	<xs:group name="ideal.rsspanel.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="ideal.rsspanel.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				The rsspanel element includes a RSS feed reader.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.rsspanel.content" />
+		<xs:attributeGroup ref="ideal.rsspanel.attlist" />
+	</xs:complexType>
+	<xs:element name="rssPanel" type="ideal.rsspanel.type" />
+	<!-- end rsspanel element -->
+</xs:schema>

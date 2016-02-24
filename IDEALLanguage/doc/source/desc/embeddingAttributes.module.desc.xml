@@ -1,0 +1,18 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+		<externalNamespace prefix="xml" uri="http://" docuri="http://www.w3.org/TR/REC-xml/"/>
+	</externalNamespaces>
+	
+	<module name="Embedding Attributes" targetNamespace="http://www.morfeo-project.org/2008/ideal" targetPrefix="ideal" >
+		<documentation> This collection causes the contents of a remote resource to be embedded in the document in place of the element's content. 
+		</documentation>
+		<attributes>
+			<attribute name="src" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_src"/>
+			<attribute name="srctype" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_srctype"/>
+			<attribute name="encoding" docName="http://www.w3.org/TR/xhtml2/mod-embedding.html#adef_embedding_encoding"/>
+		</attributes>
+	</module>
+</module_desc>

@@ -1,0 +1,175 @@
+<div3 id="Text-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Text</head>
+<p>Defines all of the basic text container elements, attributes, and their content models that are "inline level". </p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;abbr&gt;</td>
+<td>The abbr element indicates that a text fragment is an
+				abbreviation (e.g., W3C, XML, Inc., Ltd., Mass., etc.);
+				this includes acronyms.</td>
+<td>
+<loc href="#abbr-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#abbr-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;cite&gt;</td>
+<td>The cite element contains a citation or a reference to
+				other source</td>
+<td>
+<loc href="#cite-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#cite-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;code&gt;</td>
+<td>The code element contains a fragment of computer code.</td>
+<td>
+<loc href="#code-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#code-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dfn&gt;</td>
+<td>The dfn element contains the defining instance of the
+				enclosed term.</td>
+<td>
+<loc href="#dfn-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dfn-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;em&gt;</td>
+<td>The em element indicates emphasis for its contents.</td>
+<td>
+<loc href="#em-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#em-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;kbd&gt;</td>
+<td>The em element indicates emphasis for its contents.</td>
+<td>
+<loc href="#kbd-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#kbd-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;l&gt;</td>
+<td>The l element represents a semantic line of text (e.g.,
+				a line of verse or a line of computer code).</td>
+<td>
+<loc href="#l-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#l-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;q&gt;</td>
+<td>This element designates an inline text fragment of
+				quoted text.</td>
+<td>
+<loc href="#q-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#q-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;samp&gt;</td>
+<td>The samp element designates sample output from programs,
+				scripts, etc.</td>
+<td>
+<loc href="#samp-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#samp-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;span&gt;</td>
+<td>The span element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				structure to documents. This element imposes no
+				presentational idioms on the content. Thus, authors may
+				use this element in conjunction with style sheets, the
+				xml:lang attribute, etc.</td>
+<td>
+<loc href="#span-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#span-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;strong&gt;</td>
+<td>The strong element indicates higher importance for its
+				contents than that of the surrounding content.</td>
+<td>
+<loc href="#strong-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#strong-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;sub&gt;</td>
+<td>The sub element indicates that its contents should
+				regarded as a subscript.</td>
+<td>
+<loc href="#sub-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#sub-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;sup&gt;</td>
+<td>The sup element indicates that its contents should be
+				regarded as a super-script.</td>
+<td>
+<loc href="#sup-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#sup-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;var&gt;</td>
+<td>The var element indicates an instance of a variable or
+				program argument.</td>
+<td>
+<loc href="#var-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#var-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

@@ -1,0 +1,65 @@
+<div3 id="Selection-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Selection</head>
+<p> Processing instructions for general purpose content selection or filtering.
+		Content may be conditionally included or excluded based on the evaluation of the  <loc href="http://www.w3.org/TR/di-gloss/#def-delivery-context-v2" xlink:actuate="onRequest" xlink:show="replace">
+				delivery context
+			</loc>.
+		This may include capabilities of the requesting device, the user's profile (e.g. age, preferences),
+		the user's context (e.g. location) and any dynamic factors (e.g. battery life, the transport bandwidth).
+		A selection criterion is represented by the value of the sel:expr attribute.
+		This module is based son elements and attributes from the <loc href="http://www.w3.org/TR/cselection/" xlink:actuate="onRequest" xlink:show="replace">DISelect</loc> specification. 
+		</p>
+<div4 id="Selection-elements">
+<head>Selection elements</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;sel:variable&gt;</td>
+<td colspan="3">
+<loc href="http://www.w3.org/TR/cselection/#sec-sel-variable-element" xlink:show="replace" xlink:actuate="onRequest">See sel:variable element</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>
+<div4 id="Selection-attributes">
+<head>Selection attributes</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>sel:expr</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/cselection/#sec-sel-expr-attribute" xlink:show="replace" xlink:actuate="onRequest">See sel:expr attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>sel:selid</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/cselection/#sec-sel-selid-attribute" xlink:show="replace" xlink:actuate="onRequest">See sel:selid attribute</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>
+</div3>

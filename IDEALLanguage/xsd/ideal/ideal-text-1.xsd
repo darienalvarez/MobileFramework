@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal">
+
+	<xs:include schemaLocation="ideal-attribs-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Text module for IDEAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Text Elements
+
+			* abbr, cite, code, dfn, kbd, l, q, samp, span, strong, sub,
+			sup, var
+
+			This module declares the elements and their attributes used
+			to support inline-level presentational markup.
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:attributeGroup name="ideal.Text.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+	</xs:attributeGroup>
+
+	<!-- Element: abbr  -->
+
+	<xs:attributeGroup name="ideal.abbr.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+		<xs:attribute ref="full" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.abbr.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.abbr.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The abbr element indicates that a text fragment is an
+				abbreviation (e.g., W3C, XML, Inc., Ltd., Mass., etc.);
+				this includes acronyms.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.abbr.content" />
+		<xs:attributeGroup ref="ideal.abbr.attlist" />
+	</xs:complexType>
+	<xs:element name="abbr" type="ideal.abbr.type" />
+
+	<!-- Element: cite  -->
+
+	<xs:attributeGroup name="ideal.cite.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+		<xs:attribute ref="cite" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.cite.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.cite.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The cite element contains a citation or a reference to
+				other source
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.cite.content" />
+		<xs:attributeGroup ref="ideal.cite.attlist" />
+	</xs:complexType>
+	<xs:element name="cite" type="ideal.cite.type" />
+
+	<!-- Element: code  -->
+
+	<xs:attributeGroup name="ideal.code.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.code.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.code.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The code element contains a fragment of computer code.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.code.content" />
+		<xs:attributeGroup ref="ideal.code.attlist" />
+	</xs:complexType>
+	<xs:element name="code" type="ideal.code.type" />
+
+	<!-- Element: dfn  -->
+
+	<xs:attributeGroup name="ideal.dfn.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.dfn.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.dfn.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The dfn element contains the defining instance of the
+				enclosed term.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.code.content" />
+		<xs:attributeGroup ref="ideal.code.attlist" />
+	</xs:complexType>
+	<xs:element name="dfn" type="ideal.dfn.type" />
+
+	<!-- Element: em  -->
+
+	<xs:attributeGroup name="ideal.em.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.em.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.em.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The em element indicates emphasis for its contents.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.em.content" />
+		<xs:attributeGroup ref="ideal.em.attlist" />
+	</xs:complexType>
+	<xs:element name="em" type="ideal.kbd.type" />
+
+	<!-- Element: kbd  -->
+
+	<xs:attributeGroup name="ideal.kbd.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.kbd.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.kbd.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The em element indicates emphasis for its contents.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.kbd.content" />
+		<xs:attributeGroup ref="ideal.kbd.attlist" />
+	</xs:complexType>
+	<xs:element name="kbd" type="ideal.kbd.type" />
+
+	<!-- Element: l  -->
+
+	<xs:attributeGroup name="ideal.l.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.l.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.l.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The l element represents a semantic line of text (e.g.,
+				a line of verse or a line of computer code).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.l.content" />
+		<xs:attributeGroup ref="ideal.l.attlist" />
+	</xs:complexType>
+	<xs:element name="l" type="ideal.l.type" />
+
+	<!-- Element: q  -->
+
+	<xs:attributeGroup name="ideal.q.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+		<xs:attribute ref="cite" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.q.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.q.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				This element designates an inline text fragment of
+				quoted text.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.q.content" />
+		<xs:attributeGroup ref="ideal.q.attlist" />
+	</xs:complexType>
+	<xs:element name="q" type="ideal.q.type" />
+
+	<!-- Element: samp  -->
+
+	<xs:attributeGroup name="ideal.samp.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.samp.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.samp.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The samp element designates sample output from programs,
+				scripts, etc.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.samp.content" />
+		<xs:attributeGroup ref="ideal.samp.attlist" />
+	</xs:complexType>
+	<xs:element name="samp" type="ideal.samp.type" />
+
+	<!-- Element: span  -->
+
+	<xs:attributeGroup name="ideal.span.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="encoding" />
+		<xs:attributeGroup ref="span.extra.attributes" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.span.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.span.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The span element, in conjunction with the id, class and
+				role attributes, offers a generic mechanism for adding
+				structure to documents. This element imposes no
+				presentational idioms on the content. Thus, authors may
+				use this element in conjunction with style sheets, the
+				xml:lang attribute, etc.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.span.content" />
+		<xs:attributeGroup ref="ideal.span.attlist" />
+	</xs:complexType>
+	<xs:element name="span" type="ideal.span.type" />
+
+	<!-- Element: strong  -->
+
+	<xs:attributeGroup name="ideal.strong.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.strong.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.strong.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The strong element indicates higher importance for its
+				contents than that of the surrounding content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.strong.content" />
+		<xs:attributeGroup ref="ideal.strong.attlist" />
+	</xs:complexType>
+	<xs:element name="strong" type="ideal.strong.type" />
+
+	<!-- Element: sub  -->
+
+	<xs:attributeGroup name="ideal.sub.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.sub.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.sub.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The sub element indicates that its contents should
+				regarded as a subscript.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.sub.content" />
+		<xs:attributeGroup ref="ideal.sub.attlist" />
+	</xs:complexType>
+	<xs:element name="sub" type="ideal.sub.type" />
+
+	<!-- Element: sup  -->
+
+	<xs:attributeGroup name="ideal.sup.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.sup.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.sup.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The sup element indicates that its contents should be
+				regarded as a super-script.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.sup.content" />
+		<xs:attributeGroup ref="ideal.sup.attlist" />
+	</xs:complexType>
+	<xs:element name="sup" type="ideal.sup.type" />
+
+	<!-- Element: var  -->
+
+	<xs:attributeGroup name="ideal.var.attlist">
+		<xs:attributeGroup ref="ideal.Text.attlist" />
+	</xs:attributeGroup>
+
+	<xs:group name="ideal.var.content">
+		<xs:sequence>
+			<xs:group ref="XForm.UIInline.class" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="ideal.var.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The var element indicates an instance of a variable or
+				program argument.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.var.content" />
+		<xs:attributeGroup ref="ideal.var.attlist" />
+	</xs:complexType>
+	<xs:element name="var" type="ideal.var.type" />
+</xs:schema>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xh11d="http://www.w3.org/1999/xhtml/datatypes/"
+	xmlns:xforms="http://www.w3.org/2002/xforms" 
+	xmlns:sel="http://www.w3.org/2004/06/diselect" 
+	xmlns="http://www.morfeo-project.org/2008/ideal" 
+	targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/1999/xhtml/datatypes/" schemaLocation="xhtml-datatypes-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:import namespace="http://www.w3.org/2004/06/diselect" schemaLocation="DISelect.xsd"/>
+	<xs:include schemaLocation="xhtml-role.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Common attributes for IDEAL</xs:documentation>
+	</xs:annotation>
+	<xs:attributeGroup name="ideal.xml_id">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/2005/REC-xml-id-20050909/"/>
+		</xs:annotation>
+		<xs:attribute ref="xml:id"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.xml_space">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/REC-xml/#sec-white-space"/>
+		</xs:annotation>
+		<xs:attribute ref="xml:space"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.xml_lang">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/REC-xml/#sec-lang-tag"/>
+		</xs:annotation>
+		<xs:attribute ref="xml:lang"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.sel_expr">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute may be included in any element in the
+				document, and must be bound to the DISelect namespace.
+				Its value is a boolean XPATH expression. This expression
+				may be evaluated by the server, client, or other
+				adaptation layer: if it evaluates to 'true' then the
+				element containing the expr attribute, and all its child
+				and attribute nodes, are selected for inclusion in the
+				output document. If the expression evaluates to false,
+				then the element containing the expr attribute, and all
+				its children, are omitted from the output document.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute ref="sel:expr"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.class">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute ref="class"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.title">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute defines meta-information about the
+				element on which it is set.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute ref="title"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.role">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/xhtml-role"/>
+		</xs:annotation>
+		<xs:attribute ref="role"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.Common.extra.attrib"/>
+	<xs:attributeGroup name="embedding.attrib">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="hypertext.attrib">
+		<xs:attribute ref="href"/>
+		<xs:attribute ref="hreftype"/>
+		<xs:attribute ref="hrefmedia"/>
+		<xs:attribute ref="hreflang"/>
+		<xs:attribute ref="nextfocus"/>
+		<xs:attribute ref="prevfocus"/>
+	</xs:attributeGroup>
+	<xs:attribute name="class" type="xs:NMTOKENS">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="title" type="xh11d:Text">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute defines meta-information about the
+				element on which it is set.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="encoding" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="src" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the location of an external
+				source for the contents of the element.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="srctype" type="xh11d:ContentType">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="href" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies a URI that is actuated when the
+				element is activated.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="hreftype" type="xh11d:ContentType">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the allowable content types of
+				the relevant href URI.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="hreflang" type="xh11d:LanguageCodes">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the primary language of the
+				resource designated by href
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="hrefmedia" type="xh11d:MediaDesc">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute indicates the type(s) of media to which
+				to make available the content referenced by the
+				associated href URI
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="nextfocus" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="prevfocus" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="rel" type="xs:QName">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute describes the relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="rev" type="xs:QName">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute is the complement of the rel attribute
+				and describes the reverse relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="about" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies which resource has a specified
+				property.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="property" type="xs:QName">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute indicates which property is being defined
+				by the element. If it is not specified, the property is
+				reference.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="content" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the metadata associated with an
+				element. If not specified, then the metadata for an
+				element is its content.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="datatype" type="xs:QName">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute defines the datatype of the content
+				metadata of the element. If the attribute is not
+				specified, then the default value is string as defined
+				by [XMLSCHEMA].
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="declare">
+		<xs:annotation>
+			<xs:documentation>
+				When present, this boolean attribute makes the current
+				element a declaration only - one that is to be executed
+				only after the document has completed loading and has
+				been called through a user event.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:NMTOKEN">
+				<xs:enumeration value="declare"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="name" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute defines the name of a run-time parameter,
+				assumed to be known by the object handler. Whether the
+				property name is case-sensitive depends on the specific
+				object handler implementation.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="value" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the value of a run-time
+				parameter specified by name. Property values have no
+				meaning to XHTML; their meaning is determined by the
+				object in question.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="full" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute locates an element that defines the full
+				expansion of an abbreviation.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="cite" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>
+				The value of this attribute is a URI that designates a
+				source document or message. This attribute is intended
+				to give further information about the element's contents
+				(e.g., the source from which a quotation was borrowed,
+				or the reason text was inserted or deleted).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="scope">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the set of data cells for which
+				the current header cell provides header information
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:NMTOKEN">
+				<xs:enumeration value="row"/>
+				<xs:enumeration value="col"/>
+				<xs:enumeration value="rowgroup"/>
+				<xs:enumeration value="colgroup"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="abbr" type="xh11d:Text">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute should be used to provide an abbreviated
+				form of the cell's content, and may be rendered by user
+				agents when appropriate in place of the cell's content.
+				Abbreviated names should be short since user agents may
+				render them repeatedly. For instance, speech
+				synthesizers may render the abbreviated headers relating
+				to a particular cell before rendering that cell's
+				content.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="headers" type="xs:IDREFS">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="rowspan" type="xh11d:Number">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="colspan" type="xh11d:Number">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute specifies the number of columns spanned
+				by the current cell. The default value of this attribute
+				is one ("1"). The value zero ("0") means that the cell
+				spans all columns from the current column to the last
+				column of the column group ( colgroup) in which the cell
+				is defined.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="span" type="xh11d:Number">
+		<xs:annotation>
+			<xs:documentation>
+				This attribute must be an integer &gt; 0; the default
+				value is 1. This specifies the number of columns in a
+				colgroup, or specifies the number of columns "spanned"
+				by the col element.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="number" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				Represents the telephone number. It must not have any
+				spaces or other characters between the digits and it is
+				recommended to precede it always with the country
+				number.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="contact" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				The contact attribute indicates the name that will be
+				used for this contact in the phone book.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="decorator" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>
+				Decorator should be shown nearer the element.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<!-- 
+	<xs:attribute name="content" type="xh11d:URI">
+		<xs:annotation>
+			<xs:documentation>URI to markup fragment.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	-->
+	<xs:attribute name="cachecontent" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				Ability to have their source RSS feeds cached.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="cti" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				The cti attribute (Computer Telephony Integration)
+				allows interactions between the phone and a computer,
+				including pauses and user actions number.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="expr" type="xh11d:CDATA">
+		<xs:annotation>
+			<xs:documentation>
+				Indicates the expression to evaluate.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attributeGroup name="repeat.attributes">
+		<xs:attribute ref="xforms:repeat-model"/>
+		<xs:attribute ref="xforms:repeat-bind"/>
+		<xs:attribute ref="xforms:repeat-nodeset"/>
+		<xs:attribute ref="xforms:repeat-startindex"/>
+		<xs:attribute ref="xforms:repeat-number"/>
+	</xs:attributeGroup>
+	<!-- XML Events 2 attributes -->
+	<xs:attribute name="targetrole" type="xh11d:CURIEs">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute specifies the role of the target elements of
+				the event.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="targetid" type="xs:IDREFS">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute specifies the id of the target elements of the
+				event.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="formatter" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute specifies the id of the formatter element.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="validator" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute specifies the id of the validator element.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="type" type="xs:QName">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute specifies the element type.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="handler" type="xs:anyURI">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the URI reference of a resource that defines
+				the handler.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="pattern" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>
+				Defines the exact sequence of characters that are
+				acceptable.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="enumeration" type="xs:anySimpleType">
+		<xs:annotation>
+			<xs:documentation>
+				Defines a list of acceptable values.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="whiteSpace">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies how white space is handled.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:NMTOKEN">
+				<xs:enumeration value="preserve"/>
+				<xs:enumeration value="replace"/>
+				<xs:enumeration value="collapse"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="length" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the exact number of characters or list items
+				allowed. Must be equal to or greater than zero.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="maxlength" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the maximum number of characters or list items
+				allowed. Must be equal to or greater than zero.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="minlength" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the minimum number of characters or list items
+				allowed. Must be equal to or greater than zero.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="totalDigits" type="xs:positiveInteger">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the exact number of digits allowed. Must be
+				greater than zero.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="fractionDigits" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the maximum number of decimal places allowed.
+				Must be equal to or greater than zero.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="maxInclusive" type="xs:anySimpleType">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the upper bounds for values (the value must be
+				less than or equal to this value).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="maxExclusive" type="xs:anySimpleType">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the upper bounds for values (the value must be
+				less than this value).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="minInclusive" type="xs:anySimpleType">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the lower bounds for values (the value must be
+				greater than or equal to this value).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="minExclusive" type="xs:anySimpleType">
+		<xs:annotation>
+			<xs:documentation>
+				Specifies the lower bounds for values (the value must be
+				greater than this value).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="locale" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>
+				Represents a specific geographical, political or
+				cultural region.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="timeZone" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>
+				Represents a time zone offset. To specify a time zone,
+				you can either enter a dateTime in UTC time by adding a
+				"Z" behind the time - like this: '2002-05-30T09:30:10Z'
+				or you can specify an offset from the UTC time by adding
+				a positive or negative time behind the time - like this:
+				'2002-05-30T09:30:10-06:00' or
+				'2002-05-30T09:30:10+06:00'.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="if" type="xforms:XPathExpression">
+		<xs:annotation>
+			<xs:documentation>
+				Attribute allows a condition to be specified. This
+				condition must be met in order for the event handler to
+				be activated.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<!-- XML Events 2 attributes -->
+	<xs:attributeGroup name="ideal.Common.attrib">
+		<xs:attributeGroup ref="ideal.xml_space"/>
+		<xs:attributeGroup ref="ideal.xml_id"/>
+		<xs:attributeGroup ref="ideal.xml_lang"/>
+		<xs:attributeGroup ref="ideal.class"/>
+		<xs:attributeGroup ref="ideal.title"/>
+		<xs:attributeGroup ref="ideal.sel_expr"/>
+		<xs:attributeGroup ref="ideal.role"/>
+		<xs:attributeGroup ref="ideal.Common.extra.attrib"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ideal.Basic_Common.attrib">
+		<xs:attributeGroup ref="ideal.xml_id"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="p.extra.attributes">
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="div.extra.attributes">
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="title.extra.attributes">
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="span.extra.attributes">
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="li.extra.attributes">
+		<xs:attribute ref="decorator"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="table.extra.attributes">
+		<xs:attribute ref="xforms:ref"/>
+		<xs:attribute ref="xforms:bind"/>
+		<xs:attribute ref="xforms:model"/>
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="nl.extra.attributes">
+		<xs:attribute ref="xforms:ref"/>
+		<xs:attribute ref="xforms:bind"/>
+		<xs:attribute ref="xforms:model"/>
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="dl.extra.attributes">
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ol.extra.attributes">
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ul.extra.attributes">
+		<xs:attributeGroup ref="repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="object.extra.attributes">
+		<xs:attribute ref="xforms:ref"/>
+		<xs:attribute ref="xforms:bind"/>
+		<xs:attribute ref="xforms:model"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="th.extra.attributes"/>
+	<xs:attributeGroup name="tr.extra.attributes"/>
+	<xs:attributeGroup name="td.extra.attributes"/>
+</xs:schema>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.morfeo-project.org/2008/ideal" xmlns:xforms="http://www.w3.org/2002/xforms" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified">
+	<xs:include schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:include schemaLocation="ideal-model-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			List Module This is the XML Schema Lists module for IDEAL
+
+			List Module Elements
+
+			* dl, dt, dd, di, ol, ul, li, nl
+
+			This module declares the list-oriented element types and
+			their attributes.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- il element -->
+	<xs:attributeGroup name="ideal.li.attlist">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>
+		<xs:attributeGroup ref="hypertext.attrib"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attributeGroup ref="li.extra.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.li.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="ideal.Text.class"/>
+				<xs:group ref="XForm.UIInline.class"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.li.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The li element defines a list item within an ordered,
+				unordered, or navigation list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.li.content"/>
+		<xs:attributeGroup ref="ideal.li.attlist"/>
+	</xs:complexType>
+	<xs:element name="li" type="ideal.li.type"/>
+	<!-- end il element -->
+	<!-- ol element -->
+	<xs:attributeGroup name="ideal.ol.attlist">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>
+		<xs:attribute ref="nextfocus"/>
+		<xs:attribute ref="prevfocus"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attributeGroup ref="ol.extra.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.ol.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.ol.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.ol.content"/>
+		<xs:attributeGroup ref="ideal.ol.attlist"/>
+	</xs:complexType>
+	<xs:element name="ol" type="ideal.ol.type"/>
+	<!-- end ol element -->
+	<!-- ul element -->
+	<xs:attributeGroup name="ideal.ul.attlist">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>		
+		<xs:attribute ref="nextfocus"/>
+		<xs:attribute ref="prevfocus"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attributeGroup ref="ul.extra.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.ul.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.ul.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a list (&lt;li&gt;),
+				they are mutually exclusive within the same list.
+				&lt;ol&gt; represents an item in an ordered list,
+				&lt;ul&gt; represents an item in an unordered list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.ul.content"/>
+		<xs:attributeGroup ref="ideal.ul.attlist"/>
+	</xs:complexType>
+	<xs:element name="ul" type="ideal.ul.type"/>
+	<!-- end ul element -->
+	<!-- dl element -->
+	<xs:attributeGroup name="ideal.dl.attlist">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>
+		<xs:attribute ref="nextfocus"/>
+		<xs:attribute ref="prevfocus"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attributeGroup ref="dl.extra.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.dl.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:element ref="di" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.dl.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.dl.content"/>
+		<xs:attributeGroup ref="ideal.dl.attlist"/>
+	</xs:complexType>
+	<xs:element name="dl" type="ideal.dl.type"/>
+	<!-- end dl element -->
+	<!-- di element -->
+	<xs:attributeGroup name="ideal.di.attlist">
+		<xs:attributeGroup ref="hypertext.attrib"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.di.content">
+		<xs:sequence>
+			<xs:element ref="dt"/>
+			<xs:element ref="dd"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.di.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.di.content"/>
+		<xs:attributeGroup ref="ideal.di.attlist"/>
+	</xs:complexType>
+	<xs:element name="di" type="ideal.di.type"/>
+	<!-- end di element -->
+	<!-- dt element -->
+	<xs:attributeGroup name="ideal.dt.attlist">
+		<xs:attributeGroup ref="hypertext.attrib"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.dt.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="ideal.Text.class"/>
+				<xs:group ref="XForm.UIInline.class"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.dt.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.dt.content"/>
+		<xs:attributeGroup ref="ideal.dt.attlist"/>
+	</xs:complexType>
+	<xs:element name="dt" type="ideal.dt.type"/>
+	<!-- end dt element -->
+	<!-- dd element -->
+	<xs:attributeGroup name="ideal.dd.attlist">
+		<xs:attributeGroup ref="hypertext.attrib"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.dd.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="ideal.Text.class"/>
+				<xs:group ref="XForm.UIInline.class"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.dd.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				Definition lists. These vary only slightly from other
+				types of lists in that list items consist of two parts:
+				a term and a description. The term is given by the dt
+				element. The description is given with a dd element. The
+				term and its definition can be grouped within a di
+				element to help clarify the relationship between a term
+				and its definition(s).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.dd.content"/>
+		<xs:attributeGroup ref="ideal.dd.attlist"/>
+	</xs:complexType>
+	<xs:element name="dd" type="ideal.dd.type"/>
+	<!-- end dd element -->
+	<!-- nl element -->
+	<xs:attributeGroup name="ideal.nl.attlist">
+		<xs:attribute ref="src"/>
+		<xs:attribute ref="srctype"/>
+		<xs:attribute ref="encoding"/>
+		<xs:attribute ref="nextfocus"/>
+		<xs:attribute ref="prevfocus"/>
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+		<xs:attributeGroup ref="nl.extra.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.nl.content">
+		<xs:sequence>
+			<xs:element ref="label" minOccurs="0"/>
+			<xs:element ref="li" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.nl.type" mixed="false">
+		<xs:annotation>
+			<xs:documentation>
+				Navigation lists are intended to be used to define
+				collections of selectable items for presentation in a
+				"navigation" menu. Note that a navigation list always
+				starts with a label element that defines the label for
+				the list
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.nl.content"/>
+		<xs:attributeGroup ref="ideal.nl.attlist"/>
+	</xs:complexType>
+	<xs:element name="nl" type="ideal.nl.type"/>
+	<!-- end nl element -->
+</xs:schema>

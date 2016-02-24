@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:sel="http://www.w3.org/2004/06/diselect"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.w3.org/2004/06/diselect"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<!-- attributes -->
+	<xs:attribute name="expr">
+		<xs:annotation>
+			<xs:documentation>
+				XPath expression which resolves to a boolean to control	inclusion of optional content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+		      <xs:restriction base="xs:string"/>
+		</xs:simpleType>		
+	</xs:attribute>
+	<xs:attribute name="selid">
+		<xs:annotation>
+			<xs:documentation>
+				The value of selid attribute on an element in the source infoset becomes the value of the generated xml:id attribute on the equivalent element of the result infoset.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+		      <xs:restriction base="xs:string"/>
+		</xs:simpleType>			
+	</xs:attribute>
+	<xs:attribute name="selidname">
+		<xs:annotation>
+			<xs:documentation>
+				This optional attribute defines the name of the host language attribute that provides unique identifiers.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+		      <xs:restriction base="xs:string"/>
+		</xs:simpleType>			
+	</xs:attribute>
+		
+	
+ 	<xs:attributeGroup name="selection.Common.attributes">
+    		<xs:attribute ref="sel:expr"/>
+       		<xs:attribute ref="sel:selid"/>
+   		<xs:attribute ref="sel:selidname"/>       
+  	</xs:attributeGroup>	
+</xs:schema>

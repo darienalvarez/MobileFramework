@@ -1,0 +1,2583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY XHTML.global.i18n.attrib "xhtml:dir          ( ltr | rtl )            #IMPLIED      xml:lang     CDATA  #IMPLIED">
+<!ENTITY nbsp "&amp;#160;">
+<!ENTITY iexcl "&amp;#161;">
+<!ENTITY cent "&amp;#162;">
+<!ENTITY pound "&amp;#163;">
+<!ENTITY curren "&amp;#164;">
+<!ENTITY yen "&amp;#165;">
+<!ENTITY brvbar "&amp;#166;">
+<!ENTITY sect "&amp;#167;">
+<!ENTITY uml "&amp;#168;">
+<!ENTITY copy "&amp;#169;">
+<!ENTITY ordf "&amp;#170;">
+<!ENTITY laquo "&amp;#171;">
+<!ENTITY not "&amp;#172;">
+<!ENTITY shy "&amp;#173;">
+<!ENTITY reg "&amp;#174;">
+<!ENTITY macr "&amp;#175;">
+<!ENTITY deg "&amp;#176;">
+<!ENTITY plusmn "&amp;#177;">
+<!ENTITY sup2 "&amp;#178;">
+<!ENTITY sup3 "&amp;#179;">
+<!ENTITY acute "&amp;#180;">
+<!ENTITY micro "&amp;#181;">
+<!ENTITY para "&amp;#182;">
+<!ENTITY middot "&amp;#183;">
+<!ENTITY cedil "&amp;#184;">
+<!ENTITY sup1 "&amp;#185;">
+<!ENTITY ordm "&amp;#186;">
+<!ENTITY raquo "&amp;#187;">
+<!ENTITY frac14 "&amp;#188;">
+<!ENTITY frac12 "&amp;#189;">
+<!ENTITY frac34 "&amp;#190;">
+<!ENTITY iquest "&amp;#191;">
+<!ENTITY Agrave "&amp;#192;">
+<!ENTITY Aacute "&amp;#193;">
+<!ENTITY Acirc "&amp;#194;">
+<!ENTITY Atilde "&amp;#195;">
+<!ENTITY Auml "&amp;#196;">
+<!ENTITY Aring "&amp;#197;">
+<!ENTITY AElig "&amp;#198;">
+<!ENTITY Ccedil "&amp;#199;">
+<!ENTITY Egrave "&amp;#200;">
+<!ENTITY Eacute "&amp;#201;">
+<!ENTITY Ecirc "&amp;#202;">
+<!ENTITY Euml "&amp;#203;">
+<!ENTITY Igrave "&amp;#204;">
+<!ENTITY Iacute "&amp;#205;">
+<!ENTITY Icirc "&amp;#206;">
+<!ENTITY Iuml "&amp;#207;">
+<!ENTITY ETH "&amp;#208;">
+<!ENTITY Ntilde "&amp;#209;">
+<!ENTITY Ograve "&amp;#210;">
+<!ENTITY Oacute "&amp;#211;">
+<!ENTITY Ocirc "&amp;#212;">
+<!ENTITY Otilde "&amp;#213;">
+<!ENTITY Ouml "&amp;#214;">
+<!ENTITY times "&amp;#215;">
+<!ENTITY Oslash "&amp;#216;">
+<!ENTITY Ugrave "&amp;#217;">
+<!ENTITY Uacute "&amp;#218;">
+<!ENTITY Ucirc "&amp;#219;">
+<!ENTITY Uuml "&amp;#220;">
+<!ENTITY Yacute "&amp;#221;">
+<!ENTITY THORN "&amp;#222;">
+<!ENTITY szlig "&amp;#223;">
+<!ENTITY agrave "&amp;#224;">
+<!ENTITY aacute "&amp;#225;">
+<!ENTITY acirc "&amp;#226;">
+<!ENTITY atilde "&amp;#227;">
+<!ENTITY auml "&amp;#228;">
+<!ENTITY aring "&amp;#229;">
+<!ENTITY aelig "&amp;#230;">
+<!ENTITY ccedil "&amp;#231;">
+<!ENTITY egrave "&amp;#232;">
+<!ENTITY eacute "&amp;#233;">
+<!ENTITY ecirc "&amp;#234;">
+<!ENTITY euml "&amp;#235;">
+<!ENTITY igrave "&amp;#236;">
+<!ENTITY iacute "&amp;#237;">
+<!ENTITY icirc "&amp;#238;">
+<!ENTITY iuml "&amp;#239;">
+<!ENTITY eth "&amp;#240;">
+<!ENTITY ntilde "&amp;#241;">
+<!ENTITY ograve "&amp;#242;">
+<!ENTITY oacute "&amp;#243;">
+<!ENTITY ocirc "&amp;#244;">
+<!ENTITY otilde "&amp;#245;">
+<!ENTITY ouml "&amp;#246;">
+<!ENTITY divide "&amp;#247;">
+<!ENTITY oslash "&amp;#248;">
+<!ENTITY ugrave "&amp;#249;">
+<!ENTITY uacute "&amp;#250;">
+<!ENTITY ucirc "&amp;#251;">
+<!ENTITY uuml "&amp;#252;">
+<!ENTITY yacute "&amp;#253;">
+<!ENTITY thorn "&amp;#254;">
+<!ENTITY yuml "&amp;#255;">
+<!ENTITY fnof "&amp;#402;">
+<!ENTITY Alpha "&amp;#913;">
+<!ENTITY Beta "&amp;#914;">
+<!ENTITY Gamma "&amp;#915;">
+<!ENTITY Delta "&amp;#916;">
+<!ENTITY Epsilon "&amp;#917;">
+<!ENTITY Zeta "&amp;#918;">
+<!ENTITY Eta "&amp;#919;">
+<!ENTITY Theta "&amp;#920;">
+<!ENTITY Iota "&amp;#921;">
+<!ENTITY Kappa "&amp;#922;">
+<!ENTITY Lambda "&amp;#923;">
+<!ENTITY Mu "&amp;#924;">
+<!ENTITY Nu "&amp;#925;">
+<!ENTITY Xi "&amp;#926;">
+<!ENTITY Omicron "&amp;#927;">
+<!ENTITY Pi "&amp;#928;">
+<!ENTITY Rho "&amp;#929;">
+<!ENTITY Sigma "&amp;#931;">
+<!ENTITY Tau "&amp;#932;">
+<!ENTITY Upsilon "&amp;#933;">
+<!ENTITY Phi "&amp;#934;">
+<!ENTITY Chi "&amp;#935;">
+<!ENTITY Psi "&amp;#936;">
+<!ENTITY Omega "&amp;#937;">
+<!ENTITY alpha "&amp;#945;">
+<!ENTITY beta "&amp;#946;">
+<!ENTITY gamma "&amp;#947;">
+<!ENTITY delta "&amp;#948;">
+<!ENTITY epsilon "&amp;#949;">
+<!ENTITY zeta "&amp;#950;">
+<!ENTITY eta "&amp;#951;">
+<!ENTITY theta "&amp;#952;">
+<!ENTITY iota "&amp;#953;">
+<!ENTITY kappa "&amp;#954;">
+<!ENTITY lambda "&amp;#955;">
+<!ENTITY mu "&amp;#956;">
+<!ENTITY nu "&amp;#957;">
+<!ENTITY xi "&amp;#958;">
+<!ENTITY omicron "&amp;#959;">
+<!ENTITY pi "&amp;#960;">
+<!ENTITY rho "&amp;#961;">
+<!ENTITY sigmaf "&amp;#962;">
+<!ENTITY sigma "&amp;#963;">
+<!ENTITY tau "&amp;#964;">
+<!ENTITY upsilon "&amp;#965;">
+<!ENTITY phi "&amp;#966;">
+<!ENTITY chi "&amp;#967;">
+<!ENTITY psi "&amp;#968;">
+<!ENTITY omega "&amp;#969;">
+<!ENTITY thetasym "&amp;#977;">
+<!ENTITY upsih "&amp;#978;">
+<!ENTITY piv "&amp;#982;">
+<!ENTITY bull "&amp;#8226;">
+<!ENTITY hellip "&amp;#8230;">
+<!ENTITY prime "&amp;#8242;">
+<!ENTITY Prime "&amp;#8243;">
+<!ENTITY oline "&amp;#8254;">
+<!ENTITY frasl "&amp;#8260;">
+<!ENTITY weierp "&amp;#8472;">
+<!ENTITY image "&amp;#8465;">
+<!ENTITY real "&amp;#8476;">
+<!ENTITY trade "&amp;#8482;">
+<!ENTITY alefsym "&amp;#8501;">
+<!ENTITY larr "&amp;#8592;">
+<!ENTITY uarr "&amp;#8593;">
+<!ENTITY rarr "&amp;#8594;">
+<!ENTITY darr "&amp;#8595;">
+<!ENTITY harr "&amp;#8596;">
+<!ENTITY crarr "&amp;#8629;">
+<!ENTITY lArr "&amp;#8656;">
+<!ENTITY uArr "&amp;#8657;">
+<!ENTITY rArr "&amp;#8658;">
+<!ENTITY dArr "&amp;#8659;">
+<!ENTITY hArr "&amp;#8660;">
+<!ENTITY forall "&amp;#8704;">
+<!ENTITY part "&amp;#8706;">
+<!ENTITY exist "&amp;#8707;">
+<!ENTITY empty "&amp;#8709;">
+<!ENTITY nabla "&amp;#8711;">
+<!ENTITY isin "&amp;#8712;">
+<!ENTITY notin "&amp;#8713;">
+<!ENTITY ni "&amp;#8715;">
+<!ENTITY prod "&amp;#8719;">
+<!ENTITY sum "&amp;#8721;">
+<!ENTITY minus "&amp;#8722;">
+<!ENTITY lowast "&amp;#8727;">
+<!ENTITY radic "&amp;#8730;">
+<!ENTITY prop "&amp;#8733;">
+<!ENTITY infin "&amp;#8734;">
+<!ENTITY ang "&amp;#8736;">
+<!ENTITY and "&amp;#8743;">
+<!ENTITY or "&amp;#8744;">
+<!ENTITY cap "&amp;#8745;">
+<!ENTITY cup "&amp;#8746;">
+<!ENTITY int "&amp;#8747;">
+<!ENTITY there4 "&amp;#8756;">
+<!ENTITY sim "&amp;#8764;">
+<!ENTITY cong "&amp;#8773;">
+<!ENTITY asymp "&amp;#8776;">
+<!ENTITY ne "&amp;#8800;">
+<!ENTITY equiv "&amp;#8801;">
+<!ENTITY le "&amp;#8804;">
+<!ENTITY ge "&amp;#8805;">
+<!ENTITY sub "&amp;#8834;">
+<!ENTITY sup "&amp;#8835;">
+<!ENTITY nsub "&amp;#8836;">
+<!ENTITY sube "&amp;#8838;">
+<!ENTITY supe "&amp;#8839;">
+<!ENTITY oplus "&amp;#8853;">
+<!ENTITY otimes "&amp;#8855;">
+<!ENTITY perp "&amp;#8869;">
+<!ENTITY sdot "&amp;#8901;">
+<!ENTITY lceil "&amp;#8968;">
+<!ENTITY rceil "&amp;#8969;">
+<!ENTITY lfloor "&amp;#8970;">
+<!ENTITY rfloor "&amp;#8971;">
+<!ENTITY lang "&amp;#9001;">
+<!ENTITY rang "&amp;#9002;">
+<!ENTITY loz "&amp;#9674;">
+<!ENTITY spades "&amp;#9824;">
+<!ENTITY clubs "&amp;#9827;">
+<!ENTITY hearts "&amp;#9829;">
+<!ENTITY diams "&amp;#9830;">
+<!ENTITY OElig "&amp;#338;">
+<!ENTITY oelig "&amp;#339;">
+<!ENTITY Scaron "&amp;#352;">
+<!ENTITY scaron "&amp;#353;">
+<!ENTITY Yuml "&amp;#376;">
+<!ENTITY circ "&amp;#710;">
+<!ENTITY tilde "&amp;#732;">
+<!ENTITY ensp "&amp;#8194;">
+<!ENTITY emsp "&amp;#8195;">
+<!ENTITY thinsp "&amp;#8201;">
+<!ENTITY zwnj "&amp;#8204;">
+<!ENTITY zwj "&amp;#8205;">
+<!ENTITY lrm "&amp;#8206;">
+<!ENTITY rlm "&amp;#8207;">
+<!ENTITY ndash "&amp;#8211;">
+<!ENTITY mdash "&amp;#8212;">
+<!ENTITY lsquo "&amp;#8216;">
+<!ENTITY rsquo "&amp;#8217;">
+<!ENTITY sbquo "&amp;#8218;">
+<!ENTITY ldquo "&amp;#8220;">
+<!ENTITY rdquo "&amp;#8221;">
+<!ENTITY bdquo "&amp;#8222;">
+<!ENTITY dagger "&amp;#8224;">
+<!ENTITY Dagger "&amp;#8225;">
+<!ENTITY permil "&amp;#8240;">
+<!ENTITY lsaquo "&amp;#8249;">
+<!ENTITY rsaquo "&amp;#8250;">
+<!ENTITY euro "&amp;#8364;">
+<!ELEMENT br EMPTY>
+<!ATTLIST br
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+>
+<!ELEMENT span (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST span
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT abbr (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST abbr
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT acronym (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST acronym
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT cite (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST cite
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT code (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST code
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT dfn (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST dfn
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT em (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST em
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT kbd (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST kbd
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT q (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST q
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	cite CDATA #IMPLIED
+>
+<!ELEMENT samp (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST samp
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT strong (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST strong
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT var (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST var
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT div (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST div
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT p (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST p
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT address (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST address
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT blockquote (h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | ins | del | script | noscript)*>
+<!ATTLIST blockquote
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	cite CDATA #IMPLIED
+>
+<!ELEMENT pre (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | bdo | a | map | ins | del | script | noscript)*>
+<!ATTLIST pre
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h1 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h1
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h2 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h2
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h3 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h3
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h4 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h4
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h5 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h5
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT h6 (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST h6
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT a (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST a
+	onfocus CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	charset CDATA #IMPLIED
+	type CDATA #IMPLIED
+	hreflang CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+	tabindex CDATA #IMPLIED
+	shape (circle | default | rect | poly) "rect"
+	coords CDATA #IMPLIED
+	target CDATA #IMPLIED
+>
+<!ELEMENT dl (dt | dd)+>
+<!ATTLIST dl
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT dt (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST dt
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT dd (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST dd
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT ol (li)+>
+<!ATTLIST ol
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT ul (li)+>
+<!ATTLIST ul
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT li (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST li
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT ins (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST ins
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	cite CDATA #IMPLIED
+	datetime CDATA #IMPLIED
+>
+<!ELEMENT del (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST del
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	cite CDATA #IMPLIED
+	datetime CDATA #IMPLIED
+>
+<!ELEMENT bdo (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST bdo
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	xml:lang CDATA #IMPLIED
+	dir (rtl | ltr) #REQUIRED
+>
+<!ELEMENT ruby ((rb, (rt | (rp, rt, rp))) | (rbc, rtc, rtc?))>
+<!ATTLIST ruby
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT rbc (rb)+>
+<!ATTLIST rbc
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT rtc (rt)+>
+<!ATTLIST rtc
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT rb (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ins | del | script | noscript)*>
+<!ATTLIST rb
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT rt (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ins | del | script | noscript)*>
+<!ATTLIST rt
+	rbspan CDATA "1"
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT rp (#PCDATA)>
+<!ATTLIST rp
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT b (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST b
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT big (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST big
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT i (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST i
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT small (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST small
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT sub (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST sub
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT sup (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST sup
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT tt (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST tt
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT hr EMPTY>
+<!ATTLIST hr
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT link EMPTY>
+<!ATTLIST link
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	charset CDATA #IMPLIED
+	hreflang CDATA #IMPLIED
+	type CDATA #IMPLIED
+	media CDATA #IMPLIED
+	target CDATA #IMPLIED
+>
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	http-equiv NMTOKEN #IMPLIED
+	name NMTOKEN #IMPLIED
+	scheme CDATA #IMPLIED
+>
+<!ELEMENT base EMPTY>
+<!ATTLIST base
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	href CDATA #REQUIRED
+	target CDATA #IMPLIED
+>
+<!ELEMENT script (#PCDATA)>
+<!ATTLIST script
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	href CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	charset CDATA #IMPLIED
+	type CDATA #REQUIRED
+	src CDATA #IMPLIED
+	defer (defer) #IMPLIED
+>
+<!ELEMENT noscript (h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | ins | del | script | noscript)+>
+<!ATTLIST noscript
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT style (#PCDATA)>
+<!ATTLIST style
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	title CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	href CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	type CDATA #REQUIRED
+	media CDATA #IMPLIED
+>
+<!ELEMENT img EMPTY>
+<!ATTLIST img
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	src CDATA #REQUIRED
+	alt CDATA #REQUIRED
+	longdesc CDATA #IMPLIED
+	height CDATA #IMPLIED
+	width CDATA #IMPLIED
+	usemap IDREF #IMPLIED
+	ismap (ismap) #IMPLIED
+>
+<!ELEMENT area EMPTY>
+<!ATTLIST area
+	onfocus CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	shape (circle | default | rect | poly) "rect"
+	coords CDATA #IMPLIED
+	nohref (nohref) #IMPLIED
+	alt CDATA #REQUIRED
+	tabindex CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+	target CDATA #IMPLIED
+>
+<!ELEMENT map ((h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | ins | del | script | noscript) | area)+>
+<!ATTLIST map
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #REQUIRED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+>
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	href CDATA #IMPLIED
+	name CDATA #REQUIRED
+	value CDATA #IMPLIED
+	valuetype (data | ref | object) "data"
+	type CDATA #IMPLIED
+>
+<!ELEMENT object (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript | param)*>
+<!ATTLIST object
+	usemap IDREF #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	declare (declare) #IMPLIED
+	classid CDATA #IMPLIED
+	codebase CDATA #IMPLIED
+	data CDATA #IMPLIED
+	type CDATA #IMPLIED
+	codetype CDATA #IMPLIED
+	archive CDATA #IMPLIED
+	standby CDATA #IMPLIED
+	height CDATA #IMPLIED
+	width CDATA #IMPLIED
+	name CDATA #IMPLIED
+	tabindex CDATA #IMPLIED
+>
+<!ELEMENT table (caption?, (col* | colgroup*), ((thead?, tfoot?, tbody+) | (tr+)))>
+<!ATTLIST table
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	summary CDATA #IMPLIED
+	width CDATA #IMPLIED
+	border CDATA #IMPLIED
+	frame (above | vsides | border | rhs | lhs | hsides | void | box | below) #IMPLIED
+	rules (rows | all | none | cols | groups) #IMPLIED
+	cellspacing CDATA #IMPLIED
+	cellpadding CDATA #IMPLIED
+>
+<!ELEMENT caption (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST caption
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT thead (tr)+>
+<!ATTLIST thead
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT tfoot (tr)+>
+<!ATTLIST tfoot
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT tbody (tr)+>
+<!ATTLIST tbody
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT colgroup (col)*>
+<!ATTLIST colgroup
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	span CDATA "1"
+	width CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT col EMPTY>
+<!ATTLIST col
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	span CDATA "1"
+	width CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT tr (th | td)+>
+<!ATTLIST tr
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT th (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST th
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	abbr CDATA #IMPLIED
+	axis CDATA #IMPLIED
+	headers IDREFS #IMPLIED
+	scope (row | col | rowgroup | colgroup) #IMPLIED
+	rowspan CDATA "1"
+	colspan CDATA "1"
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT td (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST td
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	abbr CDATA #IMPLIED
+	axis CDATA #IMPLIED
+	headers IDREFS #IMPLIED
+	scope (row | col | rowgroup | colgroup) #IMPLIED
+	rowspan CDATA "1"
+	colspan CDATA "1"
+	align (left | right | char | justify | center) #IMPLIED
+	char CDATA #IMPLIED
+	charoff CDATA #IMPLIED
+	valign (baseline | top | middle | bottom) #IMPLIED
+>
+<!ELEMENT form (h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | ins | del | script | noscript | fieldset)+>
+<!ATTLIST form
+	onsubmit CDATA #IMPLIED
+	onreset CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	action CDATA #REQUIRED
+	method (post | get) "get"
+	enctype CDATA "application/x-www-form-urlencoded"
+	accept-charset CDATA #IMPLIED
+	accept CDATA #IMPLIED
+	target CDATA #IMPLIED
+>
+<!ELEMENT label (#PCDATA | input | select | textarea | button | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | bdo | tt | i | b | big | small | sub | sup | a | img | map | object | ins | del | script | noscript)*>
+<!ATTLIST label
+	onfocus CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	for IDREF #IMPLIED
+	accesskey CDATA #IMPLIED
+>
+<!ELEMENT input EMPTY>
+<!ATTLIST input
+	ismap (ismap) #IMPLIED
+	onchange CDATA #IMPLIED
+	onfocus CDATA #IMPLIED
+	onselect CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	usemap IDREF #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	type (button | password | image | text | reset | file | checkbox | radio | hidden | submit) "text"
+	name CDATA #IMPLIED
+	value CDATA #IMPLIED
+	checked (checked) #IMPLIED
+	disabled (disabled) #IMPLIED
+	readonly (readonly) #IMPLIED
+	size CDATA #IMPLIED
+	maxlength CDATA #IMPLIED
+	src CDATA #IMPLIED
+	alt CDATA #IMPLIED
+	tabindex CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+	accept CDATA #IMPLIED
+>
+<!ELEMENT select (optgroup | option)+>
+<!ATTLIST select
+	onchange CDATA #IMPLIED
+	onfocus CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	name CDATA #IMPLIED
+	size CDATA #IMPLIED
+	multiple (multiple) #IMPLIED
+	disabled (disabled) #IMPLIED
+	tabindex CDATA #IMPLIED
+>
+<!ELEMENT optgroup (option)+>
+<!ATTLIST optgroup
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	disabled (disabled) #IMPLIED
+	label CDATA #REQUIRED
+>
+<!ELEMENT option (#PCDATA)>
+<!ATTLIST option
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	selected (selected) #IMPLIED
+	disabled (disabled) #IMPLIED
+	label CDATA #IMPLIED
+	value CDATA #IMPLIED
+>
+<!ELEMENT textarea (#PCDATA)>
+<!ATTLIST textarea
+	onchange CDATA #IMPLIED
+	onfocus CDATA #IMPLIED
+	onselect CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	name CDATA #IMPLIED
+	rows CDATA #REQUIRED
+	cols CDATA #REQUIRED
+	disabled (disabled) #IMPLIED
+	readonly (readonly) #IMPLIED
+	tabindex CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+>
+<!ELEMENT fieldset (#PCDATA | legend | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST fieldset
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT legend (#PCDATA | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | a | img | map | object | input | select | textarea | label | button | ruby | ins | del | script | noscript)*>
+<!ATTLIST legend
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+>
+<!ELEMENT button (#PCDATA | h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | ins | del | script | noscript | br | span | em | strong | dfn | code | samp | kbd | var | cite | abbr | acronym | q | tt | i | b | big | small | sub | sup | bdo | img | map | object)*>
+<!ATTLIST button
+	onfocus CDATA #IMPLIED
+	onblur CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	name CDATA #IMPLIED
+	value CDATA #IMPLIED
+	type (button | reset | submit) "submit"
+	disabled (disabled) #IMPLIED
+	tabindex CDATA #IMPLIED
+	accesskey CDATA #IMPLIED
+>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT head ((script | style | meta | link | object)*, ((title, (script | style | meta | link | object)*, (base, (script | style | meta | link | object)*)?) | (base, (script | style | meta | link | object)*, (title, (script | style | meta | link | object)*))))>
+<!ATTLIST head
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	profile CDATA ""
+>
+<!ELEMENT body (h1 | h2 | h3 | h4 | h5 | h6 | ul | ol | dl | p | div | pre | blockquote | address | hr | table | form | fieldset | ins | del | script | noscript)*>
+<!ATTLIST body
+	onload CDATA #IMPLIED
+	onunload CDATA #IMPLIED
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+>
+<!ELEMENT html (head, body)>
+<!ATTLIST html
+	xmlns CDATA #FIXED "http://www.w3.org/1999/xhtml"
+	xmlns:sel CDATA #FIXED "http://www.w3.org/2005/sel"
+	xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+	id ID #IMPLIED
+	class NMTOKENS #IMPLIED
+	title CDATA #IMPLIED
+	xml:space (preserve) #FIXED "preserve"
+	style CDATA #IMPLIED
+	dir (rtl | ltr) #IMPLIED
+	xml:lang CDATA #IMPLIED
+	onclick CDATA #IMPLIED
+	ondblclick CDATA #IMPLIED
+	onmousedown CDATA #IMPLIED
+	onmouseup CDATA #IMPLIED
+	onmouseover CDATA #IMPLIED
+	onmousemove CDATA #IMPLIED
+	onmouseout CDATA #IMPLIED
+	onkeypress CDATA #IMPLIED
+	onkeydown CDATA #IMPLIED
+	onkeyup CDATA #IMPLIED
+	href CDATA #IMPLIED
+	sel:expr CDATA #IMPLIED
+	sel:selid CDATA #IMPLIED
+	sel:selidname CDATA #IMPLIED
+	xsi:schemaLocation CDATA #IMPLIED
+	version CDATA #FIXED "XHTML+Selection Attributes 1.0"
+>

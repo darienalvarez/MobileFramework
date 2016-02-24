@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!--================= URL Mapping ==========================-->
+	<bean id="simpleUrlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+			    <prop key="login.exec">loginController</prop>
+				<prop key="logout.exec">logoutController</prop>
+			    <prop key="initapp.exec">initAppController</prop>
+			    <prop key="show.exec">showController</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!--================ Controllers ============================-->
+	<bean id="loginController" class="com.gazoomobile.mfw.platform.engine.LoginController">
+		<property name="userService"><ref bean="userService"/></property>
+		<property name="creator"><ref bean="creator" /></property>
+	</bean>
+	
+	<bean id="logoutController" class="com.gazoomobile.mfw.platform.engine.LogoutController">
+	</bean>
+	
+	<bean id="initAppController" class="com.gazoomobile.mfw.platform.engine.InitAppController">
+		<property name="applicationService"><ref bean="applicationService"/></property>
+		<property name="creator"><ref bean="creator" /></property>
+	</bean>
+	
+	<bean id="showController" class="com.gazoomobile.mfw.platform.engine.ShowController">
+		<property name="creator"><ref bean="creator" /></property>
+	</bean>
+	
+	<bean id="creator" class="com.gazoomobile.mfw.platform.engine.MXALMCreatorImpl" >
+		<property name="builderResolver">
+			<ref bean="buildResolver"/>
+		</property>
+		<property name="datasourceService">
+			<ref bean="datasourceService" />
+		</property>
+	</bean>
+	
+	<bean id="buildResolver" class="com.gazoomobile.mfw.platform.engine.util.builder.impl.MXALMBuilderResolverImpl">
+		<property name="builders">
+			<map>
+				<entry key="textbox"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.TextBoxBuilder</value></entry>
+				<entry key="listbox"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.ListBoxBuilder</value></entry>
+				<entry key="linkbutton"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.LinkButtonBuilder</value></entry>
+				<entry key="label"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.LabelBuilder</value></entry>
+				<entry key="horizontallayout"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.HorizontallayoutBuilder</value></entry>
+				<entry key="form"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.FormBuilder</value></entry>
+				<entry key="edit"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.EditBuilder</value></entry>
+				<entry key="combobox"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.ComboBoxBuilder</value></entry>
+				<entry key="checkbox"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.CheckBoxBuilder</value></entry>
+				<entry key="button"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.ButtonBuilder</value></entry>
+				<entry key="table"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.TableBuilder</value></entry>
+				<entry key="verticallayout"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.VerticallayoutBuilder</value></entry>
+				<entry key="option"><value>com.gazoomobile.mfw.platform.engine.util.builder.impl.OptionBuilder</value></entry>
+			</map>
+		</property>
+	</bean>
+	
+</beans>

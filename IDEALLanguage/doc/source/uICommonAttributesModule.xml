@@ -1,0 +1,37 @@
+<div2 id="User_Interface_Common_Attributes-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>User Interface Common Attributes</head>
+<p> The following attributes are common to the user interface elements in IDEAL: 
+		</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>class</td>
+<td>This attribute assigns one or more class names to an
+				element; the element may be said to belong to these
+				classes. A class name may be shared by several element
+				instances.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_NMTOKENS" xlink:show="replace" xlink:actuate="onRequest">NMTOKENS</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>title</td>
+<td>This attribute defines meta-information about the
+				element on which it is set.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text" xlink:show="replace" xlink:actuate="onRequest">Text</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div2>

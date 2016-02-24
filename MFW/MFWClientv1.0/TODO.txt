@@ -1,0 +1,4 @@
+los labels no permiten ponerle valores de un datasource
+no se hizo la parte de ponerle los valores a los controles de tipo edit
+no se hizo la parte de ponerle los valores a los controles de tipo textbox
+el datasource se le puede poner a cualquier propiedad de los controles, no tiene que ser al stringvalue

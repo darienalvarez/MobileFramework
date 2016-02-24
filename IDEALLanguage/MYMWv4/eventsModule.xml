@@ -1,0 +1,108 @@
+<div3 id="Events_Module-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Events Module</head>
+<div4 id="Events_Module-elements">
+<head>Events Module elements</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;ev:listener&gt;</td>
+<td colspan="3">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#section-listener-element" xlink:show="replace" xlink:actuate="onRequest">See ev:listener element</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>
+<div4 id="Events_Module-attributes">
+<head>Events Module attributes</head>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="3">Attributes</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>ev:defaultAction</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-defaultAction" xlink:show="replace" xlink:actuate="onRequest">See ev:defaultAction attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:event</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-event" xlink:show="replace" xlink:actuate="onRequest">See ev:event attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:function</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-function" xlink:show="replace" xlink:actuate="onRequest">See ev:function attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:handler</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-handler" xlink:show="replace" xlink:actuate="onRequest">See ev:handler attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:observer</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-observer" xlink:show="replace" xlink:actuate="onRequest">See ev:observer attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:phase</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-phase" xlink:show="replace" xlink:actuate="onRequest">See ev:phase attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:propagate</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-propagate" xlink:show="replace" xlink:actuate="onRequest">See ev:propagate attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>ev:target</td>
+<td colspan="2">
+<loc href="http://www.w3.org/TR/xml-events/Overview.html#attr-listener-target" xlink:show="replace" xlink:actuate="onRequest">See ev:target attribute</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>targetid</td>
+<td>Attribute specifies the id of the target elements of the
+				event.</td>
+<td>
+<loc href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREFS" xlink:show="replace" xlink:actuate="onRequest">IDREFS</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>targetrole</td>
+<td>Attribute specifies the role of the target elements of
+				the event.</td>
+<td>
+<loc href="http://www.w3.org/TR/curie/#s_schema" xlink:show="replace" xlink:actuate="onRequest">CURIEs</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div4>
+</div3>

@@ -1,0 +1,21 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="UI Structure" targetNamespace="http://morfeo-project.org/2009/ideal" targetPrefix="ideal" >
+		<documentation>Defines the major structural elements for the user interface. 
+		</documentation>
+		<elements>
+			<element name="div" docName="div-content-model"/>
+			<element name="include" docName="include-content-model"/>
+			<element name="footer" docName="footer-content-model"/>
+			<element name="header" docName="header-content-model"/>
+			<element name="section" docName="section-content-model"/>
+			<element name="p" docName="p-content-model"/>
+			<element name="separator" docName="separator-content-model"/>
+		</elements>
+	</module>
+</module_desc>

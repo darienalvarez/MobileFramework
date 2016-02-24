@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:sel="http://www.w3.org/2004/06/diselect" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.morfeo-project.org/2008/ideal" targetNamespace="http://www.morfeo-project.org/2008/ideal" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:import namespace="http://www.w3.org/2004/06/diselect" schemaLocation="DISelect.xsd"/>
+	<xs:import namespace="http://www.w3.org/2001/xml-events" schemaLocation="xml-events-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema-extra.xsd"/>
+	
+	<xs:include schemaLocation="xhtml-access-1.xsd"/>
+	<xs:include schemaLocation="ideal-object-1.xsd"/>
+	<xs:include schemaLocation="ideal-text-1.xsd"/>
+	<xs:include schemaLocation="ideal-table-1.xsd"/>
+	<xs:include schemaLocation="ideal-script-1.xsd"/>
+	<xs:include schemaLocation="ideal-link-1.xsd"/>
+	<xs:include schemaLocation="ideal-meta-1.xsd"/>
+	<xs:include schemaLocation="ideal-model-1.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Document framework module for IDEAL
+
+			The Document Framwork Module defines the major elements and
+			their attributes.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- body Element -->
+	<xs:attributeGroup name="ideal.body.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib"/>
+	</xs:attributeGroup>
+	<xs:group name="ideal.body.content">
+		<xs:sequence>
+			<xs:group ref="header.class"/>
+			<xs:element ref="h" minOccurs="0"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="section"/>
+				<xs:element ref="separator"/>
+			</xs:choice>
+			<xs:group ref="footer.class"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ideal.body.type">
+		<xs:annotation>
+			<xs:documentation>
+				Contains the document's content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.body.content"/>
+		<xs:attributeGroup ref="ideal.body.attlist"/>
+	</xs:complexType>
+	<xs:element name="body" type="ideal.body.type"/>
+	<!-- End body Element -->
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	targetNamespace="http://www.w3.org/2002/xforms"
+	elementFormDefault="qualified">
+
+	<xs:group name="repeat.extra">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:group name="group.extra">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:attributeGroup name="group.attributes.extra" />
+
+	<xs:attributeGroup name="output.attributes.extra" />
+
+	<xs:attributeGroup name="input.attributes.extra" />
+	
+	<xs:attributeGroup name="choices.attributes.extra" />
+	
+	<xs:attributeGroup name="Common.Attributes.Extra" />
+
+	<xs:group name="action.extra">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:group name="model.extra">
+		<xs:sequence />
+	</xs:group>
+			
+</xs:schema>

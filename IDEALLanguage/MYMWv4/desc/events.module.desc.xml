@@ -1,0 +1,29 @@
+<module_desc>
+	<externalNamespaces>
+		<externalNamespace prefix="ev" uri="http://www.w3.org/2001/xml-events" docuri="http://www.w3.org/TR/xml-events/Overview.html"/>
+		<externalNamespace prefix="sel" uri="http://www.w3.org/2004/06/diselect" docuri="http://www.w3.org/TR/cselection/"/>
+		<externalNamespace prefix="xforms" uri="http://www.w3.org/2002/xforms" docuri="http://www.w3.org/TR/xforms"/>
+	</externalNamespaces>
+	
+	<module name="Events Module" targetNamespace="http://morfeo-project.org/2009/ideal" targetPrefix="ideal" >
+		<documentation>
+		</documentation>
+		<elements>
+			<element name="ev:listener" docName="section-listener-element"/>
+		</elements>
+		<attributes>
+			<attribute name="ev:defaultAction" docName="attr-listener-defaultAction"/>
+			
+			<attribute name="ev:event" docName="attr-listener-event"/>
+			<attribute name="ev:function" docName="attr-listener-function"/>
+			<attribute name="ev:handler" docName="attr-listener-handler"/>			
+			<attribute name="ev:observer" docName="attr-listener-observer"/>
+			<attribute name="ev:phase" docName="attr-listener-phase"/>
+			<attribute name="ev:propagate" docName="attr-listener-propagate"/>
+			<attribute name="ev:target" docName="attr-listener-target"/>
+			<attribute name="targetid" docName=""/>
+			<attribute name="targetrole" docName=""/>
+		</attributes>		
+<!--		<extends name="XML Events" docName="https://svn.forge.morfeo-project.org/svn/mymobileweb/trunk/specs/ideal/index.html#ev:listener-attributes"/> -->
+	</module>
+</module_desc>

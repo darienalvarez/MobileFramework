@@ -1,0 +1,65 @@
+<div3 id="Validation-def" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>Validation</head>
+<p>Defines the validation module.</p>
+<table border='1' cellpadding='3' width='100%'>
+<thead>
+<tr>
+<th colspan="4">Elements</th>
+</tr>
+<tr>
+<th>Markup</th>
+<th>Purpose</th>
+<th>Content Model</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr valign='middle'>
+<td>&lt;validator&gt;</td>
+<td>The validator element defines a custom validation.</td>
+<td>
+<loc href="#validator-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#validator-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;dateTimeValidator&gt;</td>
+<td>The dateTimeValidator is used to test that a date or
+				time conforms to a set of validation constraints. The
+				attributes must be defined in ISO 8601 Date and Time
+				Formats. See
+				http://www.w3.org/TR/xmlschema-2/#isoformats</td>
+<td>
+<loc href="#dateTimeValidator-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#dateTimeValidator-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;numberValidator&gt;</td>
+<td>The numberValidator is used to test that a number value
+				conforms to a set of validation constraints.</td>
+<td>
+<loc href="#numberValidator-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#numberValidator-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+<tr valign='middle'>
+<td>&lt;stringValidator&gt;</td>
+<td>The stringValidator is used to test that a string
+				conforms to a set of validation constraints.</td>
+<td>
+<loc href="#stringValidator-content-model" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+<td>
+<loc href="#stringValidator-attributes" xlink:show="replace" xlink:actuate="onRequest">See</loc>
+</td>
+</tr>
+</tbody>
+</table>
+</div3>

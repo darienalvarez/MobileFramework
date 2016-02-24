@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns:xforms="http://www.w3.org/2002/xforms"
+	xmlns="http://www.morfeo-project.org/2008/dial"
+	targetNamespace="http://www.morfeo-project.org/2008/dial">
+
+	<xs:include schemaLocation="dial-attribs-1.xsd" />
+
+	<xs:import namespace="http://www.w3.org/2002/xforms"
+		schemaLocation="XForms-Schema.xsd" />
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Tables module for DIAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Tables
+
+			* table, label, caption, summary, thead, tfoot, tbody, col,
+			tr, th, td
+
+			This module declares element types and attributes used to
+			provide table markup.
+		</xs:documentation>
+	</xs:annotation>
+
+
+
+	<xs:attributeGroup name="dial.scope.attrib">
+		<xs:attribute ref="scope" />
+	</xs:attributeGroup>
+
+	<!-- TD Element -->
+
+	<xs:attributeGroup name="dial.td.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="abbr" />
+		<xs:attribute ref="headers" />
+		<xs:attributeGroup ref="dial.scope.attrib" />
+		<xs:attribute ref="rowspan" default="1" />
+		<xs:attribute ref="colspan" default="1" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="td.extra.attributes"/>		
+	</xs:attributeGroup>
+
+	<xs:group name="dial.td.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.td.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row. &lt;th&gt;
+				represents a column heading, &lt;td&gt; represents the
+				value of that column data for a given row.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.td.content" />
+		<xs:attributeGroup ref="dial.td.attlist" />
+	</xs:complexType>
+	<xs:element name="td" type="dial.td.type" />
+
+	<!-- TH Element -->
+
+	<xs:attributeGroup name="dial.th.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="abbr" />
+		<xs:attribute ref="headers" />
+		<xs:attributeGroup ref="dial.scope.attrib" />
+		<xs:attribute ref="rowspan" default="1" />
+		<xs:attribute ref="colspan" default="1" />
+		<xs:attributeGroup ref="hypertext.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attributeGroup ref="th.extra.attributes"/>
+	</xs:attributeGroup>
+
+	<xs:group name="dial.th.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.th.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a table row (tr), they
+				are mutually exclusive within the same row. &lt;th&gt;
+				represents a column heading, &lt;td&gt; represents the
+				value of that column data for a given row.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.th.content" />
+		<xs:attributeGroup ref="dial.th.attlist" />
+	</xs:complexType>
+	<xs:element name="th" type="dial.th.type" />
+
+	<!-- TR Element -->
+
+	<xs:attributeGroup name="dial.tr.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attributeGroup ref="tr.extra.attributes"/>
+	</xs:attributeGroup>
+
+	<xs:group name="dial.tr.content">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element ref="th" />
+				<xs:element ref="td" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.tr.type">
+		<xs:annotation>
+			<xs:documentation>
+				At least one is mandatory within a table. The tr
+				elements acts as a container for a row of table cells
+				(either th or td, see below).
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.tr.content" />
+		<xs:attributeGroup ref="dial.tr.attlist" />
+	</xs:complexType>
+	<xs:element name="tr" type="dial.tr.type" />
+
+	<!-- COL Element -->
+
+	<xs:attributeGroup name="dial.col.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="span" default="1" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.col.content">
+		<xs:sequence />
+	</xs:group>
+
+	<xs:complexType name="dial.col.type">
+		<xs:annotation>
+			<xs:documentation>
+				The col element allows authors to specify selection
+				conditions or style information for a whole column in a
+				table.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.col.content" />
+		<xs:attributeGroup ref="dial.col.attlist" />
+	</xs:complexType>
+	<xs:element name="col" type="dial.col.type" />
+
+	<!-- TBODY Element -->
+
+	<xs:attributeGroup name="dial.tbody.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.tbody.content">
+		<xs:sequence>
+			<xs:element ref="tr" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.tbody.type">
+		<xs:annotation>
+			<xs:documentation>
+				Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.tbody.content" />
+		<xs:attributeGroup ref="dial.tbody.attlist" />
+	</xs:complexType>
+	<xs:element name="tbody" type="dial.tbody.type" />
+
+	<!-- TFOOT Element -->
+
+	<xs:attributeGroup name="dial.tfoot.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.tfoot.content">
+		<xs:sequence>
+			<xs:element ref="tr" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.tfoot.type">
+		<xs:annotation>
+			<xs:documentation>
+				Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.tfoot.content" />
+		<xs:attributeGroup ref="dial.tfoot.attlist" />
+	</xs:complexType>
+	<xs:element name="tfoot" type="dial.tfoot.type" />
+
+	<!-- THEAD Element -->
+
+	<xs:attributeGroup name="dial.thead.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.thead.content">
+		<xs:sequence>
+			<xs:element ref="tr" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.thead.type">
+		<xs:annotation>
+			<xs:documentation>
+				Table rows may be grouped into a table head, a table
+				foot, and one table body sections, using the thead,
+				tfoot and tbody elements, respectively. This division
+				enables Language Processor to support pagination of the
+				table body independently of the table head and foot.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.thead.content" />
+		<xs:attributeGroup ref="dial.thead.attlist" />
+	</xs:complexType>
+	<xs:element name="thead" type="dial.thead.type" />
+
+	<!-- CAPTION Element -->
+
+	<xs:attributeGroup name="dial.caption.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.caption.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.caption.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				When present, the caption element's text should describe
+				the nature of the table for the benefit of the reader.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.caption.content" />
+		<xs:attributeGroup ref="dial.caption.attlist" />
+	</xs:complexType>
+	<xs:element name="caption" type="dial.caption.type" />
+
+	<!-- SUMMARY Element -->
+
+	<xs:attributeGroup name="dial.summary.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.summary.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="dial.Text.class" />
+				<xs:group ref="XForm.UIInline.class" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.summary.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				This element provides a summary of the table's purpose
+				and structure.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.summary.content" />
+		<xs:attributeGroup ref="dial.summary.attlist" />
+	</xs:complexType>
+	<xs:element name="summary" type="dial.summary.type" />
+
+	<!-- TABLE Element -->
+
+	<xs:attributeGroup name="dial.table.attlist">
+		<xs:attributeGroup ref="dial.Common.attrib" />
+		<xs:attribute ref="encoding" />
+		<xs:attribute ref="src" />
+		<xs:attribute ref="srctype" />
+		<xs:attribute ref="nextfocus" />
+		<xs:attribute ref="prevfocus" />
+		<xs:attributeGroup ref="table.extra.attributes" />
+	</xs:attributeGroup>
+
+	<xs:group name="dial.table.content">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:element ref="caption" />
+				<xs:element ref="label" />
+			</xs:choice>
+			<xs:element ref="summary" minOccurs="0" />
+			<xs:element ref="col" minOccurs="0" maxOccurs="unbounded" />
+			<xs:sequence>
+				<xs:element ref="thead" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="tbody" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="tfoot" minOccurs="0" maxOccurs="1" />
+			</xs:sequence>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="dial.table.type">
+		<xs:annotation>
+			<xs:documentation>
+				The table element contains all other elements that
+				specify the caption, column groups, columns, rows, and
+				content for a table
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="dial.table.content" />
+		<xs:attributeGroup ref="dial.table.attlist" />
+	</xs:complexType>
+	<xs:element name="table" type="dial.table.type" />
+
+</xs:schema>

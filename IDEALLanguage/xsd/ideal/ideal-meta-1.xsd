@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.morfeo-project.org/2008/ideal"
+	targetNamespace="http://www.morfeo-project.org/2008/ideal">
+
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema Metainformation module for IDEAL
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			Meta Information
+
+			* meta
+
+			This module declares the meta element type and its
+			attributes, used to provide declarative document
+			metainformation.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:attributeGroup name="ideal.meta.attlist">
+		<xs:attributeGroup ref="ideal.Common.attrib" />
+		<xs:attribute ref="about" />
+		<xs:attribute ref="property" />
+		<xs:attribute ref="content" />
+		<xs:attribute ref="datatype" />
+	</xs:attributeGroup>
+	<xs:group name="ideal.meta.content">
+		<xs:sequence />
+	</xs:group>
+	<xs:complexType name="ideal.meta.type" mixed="true">
+		<xs:annotation>
+			<xs:documentation>
+				The meta element can be used to identify properties of a
+				document (e.g., author, expiration date, a list of key
+				words, etc.) and assign values to those properties.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="ideal.meta.content" />
+		<xs:attributeGroup ref="ideal.meta.attlist" />
+	</xs:complexType>
+	<xs:element name="meta" type="ideal.meta.type"/>
+</xs:schema>

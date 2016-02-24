@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Altova XMLSpy 2007 Enterprise Edition (W3C) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns="http://www.morfeo-project.org/2008/dial" targetNamespace="http://www.morfeo-project.org/2008/dial" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:import namespace="http://www.w3.org/2001/xml-events" schemaLocation="xml-events-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2001/xml-events" schemaLocation="xml-events-extra-1.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema.xsd"/>
+	<xs:import namespace="http://www.w3.org/2002/xforms" schemaLocation="XForms-Schema-extra.xsd"/>
+	<xs:include schemaLocation="dial-extra-attribs-1.xsd"/>
+	<xs:include schemaLocation="dial-document-1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			This is the XML Schema for DIAL
+		</xs:documentation>
+	</xs:annotation>
+</xs:schema>

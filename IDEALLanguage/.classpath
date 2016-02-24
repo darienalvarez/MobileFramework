@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="java/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/MyMobileWebUtil/DTD2HTML/lib/dtdparser121.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxmejs-0.5.2.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxme2-0.5.2.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxme2-rt-0.5.2.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxmeapi-0.5.2.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxmepm-0.5.2.jar"/>
+	<classpathentry kind="lib" path="java/lib/jaxmexs-0.5.2.jar"/>
+	<classpathentry kind="lib" path="/MyMobileWebCommon/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/MyMobileWebCommon/lib/xml-apis.jar"/>
+	<classpathentry kind="output" path="java/classes"/>
+</classpath>

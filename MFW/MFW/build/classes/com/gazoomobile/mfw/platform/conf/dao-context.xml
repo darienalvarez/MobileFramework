@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<import resource="classpath:com/gazoomobile/mfw/platform/conf/jpa-context.xml" />
+	
+	<bean id="applicationDao" class="com.gazoomobile.mfw.platform.dao.impl.ApplicationDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="datasourceDao" class="com.gazoomobile.mfw.platform.dao.impl.DatasourceDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="controlDefinitionDao" class="com.gazoomobile.mfw.platform.dao.impl.ControlDefinitionDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="connectorDao" class="com.gazoomobile.mfw.platform.dao.impl.ConnectorDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="connectorTypeDao" class="com.gazoomobile.mfw.platform.dao.impl.ConnectorTypeDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="userDao" class="com.gazoomobile.mfw.platform.dao.impl.UserDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="controlDao" class="com.gazoomobile.mfw.platform.dao.impl.ControlDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="controlPropertyDao" class="com.gazoomobile.mfw.platform.dao.impl.ControlPropertyDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="permissionsetDao" class="com.gazoomobile.mfw.platform.dao.impl.PermissionsetDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="screenDao" class="com.gazoomobile.mfw.platform.dao.impl.ScreenDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+</beans>

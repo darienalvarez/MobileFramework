@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="EN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>Device Independent Authoring Language (DIAL)</title><style type="text/css">
+code { font-family: monospace; }
+div.constraint, div.issue, div.note, div.notice { margin-left: 2em; }
+li p { margin-top: 0.3em; margin-bottom: 0.3em; }
+                 
+
+      
+.boxedtext {
+   border: solid #bebebe 1px;
+   margin: 2em 1em 1em 2em;
+   padding: 0 0 10px 0;
+ }
+      
+div.principle, div.practice, div.constraint, div.property, div.story {
+   margin: -0.8em 0.5em 1em 1em;
+ }
+
+.principlelab, .constraintlab,
+.propertylab, .practicelab,
+.storylab {
+   margin: -0.8em 0.5em 1em 1em;
+   font-weight: bold;
+   font-style: italic;
+ }
+ 
+p.principlelab span  { background: #f7ebd7 }
+p.constraintlab span { background: #becece }
+p.propertylab span  { background: #f7ebd7 }
+p.practicelab span  { background: #dfffff }
+p.storylab span { background: #005a9c; color: #fff; }
+
+
+dt {  margin-left: 2em}
+dd { margin-left: 4em}
+
+
+div.exampleInner pre { margin-left: 1em;
+                       margin-top: 0em; margin-bottom: 0em}
+div.exampleOuter {border: 4px double gray;
+                  margin: 0em; padding: 0em}
+div.exampleInner { background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em }
+div.exampleWrapper { margin: 4px }
+div.exampleHeader { font-weight: bold;
+                    margin: 4px}
+        </style><link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/base.css"/><link rel="stylesheet" type="text/css" href="custom.css"/><link rel="contents" href="#contents"/></head><body><div class="head"><p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"/></a></p>
+<h1 id="title">Device Independent Authoring Language (DIAL)</h1>
+<h2 id="w3c-doctype">Draft 11
+			 September
+			 2008
+			</h2><dl><dt>This version:</dt><dd/><dt>Editor:</dt><dd>Autor, Affiliation</dd></dl><p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008
+			 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply.</p></div><hr/><div>
+<h2 id="abstract">Abstract</h2><p>
+				This is a proposal for re-expressing
+				<a href="http://www.w3.org/TR/dial">DIAL</a>
+				in terms of XHTML 1 modularization.
+			</p></div><div>
+<h2 id="status">Status of this Document</h2><p><em>
+					This section describes the status of this document
+					at the time of its publication...
+				</em></p><p>...more...</p></div><div class="toc">
+<h2 id="contents">Table of Contents</h2><p class="toc">1 <a href="#introduction">Introduction</a><br/>
+    1.1 <a href="#iddiv2104919872">Reading the Specification</a><br/>
+        1.1.1 <a href="#iddiv3112249504">Recommended reading</a><br/>
+        1.1.2 <a href="#iddiv393192712">Definition of terms used</a><br/>
+    1.2 <a href="#iddiv2108478176">How the Specification is Organized</a><br/>
+    1.3 <a href="#iddiv2116844440">Documentation Conventions</a><br/>
+        1.3.1 <a href="#iddiv397310208">XML namespace bindings</a><br/>
+2 <a href="#conformance">Conformance</a><br/>
+3 <a href="#ideal-def">DIAL Definition</a><br/>
+    3.1 <a href="#document-def">Document framework</a><br/>
+    3.2 <a href="#meta-def">Document Metainformation</a><br/>
+    3.3 <a href="#link-def">Link</a><br/>
+    3.4 <a href="#handler-def">Handler</a><br/>
+    3.5 <a href="#structure-def">Structure</a><br/>
+    3.6 <a href="#list-def">List</a><br/>
+    3.7 <a href="#text-def">Text</a><br/>
+    3.8 <a href="#hypertext-def">Hypertext</a><br/>
+    3.9 <a href="#object-def">Object</a><br/>
+    3.10 <a href="#tables-def">Tables</a><br/>
+    3.11 <a href="#forms">Forms</a><br/>
+        3.11.1 <a href="#xforms-core-module">XForms Core Module</a><br/>
+        3.11.2 <a href="#xforms-form-controls">XForms Form Controls</a><br/>
+        3.11.3 <a href="#other-xforms-modules">Other XForms Modules</a><br/>
+    3.12 <a href="#content-inclusion">Content inclusion</a><br/>
+    3.13 <a href="#content-selection">Content Selection</a><br/>
+        3.13.1 <a href="#attribute-value-templates">Attribute Value Templates</a><br/>
+    3.14 <a href="#semantic-enrichment">Semantic Enrichment</a><br/>
+    3.15 <a href="#common-attributes">Common attributes</a><br/>
+4 <a href="#elements"> Elements </a><br/>
+    4.1 <a href="#a-element">The &lt;a&gt; element</a><br/>
+    4.2 <a href="#abbr-element">The &lt;abbr&gt; element</a><br/>
+    4.3 <a href="#body-element">The &lt;body&gt; element</a><br/>
+    4.4 <a href="#caption-element">The &lt;caption&gt; element</a><br/>
+    4.5 <a href="#cite-element">The &lt;cite&gt; element</a><br/>
+    4.6 <a href="#code-element">The &lt;code&gt; element</a><br/>
+    4.7 <a href="#col-element">The &lt;col&gt; element</a><br/>
+    4.8 <a href="#colgroup-element">The &lt;colgroup&gt; element</a><br/>
+    4.9 <a href="#dd-element">The &lt;dd&gt; element</a><br/>
+    4.10 <a href="#dfn-element">The &lt;dfn&gt; element</a><br/>
+    4.11 <a href="#di-element">The &lt;di&gt; element</a><br/>
+    4.12 <a href="#div-element">The &lt;div&gt; element</a><br/>
+    4.13 <a href="#dl-element">The &lt;dl&gt; element</a><br/>
+    4.14 <a href="#dt-element">The &lt;dt&gt; element</a><br/>
+    4.15 <a href="#em-element">The &lt;em&gt; element</a><br/>
+    4.16 <a href="#h-element">The &lt;h&gt; element</a><br/>
+    4.17 <a href="#handler-element">The &lt;handler&gt; element</a><br/>
+    4.18 <a href="#head-element">The &lt;head&gt; element</a><br/>
+    4.19 <a href="#html-element">The &lt;html&gt; element</a><br/>
+    4.20 <a href="#kbd-element">The &lt;kbd&gt; element</a><br/>
+    4.21 <a href="#l-element">The &lt;l&gt; element</a><br/>
+    4.22 <a href="#label-element">The &lt;label&gt; element</a><br/>
+    4.23 <a href="#li-element">The &lt;li&gt; element</a><br/>
+    4.24 <a href="#link-element">The &lt;link&gt; element</a><br/>
+    4.25 <a href="#meta-element">The &lt;meta&gt; element</a><br/>
+    4.26 <a href="#nl-element">The &lt;nl&gt; element</a><br/>
+    4.27 <a href="#object-element">The &lt;object&gt; element</a><br/>
+    4.28 <a href="#ol-element">The &lt;ol&gt; element</a><br/>
+    4.29 <a href="#p-element">The &lt;p&gt; element</a><br/>
+    4.30 <a href="#param-element">The &lt;param&gt; element</a><br/>
+    4.31 <a href="#q-element">The &lt;q&gt; element</a><br/>
+    4.32 <a href="#samp-element">The &lt;samp&gt; element</a><br/>
+    4.33 <a href="#section-element">The &lt;section&gt; element</a><br/>
+    4.34 <a href="#separator-element">The &lt;separator&gt; element</a><br/>
+    4.35 <a href="#span-element">The &lt;span&gt; element</a><br/>
+    4.36 <a href="#strong-element">The &lt;strong&gt; element</a><br/>
+    4.37 <a href="#sub-element">The &lt;sub&gt; element</a><br/>
+    4.38 <a href="#summary-element">The &lt;summary&gt; element</a><br/>
+    4.39 <a href="#sup-element">The &lt;sup&gt; element</a><br/>
+    4.40 <a href="#table-element">The &lt;table&gt; element</a><br/>
+    4.41 <a href="#tbody-element">The &lt;tbody&gt; element</a><br/>
+    4.42 <a href="#td-element">The &lt;td&gt; element</a><br/>
+    4.43 <a href="#tfoot-element">The &lt;tfoot&gt; element</a><br/>
+    4.44 <a href="#th-element">The &lt;th&gt; element</a><br/>
+    4.45 <a href="#thead-element">The &lt;thead&gt; element</a><br/>
+    4.46 <a href="#title-element">The &lt;title&gt; element</a><br/>
+    4.47 <a href="#tr-element">The &lt;tr&gt; element</a><br/>
+    4.48 <a href="#ul-element">The &lt;ul&gt; element</a><br/>
+    4.49 <a href="#var-element">The &lt;var&gt; element</a><br/>
+</p>
+<h3 id="appendices">Appendices</h3><p class="toc">A <a href="#idinform-div1101823432">References</a> (Non-Normative)<br/>
+    A.1 <a href="#iddiv2101823672">Normative References</a><br/>
+    A.2 <a href="#iddiv294233904">Informative References</a><br/>
+B <a href="#changes-this-version">Changes in this version</a> (Non-Normative)<br/>
+C <a href="#acknowledgements">Acknowledgements</a> (Non-Normative)<br/>
+</p></div><hr/><div class="body"><div class="div1">
+<h2 id="introduction">1 Introduction</h2><p/><div class="div2">
+<h3 id="iddiv2104919872">1.1 Reading the Specification</h3><p/><div class="div3">
+<h4 id="iddiv3112249504">1.1.1 Recommended reading</h4><p>This section is informative.</p><p>
+						It is recommended to read at least the DIAL
+						Primer[DIAL Primer] , and ideally the Content
+						Selection Primer[CS Primer] and Device
+						Independence Principles[DI Principles] before
+						this specification. These documents will assist
+						the reader's understanding of the device
+						independence ecosystem.
+					</p></div><div class="div3">
+<h4 id="iddiv393192712">1.1.2 Definition of terms used</h4><p>
+						Terms used in this document, and others related
+						to device independence, are collected in the
+						Glossary of Terms for Device Independence[DI
+						Glossary]. A link is provided to the Glossary
+						definition when a term is first used in this
+						document.
+					</p></div></div><div class="div2">
+<h3 id="iddiv2108478176">1.2 How the Specification is Organized</h3><p>
+					The specification defines the XML element and
+					attribute information items[XML Infoset] of a Web
+					page which enable it to be presented in a way which
+					provides a functional user experience. These are
+					grouped in modules and mapped to a suitable XML
+					element or attribute.
+				</p></div><div class="div2">
+<h3 id="iddiv2116844440">1.3 Documentation Conventions</h3><p/><div class="div3">
+<h4 id="iddiv397310208">1.3.1 XML namespace bindings</h4><p>
+						The following namespace prefixes and
+						corresponding namespace identifiers are used in
+						this document:
+					</p></div></div></div><div class="div1">
+<h2 id="conformance">2 Conformance</h2></div>
+		<div class="div1">
+<h2 id="ideal-def">3 DIAL Definition</h2><p>
+		The markup which together forms a Web page intended for
+		consumption across multiple delivery contexts may be grouped
+		thusly:
+	</p><dl><dt class="label" id="def-document"><a href="#document-def">Document</a></dt><dd><p>
+					Defines the major structural elements for for the
+					Web page.
+				</p></dd><dt class="label" id="def-meta"><a href="#meta-def">Metainformation</a></dt><dd><p>
+					Defines elements that allow the definition of
+					relationships.
+				</p></dd><dt class="label" id="def-link"><a href="#link-def">Link</a></dt><dd><p>Defines links to external resources.</p></dd><dt class="label" id="def-handler"><a href="#handler-def">Handler</a></dt><dd><p>
+					Defines information pertaining to event handler
+					implementations.
+				</p></dd><dt class="label" id="def-structure"><a href="#structure-def">Structure</a></dt><dd><p>
+					Defines all of the basic text container elements,
+					attributes, and their content models that are
+					structural in nature.
+				</p></dd><dt class="label" id="def-list"><a href="#list-def">List</a></dt><dd><p>Provides list-oriented elements.</p></dd><dt class="label" id="def-text"><a href="#text-def">Text</a></dt><dd><p>
+					Defines all of the basic text container elements,
+					attributes, and their content models that are
+					"inline level".
+				</p></dd><dt class="label" id="def-hypertext"><a href="#hypertext-def">Hypertext</a></dt><dd><p>Defines an anchor.</p></dd><dt class="label" id="def-object"><a href="#object-def">Object</a></dt><dd><p>
+					Provides elements for general-purpose object
+					inclusion; this includes images and other media, as
+					well as executable content.
+				</p></dd><dt class="label" id="def-tables"><a href="#tables-def">Tables</a></dt><dd><p>
+					Provides elements for marking up tabular information
+					in a document.
+				</p></dd><dt class="label" id="def-forms"><a href="#forms-def">Forms</a></dt><dd><p>Provides a rich collection of forms features.</p></dd><dt class="label" id="def-inc"><a href="#inc-def">Content inclusion</a></dt><dd><p>Provides content fragments inclusion.</p></dd><dt class="label" id="def-sel"><a href="#sel-def">Content selection metadata</a></dt><dd><p>
+					Instructions which will be executed during an
+					adaptation process.
+				</p></dd><dt class="label" id="def-events"><a href="http://www.w3.org/TR/2003/REC-xml-events-20031014/">
+					XML Events
+				</a></dt><dd><p>
+					The XML Events module defined in this specification
+					provides XML languages with the ability to uniformly
+					integrate event listeners and associated event
+					handlers with Document Object Model (DOM) Level 2
+					event interfaces
+					<a href="http://www.w3.org/TR/xml-events/#ref_DOM2EVENTS">
+						[DOM2EVENTS]
+					</a>
+					. The result is to provide an interoperable way of
+					associating behaviors with document-level markup.
+				</p></dd><dt class="label" id="def-role"><a href="http://www.w3.org/TR/2008/WD-xhtml-role-20080407/">
+					XHTML Role Attribute Module
+				</a></dt><dd><p>
+					The XHTML Role Attribute defined in this
+					specification allows the author to annotate XML
+					Languages with machine-extractable semantic
+					information about the purpose of an element. Use
+					cases include accessibility, device adaptation,
+					server-side processing, and complex data
+					description. This attribute can be integrated into
+					any markup language based upon XHTML Modularization
+					<a href="http://www.w3.org/TR/xhtml-role/#ref_XHTMLMOD">
+						[XHTMLMOD]
+					</a>
+					.
+				</p></dd><dt class="label" id="def-access"><a href="http://www.w3.org/TR/2008/WD-xhtml-access-20080526/">
+					XHTML Access Module
+				</a></dt><dd><p>
+					The XHTML Access module defines an element that,
+					when used in conjunction with other XHTML modules in
+					XHTML Family Markup Languages, enables a more robust
+					accessibility model than is presently possible..
+				</p></dd><dt class="label" id="def-common"><a href="#common-attributes">Common attributes</a></dt><dd><p>
+					The following attributes are common to all elements
+					in IDEAL.
+				</p></dd></dl><p>
+		The following sections list the relevant Web page markup in each
+		group.
+	</p><div class="div2">
+<h3 id="document-def">3.1 Document framework</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;html&gt;</td><td rowspan="1" colspan="1">The root element for a DIAL document</td><td rowspan="1" colspan="1"><a href="#html-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#html-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;head&gt;</td><td rowspan="1" colspan="1">
+						Contains information about the current document
+						that is not considered document content
+					</td><td rowspan="1" colspan="1"><a href="#head-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#head-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;title&gt;</td><td rowspan="1" colspan="1">
+						Used to provide a short description of the page
+						contents
+					</td><td rowspan="1" colspan="1"><a href="#title-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#title-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;body&gt;</td><td rowspan="1" colspan="1">Contains the document's content.</td><td rowspan="1" colspan="1"><a href="#body-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#body-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="meta-def">3.2 Document Metainformation</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;meta&gt;</td><td rowspan="1" colspan="1">
+						The meta element can be used to identify
+						properties of a document (e.g., author,
+						expiration date, a list of key words, etc.) and
+						assign values to those properties.
+					</td><td rowspan="1" colspan="1"><a href="#meta-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#meta-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="link-def">3.3 Link</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;link&gt;</td><td rowspan="1" colspan="1">
+						An element that can be used to define links to
+						external resources. These resources are often
+						used to augment the DIAL Processor's ability to
+						process the associated DIAL document.
+					</td><td rowspan="1" colspan="1"><a href="#link-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#link-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="handler-def">3.4 Handler</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;handler&gt;</td><td rowspan="1" colspan="1">
+						An element that it is used to contain
+						information pertaining to event handler
+						implementations, usually defined in a scripting
+						language.
+					</td><td rowspan="1" colspan="1"><a href="#handler-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#handler-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="structure-def">3.5 Structure</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;div&gt;</td><td rowspan="1" colspan="1">
+						The div element, in conjunction with the id,
+						class and role attributes, offers a generic
+						mechanism for adding extra structure to
+						documents. This element defines no
+						presentational idioms on the content. Thus,
+						authors may use this element in conjunction with
+						style sheets, the xml:lang attribute, etc., to
+						tailor DIAL to their own needs and tastes.
+					</td><td rowspan="1" colspan="1"><a href="#div-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#div-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;section&gt;</td><td rowspan="1" colspan="1">
+						The section element defines document's or
+						application's section. Particularly, in
+						conjunction with the h element, offers a
+						mechanism for structuring documents into
+						sections. This element defines content to be
+						block-level but imposes no other presentational
+						idioms on the content, which may otherwise be
+						controlled from a style sheet.
+					</td><td rowspan="1" colspan="1"><a href="#section-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#section-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;h&gt;</td><td rowspan="1" colspan="1">
+						A heading element briefly describes the topic of
+						the section it introduces. Heading information
+						may be used by user agents, for example, to
+						construct a table of contents for a document
+						automatically. Structured headings use the
+						single h element, in combination with the
+						section element to indicate the structure of the
+						document, and the nesting of the sections
+						indicates the importance of the heading. The
+						heading for the section is the one that is a
+						child of the section element.
+					</td><td rowspan="1" colspan="1"><a href="#h-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#h-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;p&gt;</td><td rowspan="1" colspan="1">
+						The p element represents a paragraph. In
+						comparison with earlier versions of HTML, where
+						a paragraph could only contain inline text,
+						DIAL's paragraphs represent the conceptual idea
+						of a paragraph, and so may contain lists,
+						blockquotes, pre's and tables as well as inline
+						text. Note however that they may not contain
+						directly nested p elements.
+					</td><td rowspan="1" colspan="1"><a href="#p-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#p-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;separator&gt;</td><td rowspan="1" colspan="1">
+						The separator element separates parts of the
+						document from each other.
+					</td><td rowspan="1" colspan="1"><a href="#separator-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#separator-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="list-def">3.6 List</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;li&gt;</td><td rowspan="1" colspan="1">
+						The li element defines a list item within an
+						ordered, unordered, or navigation list.
+					</td><td rowspan="1" colspan="1"><a href="#li-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#li-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;ol&gt;</td><td rowspan="1" colspan="1">
+						At least one is mandatory within a list
+						(&lt;li&gt;&gt;), they are mutually exclusive
+						within the same list. Represents an item in an
+						ordered list
+					</td><td rowspan="1" colspan="1"><a href="#ol-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#ol-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;ul&gt;</td><td rowspan="1" colspan="1">
+						At least one is mandatory within a list
+						(&lt;li&gt;&gt;), they are mutually exclusive
+						within the same list. Represents an item in an
+						unordered list
+					</td><td rowspan="1" colspan="1"><a href="#ul-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#ul-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;dl&gt;</td><td rowspan="1" colspan="1">
+						Definition lists. These vary only slightly from
+						other types of lists in that list items consist
+						of two parts: a term and a description. The term
+						is given by the dt element. The description is
+						given with a dd element. The term and its
+						definition can be grouped within a di element to
+						help clarify the relationship between a term and
+						its definition(s).
+					</td><td rowspan="1" colspan="1"><a href="#dl-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#dl-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;di&gt;</td><td rowspan="1" colspan="1">
+						Definition lists. These vary only slightly from
+						other types of lists in that list items consist
+						of two parts: a term and a description. The term
+						is given by the dt element. The description is
+						given with a dd element. The term and its
+						definition can be grouped within a di element to
+						help clarify the relationship between a term and
+						its definition(s).
+					</td><td rowspan="1" colspan="1"><a href="#di-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#di-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;dt&gt;</td><td rowspan="1" colspan="1">
+						Definition lists. These vary only slightly from
+						other types of lists in that list items consist
+						of two parts: a term and a description. The term
+						is given by this element. The term and its
+						definition can be grouped within a di element to
+						help clarify the relationship between a term and
+						its definition(s).
+					</td><td rowspan="1" colspan="1"><a href="#dt-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#dt-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;dd&gt;</td><td rowspan="1" colspan="1">
+						Definition lists. These vary only slightly from
+						other types of lists in that list items consist
+						of two parts: a term and a description. The
+						description is given with this element. The term
+						and its definition can be grouped within a di
+						element to help clarify the relationship between
+						a term and its definition(s).
+					</td><td rowspan="1" colspan="1"><a href="#dd-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#dd-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;nl&gt;</td><td rowspan="1" colspan="1">
+						Navigation lists are intended to be used to
+						define collections of selectable items for
+						presentation in a "navigation" menu. Note that a
+						navigation list always starts with a label
+						element that defines the label for the list.
+					</td><td rowspan="1" colspan="1"><a href="#nl-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#nl-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="text-def">3.7 Text</h3><table border="1" summary="Editorial note: Jose M. Cantera"><tr><td align="left" valign="top" width="50%"><b>Editorial note: Jose M. Cantera</b></td><td align="right" valign="top" width="50%"/></tr><tr><td colspan="2" align="left" valign="top">
+				Ask the XHTML 2 WG for advice about what of this
+				elements can be removed from DIAL, as they are legacy.
+			</td></tr></table><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;abbr&gt;</td><td rowspan="1" colspan="1">
+						The abbr element indicates that a text fragment
+						is an abbreviation (e.g., W3C, XML, Inc., Ltd.,
+						Mass., etc.); this includes acronyms.
+					</td><td rowspan="1" colspan="1"><a href="#abbr-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#abbr-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;cite&gt;</td><td rowspan="1" colspan="1">
+						The cite element contains a citation or a
+						reference to other sources
+					</td><td rowspan="1" colspan="1"><a href="#cite-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#cite-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;code&gt;</td><td rowspan="1" colspan="1">
+						The code element contains a fragment of computer
+						code.
+					</td><td rowspan="1" colspan="1"><a href="#code-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#code-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;dfn&gt;</td><td rowspan="1" colspan="1">
+						The dfn element contains the defining instance
+						of the enclosed term.
+					</td><td rowspan="1" colspan="1"><a href="#dfn-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#dfn-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;em&gt;</td><td rowspan="1" colspan="1">
+						The em element indicates emphasis for its
+						contents.
+					</td><td rowspan="1" colspan="1"><a href="#em-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#em-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;kbd&gt;</td><td rowspan="1" colspan="1">
+						The kbd element indicates input to be entered by
+						the user.
+					</td><td rowspan="1" colspan="1"><a href="#kbd-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#kbd-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;l&gt;</td><td rowspan="1" colspan="1">
+						The l element represents a semantic line of text
+						(e.g., a line of verse or a line of computer
+						code).
+					</td><td rowspan="1" colspan="1"><a href="#l-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#l-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;q&gt;</td><td rowspan="1" colspan="1">
+						This element designates an inline text fragment
+						of quoted text.
+					</td><td rowspan="1" colspan="1"><a href="#q-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#q-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;samp&gt;</td><td rowspan="1" colspan="1">
+						The samp element designates sample output from
+						programs, scripts, etc.
+					</td><td rowspan="1" colspan="1"><a href="#samp-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#samp-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;span&gt;</td><td rowspan="1" colspan="1">
+						The span element, in conjunction with the id,
+						class and role attributes, offers a generic
+						mechanism for adding structure to documents.
+						This element imposes no presentational idioms on
+						the content. Thus, authors may use this element
+						in conjunction with style sheets, the xml:lang
+						attribute, etc., to tailor DIAL to their own
+						needs and tastes.
+					</td><td rowspan="1" colspan="1"><a href="#span-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#span-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;strong&gt;</td><td rowspan="1" colspan="1">
+						The strong element indicates higher importance
+						for its contents than that of the surrounding
+						content.
+					</td><td rowspan="1" colspan="1"><a href="#strong-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#strong-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sub&gt;</td><td rowspan="1" colspan="1">
+						The sub element indicates that its contents
+						should regarded as a subscript.
+					</td><td rowspan="1" colspan="1"><a href="#sub-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#sub-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sup&gt;</td><td rowspan="1" colspan="1">
+						The sup element indicates that its contents
+						should be regarded as a super-script.
+					</td><td rowspan="1" colspan="1"><a href="#sup-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#sup-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;var&gt;</td><td rowspan="1" colspan="1">
+						The var element indicates an instance of a
+						variable or program argument.
+					</td><td rowspan="1" colspan="1"><a href="#var-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#var-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="hypertext-def">3.8 Hypertext</h3><table border="1" summary="Editorial note: Jose M. Cantera"><tr><td align="left" valign="top" width="50%"><b>Editorial note: Jose M. Cantera</b></td><td align="right" valign="top" width="50%">09/01/2008</td></tr><tr><td colspan="2" align="left" valign="top">
+				Not sure if it is convenient to include legacy HTML
+				elements in DIAL.
+			</td></tr></table><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;a&gt;</td><td rowspan="1" colspan="1">
+						An a element defines an anchor. Since hypertext
+						attributes such as href may be applied to any
+						element, this element is not strictly necessary,
+						being equivalent to a span, but has been
+						retained to allow the expression of explicit
+						links
+					</td><td rowspan="1" colspan="1"><a href="#a-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#a-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="object-def">3.9 Object</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;object&gt;</td><td rowspan="1" colspan="1">
+						object indicates a non-text item for inclusion
+						in the document; this includes images and other
+						media, as well as executable content which
+						require plugins or external applications to
+						process. Note this is the way images are
+						referenced in DIAL, rather than through the
+						legacy img/@src
+					</td><td rowspan="1" colspan="1"><a href="#object-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#object-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;param&gt;</td><td rowspan="1" colspan="1">
+						param elements specify a set of values that may
+						be required to process the object data by an
+						object handler at run-time.
+					</td><td rowspan="1" colspan="1"><a href="#param-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#param-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="tables-def">3.10 Tables</h3><table border="1" cellpadding="3" width="100%"><thead><tr><td colspan="4" rowspan="1"><em>
+							All elements from this module are available
+							and mandatory in DIAL.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Content Model</th><th rowspan="1" colspan="1">Attributes</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">&lt;table&gt;</td><td rowspan="1" colspan="1">
+						The table element contains all other elements
+						that specify the caption, column groups,
+						columns, rows, and content for a table.
+					</td><td rowspan="1" colspan="1"><a href="#table-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#table-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;caption&gt;</td><td rowspan="1" colspan="1">
+						When present, the caption element's text should
+						describe the nature of the table for the benefit
+						of the reader.
+					</td><td rowspan="1" colspan="1"><a href="#caption-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#caption-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;label&gt;</td><td rowspan="1" colspan="1">
+						When present, the label element's text should
+						describe the nature of the table for the benefit
+						of the reader.
+					</td><td rowspan="1" colspan="1"><a href="#label-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#label-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;summary&gt;</td><td rowspan="1" colspan="1">
+						This element provides a summary of the table's
+						purpose and structure.
+					</td><td rowspan="1" colspan="1"><a href="#summary-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#summary-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;col&gt;</td><td rowspan="1" colspan="1">
+						The col element allows authors to specify
+						selection conditions or style information for a
+						whole column in a table.
+					</td><td rowspan="1" colspan="1"><a href="#col-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#col-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;colgroup&gt;</td><td rowspan="1" colspan="1">
+						The colgroup element allows authors to create
+						structural divisions within a table.
+					</td><td rowspan="1" colspan="1"><a href="#colgroup-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#colgroup-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;thead&gt;</td><td rowspan="1" colspan="1">
+						Table rows may be grouped into a table head, a
+						table foot, and one table body sections, using
+						the thead, tfoot and tbody elements,
+						respectively. This division enables DIAL
+						Processor to support pagination of the table
+						body independently of the table head and foot.
+					</td><td rowspan="1" colspan="1"><a href="#thead-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#thead-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;tbody&gt;</td><td rowspan="1" colspan="1">
+						Table rows may be grouped into a table head, a
+						table foot, and one table body sections, using
+						the thead, tfoot and tbody elements,
+						respectively. This division enables DIAL
+						Processor to support pagination of the table
+						body independently of the table head and foot.
+					</td><td rowspan="1" colspan="1"><a href="#tbody-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#tbody-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;tfoot&gt;</td><td rowspan="1" colspan="1">
+						Table rows may be grouped into a table head, a
+						table foot, and one table body sections, using
+						the thead, tfoot and tbody elements,
+						respectively. This division enables DIAL
+						Processor to support pagination of the table
+						body independently of the table head and foot.
+					</td><td rowspan="1" colspan="1"><a href="#tfoot-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#tfoot-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;tr&gt;</td><td rowspan="1" colspan="1">
+						At least one is mandatory within a table. The tr
+						elements acts as a container for a row of table
+						cells (either th or td, see below).
+					</td><td rowspan="1" colspan="1"><a href="#tr-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#tr-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;td&gt;</td><td rowspan="1" colspan="1">
+						At least one is mandatory within a table row
+						(tr), they are mutually exclusive within the
+						same row. &lt;th&gt; represents a column
+						heading, &lt;td&gt; represents the value of that
+						column data for a given row.
+					</td><td rowspan="1" colspan="1"><a href="#td-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#td-attributes">See</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;th&gt;</td><td rowspan="1" colspan="1">
+						At least one is mandatory within a table row
+						(tr), they are mutually exclusive within the
+						same row. &lt;th&gt; represents a column
+						heading, &lt;td&gt; represents the value of that
+						column data for a given row.
+					</td><td rowspan="1" colspan="1"><a href="#th-content-model">See</a></td><td rowspan="1" colspan="1"><a href="#th-attributes">See</a></td></tr></tbody></table></div><div class="div2">
+<h3 id="forms">3.11 Forms</h3><div class="div3">
+<h4 id="xforms-core-module">3.11.1 XForms Core Module</h4><p><em>
+					All content sets and elements/attributes therein
+					from this module are mandatory in DIAL
+				</em></p><p>
+				The normative definition of this module is on
+				<a href="http://www.w3.org/TR/2007/REC-xforms-20071029/#structure-abstract">
+					XForms
+				</a></p></div><div class="div3">
+<h4 id="xforms-form-controls">3.11.2 XForms Form Controls</h4><p><em>
+					All content sets and elements/attributes therein
+					from this module are mandatory in DIAL
+				</em></p><p>
+				The normative definition of this module is on
+				<a href="http://www.w3.org/TR/2007/REC-xforms-20071029/#N11BD5">
+					XForms
+				</a></p></div><div class="div3">
+<h4 id="other-xforms-modules">3.11.3 Other XForms Modules</h4><p>The rest of XForms modules are optional in DIAL.</p></div></div><div class="div2">
+<h3 id="content-inclusion">3.12 Content inclusion</h3><p>
+			Authors can include content fragments using the
+			<code>src</code>
+			attribute.
+		</p></div><div class="div2">
+<h3 id="content-selection">3.13 Content Selection</h3><p>
+			Processing instructions for general purpose content
+			selection or filtering. Content may be conditionally
+			included or excluded based on the evaluation of the
+			<a href="http://www.w3.org/TR/di-gloss/#def-delivery-context-v2">
+				delivery context
+			</a>
+			. This may include capabilities of the requesting device,
+			the user's profile (e.g. age, preferences), the user's
+			context (e.g. location) and any dynamic factors (e.g.
+			battery life, the transport bandwidth).
+		</p><p>
+			A selection criterion is represented by the value of the
+			<code>sel:expr</code>
+			attribute.
+		</p><table border="1" cellpadding="3" width="100%"><thead><tr><th colspan="3" rowspan="1">
+						Elements and attributes from the
+						<a href="http://www.w3.org/TR/cselection/">
+							DISelect
+						</a>
+						specification
+					</th></tr><tr><td colspan="3" rowspan="1"><em>
+							All elements/attributes from DISelect are
+							optional in DIAL, excepting the
+							<code>sel:expr</code>
+							attribute.
+						</em></td></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Definition</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">sel:expr</td><td rowspan="1" colspan="1">
+						This attribute may be included in any element in
+						a DIAL document, and must be bound to the
+						DISelect namespace. Its value is a boolean XPATH
+						expression. This expression may be evaluated by
+						the server, client, or other adaptation layer:
+						if it evaluates to 'true' then the element
+						containing the expr attribute, and all its child
+						and attribute nodes, are selected for inclusion
+						in the output document. If the expression
+						evaluates to false, then the element containing
+						the expr attribute, and all its children, are
+						omitted from the output document.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-expr-attribute">
+							expr
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:if&gt;</td><td rowspan="1" colspan="1">
+						Defines a set of material that is to be included
+						in the output infoset if the associated
+						expression has the appropriate value.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-if-element">
+							if
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:select&gt;</td><td rowspan="1" colspan="1">
+						This element encloses one or more sets of
+						material that are subject to conditional
+						selection.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-select-element">
+							select
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:when&gt;</td><td rowspan="1" colspan="1"><em>
+							At least one mandatory within a select
+						</em>
+						, defines a set of material that is to be
+						included in the output infoset if the associated
+						expression has the appropriate value.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-when-element">
+							when
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:otherwise&gt;</td><td rowspan="1" colspan="1">
+						This element defines a set of material that
+						appears in the output infoset if none of the
+						when elements evaluate to true.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-otherwise-element">
+							otherwise
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">sel:selid</td><td rowspan="1" colspan="1">
+						Used to ensure that an element will be assigned
+						an identifier in the resultset, without forcing
+						selection choices to have the same
+						<code>xml:id</code>
+						in the document prior to processing.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-selid-attribute">
+							selid
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">sel:selidname</td><td rowspan="1" colspan="1">
+						The
+						<code>selidname</code>
+						attribute defines the name of the host language
+						identifier, in the event that the
+						<code>xml:id</code>
+						attribute is not suitable.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-selid-attribute">
+							selidname
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:value&gt;</td><td rowspan="1" colspan="1">
+						The
+						<code>value</code>
+						element is used to include the value of an
+						expression in the content. The DISelect
+						processor evaluates the expression specified in
+						the element. It places the value of that
+						expression in the result infoset in place of the
+						value element.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-value-element">
+							value
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">&lt;sel:variable&gt;</td><td rowspan="1" colspan="1">
+						The
+						<code>variable</code>
+						element is used to declare a variable and to set
+						its value
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-variable-element">
+							variable
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">sel:functions</td><td rowspan="1" colspan="1">
+						This attribute defines the names of additional
+						XPath functions that are required to enable
+						processing of material that contains DISelect
+						elements and attributes. It allows authors to
+						verify that the materials they have provided can
+						be processed by the DISelect processor. The
+						names in the list reference functions that are
+						required by the content in addition to the set
+						provided by the DISelect processor itself.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/cselection/#sec-sel-functions-attribute">
+							functions
+						</a></td></tr></tbody></table><div class="div3">
+<h4 id="attribute-value-templates">3.13.1 Attribute Value Templates</h4><p>
+				DISelect extends the host language by allowing any
+				attribute value to be specified as an Attribute Value
+				Template (AVT). An AVT is an XPath expression which is
+				evaluated to yield the value to be used for the
+				attribute. To distinguish the use of an AVT as the value
+				of an attribute, the expression is enclosed within curly
+				braces {}.
+			</p><p>
+				An AVT used within the source infoset can contain any
+				XPath expression supported by the DISelect processor.
+				During processing, the expression is evaluated and the
+				result is used as the value of the attribute.
+			</p><table border="1" summary="Editorial note: Kevin Smith"><tr><td align="left" valign="top" width="50%"><b>Editorial note: Kevin Smith</b></td><td align="right" valign="top" width="50%">21 June 2007</td></tr><tr><td colspan="2" align="left" valign="top">
+					In the event that the DIAL schema expects a
+					non-string datatype for an attribute value, DIAL
+					will need to redefine the schema definition in order
+					to allow an AVT to be present also.
+				</td></tr></table></div></div><div class="div2">
+<h3 id="semantic-enrichment">3.14 Semantic Enrichment</h3><p><em>This section is informative</em></p><p>
+			Content semantics (in the form of metadata) may be used to
+			provide information in order to:
+			<ul><li><p>
+						inform the content adaptation process, so that
+						the decision about which content to show to the
+						user is a combination of delivery context and
+						content rules (for example, legal constraints).
+					</p></li><li><p>
+						be used to provide semantics to the content,
+						which assists search applications, and may
+						enable the inference of affinity between
+						documents.
+					</p></li><li><p>
+						reuse document data as document metadata to
+						reduce duplication.
+					</p></li></ul></p><p>
+			Authors can make use of the role attribute or RDFa
+			<a href="#RDFaPrimer">[RDFaPrimer]</a>
+			to add semantics to the DIAL documents.
+		</p></div><div class="div2">
+<h3 id="common-attributes">3.15 Common attributes</h3><p>
+			The following attributes are common to all elements in DIAL:
+		</p><table border="1" cellpadding="3" width="100%"><thead><tr><th colspan="3" rowspan="1">Common attributes</th></tr><tr><th rowspan="1" colspan="1">Markup</th><th rowspan="1" colspan="1">Purpose</th><th rowspan="1" colspan="1">Definition</th></tr></thead><tbody><tr valign="middle"><td rowspan="1" colspan="1">xml:space</td><td colspan="2" rowspan="1">
+						See
+						<a href="http://www.w3.org/TR/REC-xml/#sec-white-space">
+							XML whitespace handling
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">id</td><td colspan="2" rowspan="1">
+						See the xml:id Version 1.0 specification
+						<a href="#XMLID">[XMLID]</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">xml:lang</td><td colspan="2" rowspan="1">
+						See
+						<a href="http://www.w3.org/TR/REC-xml/#sec-lang-tag">
+							XML language identification
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">class</td><td rowspan="1" colspan="1">
+						This attribute assigns one or more class names
+						to an element; the element may be said to belong
+						to these classes. A class name may be shared by
+						several element instances.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_NMTOKENS">
+							NMTOKENS
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">title</td><td rowspan="1" colspan="1">
+						This attribute defines meta-information about
+						the element on which it is set.
+					</td><td rowspan="1" colspan="1"><a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Text">
+							Text
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">role</td><td colspan="2" rowspan="1">
+						See
+						<a href="http://www.w3.org/TR/xhtml-role/">
+							Role Attribute Module
+						</a></td></tr><tr valign="middle"><td rowspan="1" colspan="1">sel:expr</td><td colspan="2" rowspan="1">
+						See
+						<a href="http://www.w3.org/TR/cselection/#sec-sel-expr-attribute">
+							sel:expr
+						</a></td></tr></tbody></table></div></div>
+		<div class="div1">
+<h2 id="elements">4  Elements </h2><div class="div2">
+<h3 id="a-element">4.1 The <code>&lt;a&gt;</code> element</h3><p id="a-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="a-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">rel = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute describes the relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+</p></dd><dt class="label">rev = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute is the complement of the rel attribute
+				and describes the reverse relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="abbr-element">4.2 The <code>&lt;abbr&gt;</code> element</h3><p id="abbr-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="abbr-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">full = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+</p></dd></dl></div><div class="div2">
+<h3 id="body-element">4.3 The <code>&lt;body&gt;</code> element</h3><p id="body-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#h-element">h</a>? , ( <a href="#section-element">section</a> | <a href="#separator-element">separator</a> )* )
+</code></dt><dd/></dl><p id="body-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="caption-element">4.4 The <code>&lt;caption&gt;</code> element</h3><p id="caption-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="caption-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="cite-element">4.5 The <code>&lt;cite&gt;</code> element</h3><p id="cite-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="cite-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">cite = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+The value of this attribute is a URI that designates a
+				source document or message. This attribute is intended
+				to give further information about the element's contents
+				(e.g., the source from which a quotation was borrowed,
+				or the reason text was inserted or deleted).
+</p></dd></dl></div><div class="div2">
+<h3 id="code-element">4.6 The <code>&lt;code&gt;</code> element</h3><p id="code-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="code-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="col-element">4.7 The <code>&lt;col&gt;</code> element</h3><p id="col-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+ EMPTY </code></dt><dd/></dl><p id="col-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">span = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute must be an integer &gt; 0; the default
+				value is 1. This specifies the number of columns in a
+				colgroup, or specifies the number of columns "spanned"
+				by the col element.
+</p></dd></dl></div><div class="div2">
+<h3 id="colgroup-element">4.8 The <code>&lt;colgroup&gt;</code> element</h3><p id="colgroup-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#col-element">col</a>* )
+</code></dt><dd/></dl><p id="colgroup-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">span = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute must be an integer &gt; 0; the default
+				value is 1. This specifies the number of columns in a
+				colgroup, or specifies the number of columns "spanned"
+				by the col element.
+</p></dd></dl></div><div class="div2">
+<h3 id="dd-element">4.9 The <code>&lt;dd&gt;</code> element</h3><p id="dd-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="dd-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="dfn-element">4.10 The <code>&lt;dfn&gt;</code> element</h3><p id="dfn-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="dfn-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="di-element">4.11 The <code>&lt;di&gt;</code> element</h3><p id="di-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#dt-element">dt</a> , <a href="#dd-element">dd</a> )
+</code></dt><dd/></dl><p id="di-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="div-element">4.12 The <code>&lt;div&gt;</code> element</h3><p id="div-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#h-element">h</a>? , ( <a href="#a-element">a</a> | <a href="#object-element">object</a> | <a href="#span-element">span</a> | <a href="#p-element">p</a> | <a href="#table-element">table</a> | ( <a href="#nl-element">nl</a> ) | ( <a href="#ol-element">ol</a> | <a href="#ul-element">ul</a> | <a href="#dl-element">dl</a> ) | <a href="http://www.w3.org/TR/2007/REC-xforms-20071029/#elems-form-controls">XForms Controls</a> )* )
+</code></dt><dd/></dl><p id="div-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="dl-element">4.13 The <code>&lt;dl&gt;</code> element</h3><p id="dl-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#label-element">label</a>? , <a href="#di-element">di</a>* )
+</code></dt><dd/></dl><p id="dl-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="dt-element">4.14 The <code>&lt;dt&gt;</code> element</h3><p id="dt-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="dt-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="em-element">4.15 The <code>&lt;em&gt;</code> element</h3><p id="em-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="em-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="h-element">4.16 The <code>&lt;h&gt;</code> element</h3><p id="h-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="h-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="handler-element">4.17 The <code>&lt;handler&gt;</code> element</h3><p id="handler-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*</code></dt><dd/></dl><p id="handler-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="head-element">4.18 The <code>&lt;head&gt;</code> element</h3><p id="head-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#title-element">title</a> , ( <a href="http://www.w3.org/TR/xhtml-access/#sec_3.1.">access</a> | <a href="#handler-element">handler</a> | <a href="#link-element">link</a> | <a href="http://www.w3.org/TR/xml-events/Overview.html#section-listener-element">ev:listener</a> | <a href="#xforms:model-element">xforms:model</a> | <a href="#meta-element">meta</a> )* )
+</code></dt><dd/></dl><p id="head-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="html-element">4.19 The <code>&lt;html&gt;</code> element</h3><p id="html-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#head-element">head</a> , <a href="#body-element">body</a> )
+</code></dt><dd/></dl><p id="html-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">base = <a href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#anyURI">anyURI</a></dt><dd><p>
+See http://www.w3.org/TR/xmlbase/ for
+                     information about this attribute.
+</p></dd></dl></div><div class="div2">
+<h3 id="kbd-element">4.20 The <code>&lt;kbd&gt;</code> element</h3><p id="kbd-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="kbd-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="l-element">4.21 The <code>&lt;l&gt;</code> element</h3><p id="l-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="l-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="label-element">4.22 The <code>&lt;label&gt;</code> element</h3><p id="label-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*</code></dt><dd/></dl><p id="label-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="li-element">4.23 The <code>&lt;li&gt;</code> element</h3><p id="li-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="li-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="link-element">4.24 The <code>&lt;link&gt;</code> element</h3><p id="link-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+ EMPTY </code></dt><dd/></dl><p id="link-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">rel = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute describes the relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+</p></dd><dt class="label">rev = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute is the complement of the rel attribute
+				and describes the reverse relationship between the
+				resource specified by the about attribute (or its
+				default value) and the resource referred to by the href
+				attribute.
+</p></dd></dl></div><div class="div2">
+<h3 id="meta-element">4.25 The <code>&lt;meta&gt;</code> element</h3><p id="meta-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*</code></dt><dd/></dl><p id="meta-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">about = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies which resource has a specified
+				property.
+</p></dd><dt class="label">property = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute indicates which property is being defined
+				by the element. If it is not specified, the property is
+				reference.
+</p></dd><dt class="label">content = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the metadata associated with an
+				element. If not specified, then the metadata for an
+				element is its content.
+</p></dd><dt class="label">datatype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_QName">QName</a></dt><dd><p>
+This attribute defines the datatype of the content
+				metadata of the element. If the attribute is not
+				specified, then the default value is string as defined
+				by [XMLSCHEMA].
+</p></dd></dl></div><div class="div2">
+<h3 id="nl-element">4.26 The <code>&lt;nl&gt;</code> element</h3><p id="nl-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#label-element">label</a>? , <a href="#li-element">li</a>* )
+</code></dt><dd/></dl><p id="nl-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="object-element">4.27 The <code>&lt;object&gt;</code> element</h3><p id="object-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( ( <a href="#param-element">param</a> )* )
+</code></dt><dd/></dl><p id="object-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">declare = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_NMTOKEN">NMTOKEN</a>
+( declare )
+</dt><dd><p>
+When present, this boolean attribute makes the current
+				element a declaration only - one that is to be executed
+				only after the document has completed loading and has
+				been called through a user event.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="ol-element">4.28 The <code>&lt;ol&gt;</code> element</h3><p id="ol-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#label-element">label</a>? , <a href="#li-element">li</a>* )
+</code></dt><dd/></dl><p id="ol-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="p-element">4.29 The <code>&lt;p&gt;</code> element</h3><p id="p-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | ( <a href="#text-def">Text</a> | ( <a href="#ol-element">ol</a> | <a href="#ul-element">ul</a> | <a href="#dl-element">dl</a> ) | <a href="http://www.w3.org/TR/2007/REC-xforms-20071029/#elems-inline">XForms UI Inline</a> | <a href="#table-element">table</a> )* )
+*</code></dt><dd/></dl><p id="p-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="param-element">4.30 The <code>&lt;param&gt;</code> element</h3><p id="param-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+ EMPTY </code></dt><dd/></dl><p id="param-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">name = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute defines the name of a run-time parameter,
+				assumed to be known by the object handler. Whether the
+				property name is case-sensitive depends on the specific
+				object handler implementation.
+</p></dd><dt class="label">value = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the value of a run-time
+				parameter specified by name. Property values have no
+				meaning to XHTML; their meaning is determined by the
+				object in question.
+</p></dd></dl></div><div class="div2">
+<h3 id="q-element">4.31 The <code>&lt;q&gt;</code> element</h3><p id="q-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="q-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">cite = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+The value of this attribute is a URI that designates a
+				source document or message. This attribute is intended
+				to give further information about the element's contents
+				(e.g., the source from which a quotation was borrowed,
+				or the reason text was inserted or deleted).
+</p></dd></dl></div><div class="div2">
+<h3 id="samp-element">4.32 The <code>&lt;samp&gt;</code> element</h3><p id="samp-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="samp-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="section-element">4.33 The <code>&lt;section&gt;</code> element</h3><p id="section-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#h-element">h</a>? , ( <a href="#section-element">section</a> | <a href="#div-element">div</a> | <a href="#p-element">p</a> | <a href="#separator-element">separator</a> )* )
+</code></dt><dd/></dl><p id="section-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="separator-element">4.34 The <code>&lt;separator&gt;</code> element</h3><p id="separator-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+ EMPTY </code></dt><dd/></dl><p id="separator-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="span-element">4.35 The <code>&lt;span&gt;</code> element</h3><p id="span-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="span-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd></dl></div><div class="div2">
+<h3 id="strong-element">4.36 The <code>&lt;strong&gt;</code> element</h3><p id="strong-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="strong-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="sub-element">4.37 The <code>&lt;sub&gt;</code> element</h3><p id="sub-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="sub-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="summary-element">4.38 The <code>&lt;summary&gt;</code> element</h3><p id="summary-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="summary-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="sup-element">4.39 The <code>&lt;sup&gt;</code> element</h3><p id="sup-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="sup-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="table-element">4.40 The <code>&lt;table&gt;</code> element</h3><p id="table-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( ( <a href="#caption-element">caption</a> | <a href="#label-element">label</a> )? , <a href="#summary-element">summary</a>? , ( <a href="#col-element">col</a>* | <a href="#colgroup-element">colgroup</a>* ) , ( <a href="#thead-element">thead</a>? , <a href="#tbody-element">tbody</a> , <a href="#tfoot-element">tfoot</a>? ) )
+</code></dt><dd/></dl><p id="table-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="tbody-element">4.41 The <code>&lt;tbody&gt;</code> element</h3><p id="tbody-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#tr-element">tr</a>+ )
+</code></dt><dd/></dl><p id="tbody-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="td-element">4.42 The <code>&lt;td&gt;</code> element</h3><p id="td-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="td-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">abbr = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Text">Text</a></dt><dd><p>
+This attribute should be used to provide an abbreviated
+				form of the cell's content, and may be rendered by user
+				agents when appropriate in place of the cell's content.
+				Abbreviated names should be short since user agents may
+				render them repeatedly. For instance, speech
+				synthesizers may render the abbreviated headers relating
+				to a particular cell before rendering that cell's
+				content.
+</p></dd><dt class="label">headers = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREFS">IDREFS</a></dt><dd><p>
+This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+</p></dd><dt class="label">scope = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_NMTOKEN">NMTOKEN</a>
+( row | col | rowgroup | colgroup )
+</dt><dd><p>
+This attribute specifies the set of data cells for which
+				the current header cell provides header information
+</p></dd><dt class="label">rowspan = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+</p></dd><dt class="label">colspan = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute specifies the number of columns spanned
+				by the current cell. The default value of this attribute
+				is one ("1"). The value zero ("0") means that the cell
+				spans all columns from the current column to the last
+				column of the column group ( colgroup) in which the cell
+				is defined.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="tfoot-element">4.43 The <code>&lt;tfoot&gt;</code> element</h3><p id="tfoot-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#tr-element">tr</a>+ )
+</code></dt><dd/></dl><p id="tfoot-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="th-element">4.44 The <code>&lt;th&gt;</code> element</h3><p id="th-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA | <a href="#text-def">Text</a> )
+*</code></dt><dd/></dl><p id="th-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">abbr = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Text">Text</a></dt><dd><p>
+This attribute should be used to provide an abbreviated
+				form of the cell's content, and may be rendered by user
+				agents when appropriate in place of the cell's content.
+				Abbreviated names should be short since user agents may
+				render them repeatedly. For instance, speech
+				synthesizers may render the abbreviated headers relating
+				to a particular cell before rendering that cell's
+				content.
+</p></dd><dt class="label">headers = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREFS">IDREFS</a></dt><dd><p>
+This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+</p></dd><dt class="label">scope = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_NMTOKEN">NMTOKEN</a>
+( row | col | rowgroup | colgroup )
+</dt><dd><p>
+This attribute specifies the set of data cells for which
+				the current header cell provides header information
+</p></dd><dt class="label">rowspan = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute specifies the list of header cells that
+				provide header information for the current data cell.
+				The value of this attribute is a space-separated list of
+				cell names; those cells must be named by setting their
+				id attribute. Authors generally use the headers
+				attribute to help non-visual user agents render header
+				information about data cells (e.g., header information
+				is spoken prior to the cell data), but the attribute may
+				also be used in conjunction with style sheets. See also
+				the scope attribute.
+</p></dd><dt class="label">colspan = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_Number">Number</a></dt><dd><p>
+This attribute specifies the number of columns spanned
+				by the current cell. The default value of this attribute
+				is one ("1"). The value zero ("0") means that the cell
+				spans all columns from the current column to the last
+				column of the column group ( colgroup) in which the cell
+				is defined.
+</p></dd><dt class="label">href = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies a URI that is actuated when the
+				element is activated.
+</p></dd><dt class="label">hreftype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the relevant href URI.
+</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="thead-element">4.45 The <code>&lt;thead&gt;</code> element</h3><p id="thead-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#tr-element">tr</a>+ )
+</code></dt><dd/></dl><p id="thead-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="title-element">4.46 The <code>&lt;title&gt;</code> element</h3><p id="title-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*</code></dt><dd/></dl><p id="title-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">encoding = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_CDATA">CDATA</a></dt><dd><p>
+This attribute specifies the allowable encoding of the
+				external resource referenced by the src attribute. At
+				its most general, it is a comma-separated list of
+				encodings, such as "utf-8", "utf8, utf-16", or "utf-8,
+				utf-16, *".
+</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd></dl></div><div class="div2">
+<h3 id="tr-element">4.47 The <code>&lt;tr&gt;</code> element</h3><p id="tr-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( ( <a href="#th-element">th</a> | <a href="#td-element">td</a> )+ )
+</code></dt><dd/></dl><p id="tr-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div><div class="div2">
+<h3 id="ul-element">4.48 The <code>&lt;ul&gt;</code> element</h3><p id="ul-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( <a href="#label-element">label</a>? , <a href="#li-element">li</a>* )
+</code></dt><dd/></dl><p id="ul-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd><dt class="label">src = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_URI">URI</a></dt><dd><p>
+This attribute specifies the location of an external
+				source for the contents of the element.
+</p></dd><dt class="label">srctype = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_ContentType">ContentType</a></dt><dd><p>
+This attribute specifies the allowable content types of
+				the resource referenced by the relevant src URI.
+</p></dd><dt class="label">nextfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that the user agent navigate to the next
+				element that can receive focus.
+</p></dd><dt class="label">prevfocus = <a href="http://www.w3.org/TR/xhtml2/abstraction.html#dt_IDREF">IDREF</a></dt><dd><p>
+This attribute specifies an IDREF of an element in the
+				current document that will receive focus when the user
+				requests that user agent navigate to the previous
+				element that can receive focus.
+</p></dd></dl></div><div class="div2">
+<h3 id="var-element">4.49 The <code>&lt;var&gt;</code> element</h3><p id="var-content-model"><em>Content Model</em></p><dl class="contentDef"><dt class="label"><code>
+( PCDATA )*
+</code></dt><dd/></dl><p id="var-attributes"><em>Attributes</em></p><dl class="attrDef"><dt class="label">The <a href="#common-attributes">Common</a> collection</dt><dd><p>Collection of common attributes.</p></dd></dl></div></div>
+	</div><div class="back"><div class="div1">
+<h2 id="idinform-div1101823432">A References (Non-Normative)</h2><div class="div2">
+<h3 id="iddiv2101823672">A.1 Normative References</h3><dl><dt class="label"><a name="ref-rfc2119" id="ref-rfc2119"/>IETF RFC 2119</dt><dd><a href="http://www.ietf.org/rfc/rfc2119.txt"><a href="http://www.ietf.org/rfc/rfc2119.txt"><cite>
+							RFC 2119: Key words for use in RFCs to
+							Indicate Requirement Levels
+						</cite></a>
+						Internet Engineering Task Force, 1997.
+					</a>  (See http://www.ietf.org/rfc/rfc2119.txt.)</dd></dl><dl><dt class="label"><a name="XMLID" id="XMLID"/>XMLID</dt><dd><a href="http://www.w3.org/TR/2005/REC-xml-id-20050909/"><a href="http://www.w3.org/TR/2005/REC-xml-id-20050909/"><cite>
+							xml:id Version 1.0
+						</cite></a>
+						J. Marsh et al., W3C Recommendation, 9 September
+						2005
+					</a>  (See http://www.w3.org/TR/2005/REC-xml-id-20050909/.)</dd></dl><dl><dt class="label"><a name="XHTML-Access-Module" id="XHTML-Access-Module"/>XHTML Access Module</dt><dd><a href="http://www.w3.org/TR/2008/WD-xhtml-access-20080526"><a href="http://www.w3.org/TR/2008/WD-xhtml-access-20080526"><cite>
+							XHTML Access Module
+						</cite></a>
+						Mark Birbeck et al., W3C Working Draft, 26 May
+						2008.
+					</a>  (See http://www.w3.org/TR/2008/WD-xhtml-access-20080526.)</dd></dl><dl><dt class="label"><a name="XHTML-Role-Attribute-Module" id="XHTML-Role-Attribute-Module"/>XHTML Role Attribute Module</dt><dd><a href="http://www.w3.org/TR/2008/WD-xhtml-role-20080407"><a href="http://www.w3.org/TR/2008/WD-xhtml-role-20080407"><cite>
+							XHTML Role Attribute Module
+						</cite></a>
+						Mark Birbeck et al., W3C Working Draft, 7 April
+						2008.
+					</a>  (See http://www.w3.org/TR/2008/WD-xhtml-role-20080407.)</dd></dl><dl><dt class="label"><a name="DISelect" id="DISelect"/>DISelect</dt><dd><a href="http://www.w3.org/TR/2005/WD-cselection-20050502/"><a href="http://www.w3.org/TR/2005/WD-cselection-20050502/"><cite>
+							Content Selection for Device Independence
+							(DISelect) 1.0
+						</cite></a>
+						R. Lewis et al., W3C Candidate Recommendation,
+						25 July 2007.
+					</a>  (See http://www.w3.org/TR/2005/WD-cselection-20050502/.)</dd></dl><dl><dt class="label"><a name="XHTML-Modularization" id="XHTML-Modularization"/>XHTML Modularization</dt><dd><a href="http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213/"><a href="http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213/"><cite>
+							Modularization of XHTML
+						</cite></a>
+						M. Altheim et al., W3C Recommendation, 13
+						February 2006.
+					</a>  (See http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213/.)</dd></dl><dl><dt class="label"><a name="XML-Events" id="XML-Events"/>XML Events</dt><dd><a href="http://www.w3.org/TR/2003/REC-xml-events-20031014/"><a href="http://www.w3.org/TR/2003/REC-xml-events-20031014/"><cite>
+							XML Events
+						</cite></a>
+						Shane McCarron et al., W3C Recommendation, 14
+						October 2003.
+					</a>  (See http://www.w3.org/TR/2003/REC-xml-events-20031014/.)</dd></dl><dl><dt class="label"><a name="XForms" id="XForms"/>XForms</dt><dd><a href="http://www.w3.org/TR/2006/REC-xforms-20060314/"><a href="http://www.w3.org/TR/2006/REC-xforms-20060314/"><cite>
+							XForms 1.0 (second edition)
+						</cite></a>
+						John M. Boyer et al., W3C Recommendation, 14
+						March 2006.
+					</a>  (See http://www.w3.org/TR/2006/REC-xforms-20060314/.)</dd></dl></div><div class="div2">
+<h3 id="iddiv294233904">A.2 Informative References</h3><dl><dt class="label"><a name="ref-dial" id="ref-dial"/>DIAL</dt><dd><a href="http://www.w3.org/TR/dial/"><a href="http://www.w3.org/TR/dial/"><cite>
+							Device Independent Authoring Language (DIAL)
+						</cite></a>
+						Kevin Smith, Vodafone Group, 2007. W3C Working
+						Draft
+					</a>  (See http://www.w3.org/TR/dial/.)</dd><dt class="label"><a name="ref-xhtml1" id="ref-xhtml1"/>XHTML11</dt><dd><a href="http://www.w3.org/TR/xhtml11/"><a href="http://www.w3.org/TR/xhtml11/"><cite>
+							XHTML™ 1.1 - Module-based XHTML
+						</cite></a>
+						Shane McCarron, Applied Testing and Technology,
+						Inc. and Masayasu Ishikawa, W3C, 2007. W3C
+						Working Draft
+					</a>  (See http://www.w3.org/TR/xhtml11/.)</dd><dt class="label"><a name="RDFaPrimer" id="RDFaPrimer"/>RDFaPrimer</dt><dd><a href="http://www.w3.org/TR/2008/WD-xhtml-rdfa-primer-20080620/"><a href="http://www.w3.org/TR/2008/WD-xhtml-rdfa-primer-20080620/"><cite>
+							RDF Primer
+						</cite></a>
+						W3C Working Draft, Ben Adida et al., 20 June
+						2008
+					</a>  (See http://www.w3.org/TR/2008/WD-xhtml-rdfa-primer-20080620/.)</dd></dl></div></div><div class="div1">
+<h2 id="changes-this-version">B Changes in this version (Non-Normative)</h2><ul><li><p>changelog</p></li></ul></div><div class="div1">
+<h2 id="acknowledgements">C Acknowledgements (Non-Normative)</h2><p>
+				This document was produced with the participation of the
+				MyMobileWeb project Consortium:
+			</p><p>
+				The editors wish to acknowledge the specific written
+				contributions of:
+			</p><ul><li>xxx, Telefónica I+D</li></ul></div></div></body></html>

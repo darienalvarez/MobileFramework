@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:ideal="http://www.morfeo-project.org/2008/ideal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" targetNamespace="http://www.w3.org/2002/xforms" elementFormDefault="qualified">
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="ideal-model-1.xsd"/>
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="ideal-teloutput-1.xsd"/>
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="XForms-Schema-Action-extra-1.xsd"/>
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="XForms-Schema-Core-extra-1.xsd"/>
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="ideal-struct-1.xsd"/>
+	<xs:import namespace="http://www.morfeo-project.org/2008/ideal" schemaLocation="ideal-attribs-1.xsd"/>
+	<xs:group name="repeat.extra">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ideal:object"/>
+				<xs:element ref="ideal:span"/>
+				<xs:element ref="ideal:p"/>
+				<xs:element ref="ideal:table"/>
+				<xs:group ref="ideal:ideal.NavigationList.class"/>
+				<xs:group ref="ideal:ideal.List.class"/>
+				<xs:group ref="ideal:XForm.Controls.extra"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="group.extra">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:group ref="ideal:XForm.Controls.extra"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	<xs:attributeGroup name="group.attributes.extra">
+		<xs:attributeGroup ref="ideal:repeat.attributes"/>
+	</xs:attributeGroup>
+	<xs:group name="action.extra">
+		<xs:choice>
+			<xs:element ref="ideal:telephoneCall"/>
+			<xs:element ref="ideal:smsSend"/>
+			<xs:element ref="ideal:phoneBookAdd"/>
+			<xs:element ref="ideal:invoke"/>
+			<xs:element ref="ideal:validate"/>
+			<xs:element ref="ideal:format"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="model.extra">
+		<xs:choice>
+			<xs:element ref="ideal:data"/>
+		</xs:choice>
+	</xs:group>
+	<xs:attribute name="relevant" type="xforms:XPathExpression">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/2007/REC-xforms-20071029/#model-prop-relevant"/>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="calculate" type="xforms:XPathExpression">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/2007/REC-xforms-20071029/#model-prop-calculate"/>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="inputmode" type="xs:string">
+		<xs:annotation>
+			<xs:documentation source="http://www.w3.org/TR/2007/REC-xforms-20071029/#mode-syntax"/>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attributeGroup name="output.attributes.extra">
+		<xs:attributeGroup ref="ideal:embedding.attrib"/>
+		<xs:attribute ref="ideal:formatter"/>
+		<xs:attribute ref="xforms:calculate"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="input.attributes.extra">
+		<xs:attribute ref="ideal:validator"/>
+		<xs:attribute ref="ideal:formatter"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="choices.attributes.extra">
+		<xs:attribute ref="xforms:relevant"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="Common.Attributes.Extra">
+		<xs:attributeGroup ref="ideal:ideal.Common.attrib"/>
+	</xs:attributeGroup>
+</xs:schema>
